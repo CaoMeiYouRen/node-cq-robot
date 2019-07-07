@@ -1,0 +1,51 @@
+{
+    "name": "cq-robot",
+    "version": "0.0.0",
+    "description": "基于http-api和cq-websocket的酷Q机器人封装",
+    "main": "index.js",
+    "keywords": [
+        "CoolQ",
+        "CQ",
+        "QQRobot"
+    ],
+    "scripts": {
+        "build": "tsc",
+        "lint": "eslint src --ext .ts",
+        "test": "mocha -r ts-node/register test/**/*.test.ts -R nyan",
+        "deploy": "npm publish"
+    },
+    "author": "CaoMeiYouRen",
+    "license": "MIT",
+    "dependencies": {
+        "cq-websocket": "^2.0.1",
+        "moment": "^2.24.0",
+        "json5": "^2.1.0"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.3.4",
+        "babel-core": "^6.26.3",
+        "babel-loader": "^8.0.5",
+        "babel-plugin-transform-runtime": "^6.23.0",
+        "babel-polyfill": "^6.26.0",
+        "babel-preset-env": "^1.7.0",
+        "babel-preset-stage-0": "^6.24.1",
+        "@types/chai": "^4.1.7",
+        "@types/json5": "^0.0.30",
+        "@types/mocha": "^5.2.7",
+        "@types/node": "^12.0.10",
+        "@typescript-eslint/eslint-plugin": "^1.11.0",
+        "@typescript-eslint/parser": "^1.11.0",
+        "babel-eslint": "^10.0.2",
+        "chai": "^4.2.0",
+        "eslint": "^5.16.0",
+        "eslint-config-alloy": "^2.0.4",
+        "eslint-plugin-typescript": "^0.14.0",
+        "log4js": "^4.4.0",
+        "mocha": "^6.1.4",
+        "nyc": "^14.1.1",
+        "should": "^13.2.3",
+        "ts-node": "^8.3.0",
+        "typescript": "^3.5.2",
+        "typescript-eslint-parser": "^22.0.0"
+    }
+}
