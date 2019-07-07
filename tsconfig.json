@@ -20,7 +20,9 @@
         "./src/*",
         "./src/app/*/*",
         "node_modules/@types",
-        "src/utils/log.ts"
+        "src/utils/log.ts",
+        "src/event/CQApp.ts",
+        "src/entity/CoolQ.ts"
     ],
     "exclude": [
         "node_modules",
