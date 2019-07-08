@@ -12,12 +12,12 @@ export interface IVer {
      * @type {9}
      * @memberof IVer
      */
-    CQ_API_VER: 9
+    readonly CQ_API_VER: 9
     /**
      * 当前CoolQ HTTP API 版本。
      * 详见 https://cqhttp.cc/docs
      * @type {4}
      * @memberof IVer
      */
-    HTTP_API_VER: 4
+    readonly HTTP_API_VER: 4
 }
