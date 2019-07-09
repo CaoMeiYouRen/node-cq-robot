@@ -1,4 +1,5 @@
 import { configure, getLogger } from 'log4js'
+import { timeFormat } from './timeHelp'
 import path = require('path')
 configure({
     appenders: {
@@ -7,13 +8,13 @@ configure({
             layout: {
                 type: 'pattern',
                 // 用于配置输出的内容信息
-                pattern: '[%c] %d{hh:mm:ss.SSS} %[[%p] -> %m%]',
+                pattern: '%d{hh:mm:ss.SSS} -> %[[%c] %m%]',
             }
         },
         app: {
             // 设置类型为 dateFile
             type: 'dateFile',
-            // 配置文件名为 myLog.log
+            // 配置文件名
             filename: path.join(__dirname, '../../log/app/app.log'),
             // 指定编码格式为 utf-8
             encoding: 'utf-8',
@@ -56,10 +57,10 @@ configure({
         default: { appenders: ['out'], level: 'info' },
         'app-debug': { appenders: ['out', 'app-debug'], level: 'debug' },
         app: { appenders: ['out', 'app'], level: 'info' },
-        'node-cq-robot': { appenders: ['out', 'app'], level: 'info' }
+        'cq-robot': { appenders: ['out', 'app'], level: 'info' }
     }
 })
-// const logger = getLogger('node-cq-robot')
+// const logger = getLogger('app-debug')
 // logger.level = 'debug'
 // logger.debug(`现在是北京时间：${timeFormat()}`)
 

@@ -10,13 +10,13 @@ log4js_1.configure({
             layout: {
                 type: 'pattern',
                 // 用于配置输出的内容信息
-                pattern: '[%c] %d{hh:mm:ss.SSS} %[[%p] -> %m%]',
+                pattern: '%d{hh:mm:ss.SSS} -> %[[%c] %m%]',
             }
         },
         app: {
             // 设置类型为 dateFile
             type: 'dateFile',
-            // 配置文件名为 myLog.log
+            // 配置文件名
             filename: path.join(__dirname, '../../log/app/app.log'),
             // 指定编码格式为 utf-8
             encoding: 'utf-8',
@@ -59,6 +59,6 @@ log4js_1.configure({
         default: { appenders: ['out'], level: 'info' },
         'app-debug': { appenders: ['out', 'app-debug'], level: 'debug' },
         app: { appenders: ['out', 'app'], level: 'info' },
-        'node-cq-robot': { appenders: ['out', 'app'], level: 'info' }
+        'cq-robot': { appenders: ['out', 'app'], level: 'info' }
     }
 });

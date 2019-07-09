@@ -22,7 +22,7 @@ export function timeFormat(date: Date | number | string = Date.now(), pattern: s
 }
 /**
  *
- * 在控制台输出 YYYY-MM-DD HH:mm:ss:SSS->msg 格式的消息
+ * 在控制台输出 HH:mm:ss:SSS->msg 格式的消息
  * @export
  * @param {string} msg
  * @param {number} [level=0]

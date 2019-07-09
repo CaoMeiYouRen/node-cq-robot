@@ -58,6 +58,6 @@ module.exports = {
         'no-console': 0, // 禁止console
         'object-shorthand': 2, // 要求或禁止对象字面量中方法和属性使用简写语法  ''always
         'quote-props': [2, 'as-needed', { keywords: false, numbers: true }], // 要求对象字面量属性名称使用引号。
-
+        'prefer-template': 2, //建议使用模板字面量而非字符串连接 (prefer-template)
     }
 }

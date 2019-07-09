@@ -4,3 +4,5 @@ function __export(m) {
 }
 Object.defineProperty(exports, "__esModule", { value: true });
 __export(require("./CoolQ"));
+__export(require("./CQLog"));
+__export(require("./CQFile"));
