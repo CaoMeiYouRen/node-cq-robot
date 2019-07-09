@@ -3,6 +3,7 @@ import { printTime, getLogger } from '../utils'
 import { CQOption } from './CQOption'
 import { CQLog } from './CQLog'
 import { getAuth } from './CQAuth'
+import { CQCode } from './CQCode'
 import fs = require('fs')
 import path = require('path')
 import JSON5 = require('json5')
@@ -64,6 +65,7 @@ export class CoolQ {
      * @memberof CoolQ
      */
     constructor(APP_ID: string, dirname: string, debug: boolean = false) {
+        this.CQCode = new CQCode()
         this.APP_ID = APP_ID
         this.debug = debug
         this.appDirectory = path.join(dirname, 'data/')
@@ -78,6 +80,13 @@ export class CoolQ {
             printTime(`找不到 ${APP_ID} 配置文件在：${dirname} 目录下`, CQLog.LOG_ERROR)
         }
     }
+    /**
+     * CQ码
+     *
+     * @type {CQCode}
+     * @memberof CoolQ
+     */
+    CQCode: CQCode
     /**
      * 插件配置
      *

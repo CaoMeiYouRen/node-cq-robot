@@ -12,6 +12,7 @@ const cq_websocket_1 = require("cq-websocket");
 const utils_1 = require("../utils");
 const CQLog_1 = require("./CQLog");
 const CQAuth_1 = require("./CQAuth");
+const CQCode_1 = require("./CQCode");
 const fs = require("fs");
 const path = require("path");
 const JSON5 = require("json5");
@@ -71,6 +72,7 @@ class CoolQ {
      * @memberof CoolQ
      */
     constructor(APP_ID, dirname, debug = false) {
+        this.CQCode = new CQCode_1.CQCode();
         this.APP_ID = APP_ID;
         this.debug = debug;
         this.appDirectory = path.join(dirname, 'data/');

@@ -4,4 +4,5 @@ function __export(m) {
 }
 Object.defineProperty(exports, "__esModule", { value: true });
 __export(require("./entity"));
+__export(require("./event"));
 __export(require("./utils"));
