@@ -9,7 +9,7 @@
         "outDir": "./dist", //重定向输出目录。
         "watch": true, //在监视模式下运行编译器。会监视输出文件，在它们改变时重新编译。
         "allowSyntheticDefaultImports": false,
-        // "baseUrl": ".",
+        // "baseUrl": "./",
         // "paths": {
         //     "@*": [
         //         "*"
@@ -18,11 +18,8 @@
     },
     "include": [
         "./src/*",
-        "./src/app/*/*",
+        "./src/**/*",
         "node_modules/@types",
-        "src/utils/log.ts",
-        "src/event/CQApp.ts",
-        "src/entity/CoolQ.ts"
     ],
     "exclude": [
         "node_modules",
