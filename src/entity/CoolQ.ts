@@ -115,9 +115,9 @@ export class CoolQ {
     setDebug(debug: boolean) {
         this.debug = debug
         if (this.debug) {
-            printTime(`[setDebug] 应用 ${this.appOption ? this.appOption.name : '未知应用'} 已开启debug模式，所有api调用都不会真正执行`, CQLog.LOG_INFO_SUCCESS)
+            printTime(`[setDebug] 应用 ${this.APP_ID} 已开启debug模式，所有api调用都不会真正执行`, CQLog.LOG_INFO_SUCCESS)
         } else {
-            printTime(`[setDebug] 应用 ${this.appOption ? this.appOption.name : '未知应用'} 已关闭debug模式，api调用将真正执行`, CQLog.LOG_INFO_SUCCESS)
+            printTime(`[setDebug] 应用 ${this.APP_ID} 已关闭debug模式，api调用将真正执行`, CQLog.LOG_INFO_SUCCESS)
         }
     }
     /**
@@ -249,7 +249,7 @@ export class CoolQ {
    * @param {number} [auth] 权限
    * @returns
    */
-    private async cqBasicOperation(opName: string, param: Record<string, any>) {
+    private async cqBasicOperate(opName: string, param: Record<string, any>) {
         try {
             if (this.debug) {
                 printTime(`[酷Q基本操作] 操作 ${opName} 已完成`, CQLog.LOG_INFO_SUCCESS)
@@ -275,4 +275,58 @@ export class CoolQ {
             return -1
         }
     }
+    /** ************   snake_case 下划线风格 *********** */
+    /**
+     *
+     * 发送私聊消息
+     * @export
+     * @param {number} user_id 对方 QQ 号
+     * @param {string} message 要发送的内容
+     * @returns
+     */
+    async send_private_msg(user_id: number, message: string) {
+        if (this.debug) {
+            printTime(`[发送私聊消息] QQID:${user_id} msg:${message}`, CQLog.LOG_INFO_SEND)
+            return 0
+        }
+        return this.cqBasicOperate('send_private_msg', {
+            user_id,
+            message
+        })
+    }
+    /**
+     * 发送群消息
+     * @export
+     * @param {number} group_id 群号
+     * @param {string} message 要发送的内容
+     */
+    async send_group_msg(group_id: number, message: string) {
+        if (this.debug) {
+            printTime(`[发送群消息] 群号:${group_id} msg:${message}`, CQLog.LOG_INFO_SEND)
+            return 0
+        }
+        return this.cqBasicOperate('send_group_msg', {
+            group_id,
+            message
+        })
+    }
+
+    /**
+     * 发送讨论组消息
+     * @export
+     * @param {number} discuss_id 讨论组 ID（正常情况下看不到，需要从讨论组消息上报的数据中获得）
+     * @param {string} message 要发送的内容
+     */
+    async send_discuss_msg(discuss_id: number, message: string) {
+        if (this.debug) {
+            printTime(`[发送讨论组消息] 讨论组号:${discuss_id} msg:${message}`, CQLog.LOG_INFO_SEND)
+            return 0
+        }
+        return this.cqBasicOperate('send_discuss_msg', {
+            discuss_id,
+            message
+        })
+    }
+
+    /** *********  camelCase 小驼峰风格 ***************/
 }

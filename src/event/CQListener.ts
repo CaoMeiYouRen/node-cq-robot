@@ -1,4 +1,5 @@
 import { CQFile } from '../entity/CQFile'
+import { IVer } from '../entity/IVer'
 /**
  * 酷Q事件监听
  * @author CaoMeiYouRen
@@ -7,7 +8,7 @@ import { CQFile } from '../entity/CQFile'
  * @abstract
  * @class CQListener
  */
-export interface CQListener {
+export interface CQListener extends IVer {
     /**
     * 本函数的内容仅在debug模式下会执行，即CQ.setMode(true)
     *
