@@ -5,3 +5,4 @@ function __export(m) {
 Object.defineProperty(exports, "__esModule", { value: true });
 __export(require("./log"));
 __export(require("./timeHelp"));
+__export(require("./strHelp"));

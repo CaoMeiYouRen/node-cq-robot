@@ -266,12 +266,14 @@ class CoolQ {
     }
     /** ************   snake_case 下划线风格 *********** */
     /**
-     *
      * 发送私聊消息
-     * @export
+     *
+     * @author CaoMeiYouRen
+     * @date 2019-07-10
      * @param {number} user_id 对方 QQ 号
-     * @param {string} message 要发送的内容
+     * @param {(string | CQMessage | Array<CQMessage>)} message 要发送的内容，支持纯文本和数组格式
      * @returns
+     * @memberof CoolQ
      */
     send_private_msg(user_id, message) {
         return __awaiter(this, void 0, void 0, function* () {
@@ -287,9 +289,12 @@ class CoolQ {
     }
     /**
      * 发送群消息
-     * @export
+     * @author CaoMeiYouRen
+     * @date 2019-07-10
      * @param {number} group_id 群号
-     * @param {string} message 要发送的内容
+     * @param {(string | CQMessage | Array<CQMessage>)} message 要发送的内容，支持纯文本和数组格式
+     * @returns
+     * @memberof CoolQ
      */
     send_group_msg(group_id, message) {
         return __awaiter(this, void 0, void 0, function* () {
@@ -305,9 +310,13 @@ class CoolQ {
     }
     /**
      * 发送讨论组消息
-     * @export
+     *
+     * @author CaoMeiYouRen
+     * @date 2019-07-10
      * @param {number} discuss_id 讨论组 ID（正常情况下看不到，需要从讨论组消息上报的数据中获得）
-     * @param {string} message 要发送的内容
+     * @param {(string | CQMessage | Array<CQMessage>)} message 要发送的内容
+     * @returns
+     * @memberof CoolQ
      */
     send_discuss_msg(discuss_id, message) {
         return __awaiter(this, void 0, void 0, function* () {

@@ -20,7 +20,7 @@ class LtdCmyrDemo extends CQApp {
     appDirectory: string;
     constructor() {
         super('com.example.demo', __dirname)
-        this.CQ.setDebug(true)//开启调试模式
+        this.CQ.setDebug(true)// 开启调试模式
     }
     debug(): void {
         // console.log('debug()方法只会在debug模式下执行')
@@ -50,19 +50,19 @@ class LtdCmyrDemo extends CQApp {
     }
     privateMsg(subType: string, msgId: number, fromQQ: number, msg: string, font: number): 0 | 1 {
         if (fromQQ === 996881204) {
-            this.CQ.send_private_msg(fromQQ, '你好，这是' + this.APP_ID + '的回复')
+            this.CQ.send_private_msg(fromQQ, `你好，这是${this.APP_ID}的回复`)
         }
         return 0
     }
     groupMsg(subType: string, msgId: number, fromGroup: number, fromQQ: number, fromAnonymous: string, msg: string, font: number): 0 | 1 {
         if (fromQQ === 996881204) {
-            this.CQ.send_group_msg(fromGroup, new CQAt(fromQQ) + '你好，这是' + this.APP_ID + '的回复')
+            this.CQ.send_group_msg(fromGroup, `${new CQAt(fromQQ)}你好，这是${this.APP_ID}的回复`)
         }
         return 0
     }
     discussMsg(subType: string, msgId: number, fromDiscuss: number, fromQQ: number, msg: string, font: number): 0 | 1 {
         if (fromQQ === 996881204) {
-            this.CQ.send_discuss_msg(fromDiscuss, new CQAt(fromQQ) + '你发送了：' + msg)
+            this.CQ.send_discuss_msg(fromDiscuss, `${new CQAt(fromQQ)}你发送了：${msg}`)
         }
         return 0
     }

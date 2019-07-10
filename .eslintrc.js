@@ -28,6 +28,7 @@ module.exports = {
         'html'
     ],
     rules: {
+        'max-nested-callbacks': 0,
         // 类和接口的命名必须遵守帕斯卡命名法，比如 PersianCat
         // 'typescript/class-name-casing': 'error',
         indent: [// 强制使用一致的缩进

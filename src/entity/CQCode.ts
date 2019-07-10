@@ -1,4 +1,5 @@
 /* eslint no-param-reassign: 0 */
+import { getMidStr } from '../utils'
 import { CQAnonymous, CQAt, CQBFace, CQCustomMusic, CQDice, CQEmoji, CQFace, CQImage, CQMusic, CQRPS, CQRecord, CQSFace, CQShake, CQShare, CQText } from 'cq-websocket'
 /**
  * CQ码专用类
@@ -15,11 +16,11 @@ export class CQCode {
      * @author CaoMeiYouRen
      * @date 2019-07-09
      * @param {string} code 要转义的字符串
-     * @param {boolean} [isComma=false] 是否转义逗号
+     * @param {boolean} [isComma=true] 是否转义逗号，默认为true
      * @returns {string} 转义后的字符串
      * @memberof CQCode
      */
-    encode(code: string, isComma: boolean = false): string {
+    encode(code: string, isComma: boolean = true): string {
         code = code.replace('&', '&amp;')
         code = code.replace('[', '&#91;')
         code = code.replace(']', '&#93;')
@@ -104,8 +105,8 @@ export class CQCode {
      * @memberof CQCode
      */
     anonymous(ignore: boolean = false): string {
-        // return new CQAnonymous(ignore).toString()
-        return `[CQ:anonymous${ignore ? ',ignore=true' : ''}]`
+        return new CQAnonymous(ignore).toString()
+        // return `[CQ:anonymous${ignore ? ',ignore=true' : ''}]`
     }
     /**
      *发送音乐(music)
@@ -113,12 +114,12 @@ export class CQCode {
      * @author CaoMeiYouRen
      * @date 2019-07-09
      * @param {number} musicId 音乐的歌曲数字ID
-     * @param {string} [type=''] 目前支持 qq/QQ音乐 163/网易云音乐 xiami/虾米音乐，默认为qq
+     * @param {('' | 'qq' | '163' | 'xiami')}  [type=''] 目前支持 qq/QQ音乐 163/网易云音乐 xiami/虾米音乐，默认为qq
      * @param {boolean} [style=false] 启用新版样式，目前仅 QQ音乐 支持
      * @returns {string}
      * @memberof CQCode
      */
-    music(musicId: number, type: string = '', style: boolean = false): string {
+    music(musicId: number, type: '' | 'qq' | '163' | 'xiami' = '', style: boolean = false): string {
         return `[CQ:music,id=${musicId},type=${type ? type : 'qq'}${style ? ',style=1' : ''}]`
     }
     /**
@@ -135,10 +136,116 @@ export class CQCode {
      * @memberof CQCode
      */
     customMusic(url: string, audio: string, title: string = '', content: string = '', image: string = ''): string {
-        // return new CQCustomMusic(this.encode(url, true), audio, title, content, image).toString()
-        return ''
+        return new CQCustomMusic(this.encode(url), this.encode(audio), this.encode(title), this.encode(content), this.encode(image)).toString()
     }
-    demo(): string {
-        return ''
+    /**
+     * 发送名片分享(contact)
+     *
+     * @author CaoMeiYouRen
+     * @date 2019-07-10
+     * @param {('qq' | 'group')} type 类型 目前支持 qq/好友分享 group/群分享
+     * @param {number} id 类型为qq，则为QQID；类型为group，则为群号
+     * @returns {string}
+     * @memberof CQCode
+     */
+    contact(type: 'qq' | 'group', id: number): string {
+        return `[CQ:contact,type=${type},id=${id}]`
+    }
+    /**
+     * 发送链接分享(share)
+     *
+     * @author CaoMeiYouRen
+     * @date 2019-07-10
+     * @param {string} url 分享的链接
+     * @param {string} [title=''] 分享的标题，建议12字以内
+     * @param {string} [content=''] 分享的简介，建议30字以内
+     * @param {string} [image=''] 分享的图片链接，留空则为默认图片
+     * @returns {string}
+     * @memberof CQCode
+     */
+    share(url: string, title: string = '', content: string = '', image: string = ''): string {
+        return new CQShare(this.encode(url), this.encode(title), this.encode(content), this.encode(image)).toString()
+    }
+    /**
+     * 发送位置分享(location)
+     *
+     * @author CaoMeiYouRen
+     * @date 2019-07-10
+     * @param {number} lat 纬度
+     * @param {number} lon 经度
+     * @param {number} [zoom=15] 放大倍数
+     * @param {string} title 地点名称，建议12字以内
+     * @param {string} content 地址，建议20字以内
+     * @returns {string}
+     * @memberof CQCode
+     */
+    location(lat: number, lon: number, zoom: number = 15, title: string, content: string): string {
+        let para = `[CQ:location,lat=${lat},lon=${lon}`
+        if (zoom > 0) {
+            para += `,zoom=${zoom}`
+        }
+        // para += `,title=${this.encode(title)},content=${content}]`
+        para += `,title=${this.encode(title)},content=${this.encode(content)}]`
+        return para
+    }
+    /**
+     * 发送图片(image)
+     * 1.原生：将图片放在 酷Q的 data\image 下，并填写相对路径。如 data\image\1.jpg 则填写 1.jpg；
+     * 2.增强：增强 CQ 码支持设置 file 为http/https/file协议，可以发送网络和本地文件系统中其它地方的图片、语音；
+     * 增强 CQ 码详见https://cqhttp.cc/docs/4.10/#/CQCode
+     * @author CaoMeiYouRen
+     * @date 2019-07-10
+     * @param {string} file 文件路径
+     * @param {boolean} [cache=true] 是否使用缓存，默认为true
+     * @returns {string}
+     * @memberof CQCode
+     */
+    image(file: string, cache: boolean = true): string {
+        return new CQImage(this.encode(file), cache).toString()
+    }
+    /**
+     * 发送语音(record)
+     * 1.原生：将语音放在 data\record 下，并填写相对路径。如 data\record\1.amr 则填写 1.amr；
+     * 2.增强：增强 CQ 码支持设置 file 为http/https/file协议，可以发送网络和本地文件系统中其它地方的图片、语音；
+     * 增强 CQ 码详见https://cqhttp.cc/docs/4.10/#/CQCode
+     * @author CaoMeiYouRen
+     * @date 2019-07-10
+     * @param {string} file 文件路径
+     * @param {boolean} [magic=false] 是否是魔法语音
+     * @returns {string}
+     * @memberof CQCode
+     */
+    record(file: string, magic: boolean = false): string {
+        return new CQRecord(this.encode(file), magic).toString()
+    }
+    /**
+     * 从CQ码中获取图片的路径，如 [CQ:image,file=1.jpg] 则返回 1.jpg;
+     * 失败返回空字符串
+     * @author CaoMeiYouRen
+     * @date 2019-07-10
+     * @param {string} code CQ码
+     * @returns {string}
+     * @memberof CQCode
+     */
+    getImage(code: string): string {
+        if (code.includes('url=')) { // 考虑到增强 CQ 码多了一个url字段，因此不能直接分割字符串
+            return getMidStr(code, '[CQ:image,file=', ',url=') // url不为空的情况下
+        }
+        return getMidStr(code, '[CQ:image,file=', ']')
+    }
+    /**
+     * 从CQ码中获取语音的路径，如 [CQ:record,file=1.amr] 则返回 1.amr;
+     * 失败返回空字符串
+     * @author CaoMeiYouRen
+     * @date 2019-07-10
+     * @param {string} code CQ码
+     * @returns {string}
+     * @memberof CQCode
+     */
+    getRecord(code: string): string {
+        if (code.includes('url=')) { // 考虑到增强 CQ 码多了一个url字段，因此不能直接分割字符串
+            return getMidStr(code, '[CQ:record,file=', ',url=') // url不为空的情况下
+        }
+        return getMidStr(code, '[CQ:record,file=', ']')
     }
 }
