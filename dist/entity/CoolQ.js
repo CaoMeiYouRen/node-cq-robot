@@ -278,7 +278,7 @@ class CoolQ {
     send_private_msg(user_id, message) {
         return __awaiter(this, void 0, void 0, function* () {
             if (this.debug) {
-                utils_1.printTime(`[发送私聊消息] QQID:${user_id} msg:${message}`, CQLog_1.CQLog.LOG_INFO_SEND);
+                utils_1.printTime(`[发送私聊消息] QQID:${user_id} msg:${JSON.stringify(message)}`, CQLog_1.CQLog.LOG_INFO_SEND);
                 return 0;
             }
             return this.cqBasicOperate('send_private_msg', {
@@ -299,7 +299,7 @@ class CoolQ {
     send_group_msg(group_id, message) {
         return __awaiter(this, void 0, void 0, function* () {
             if (this.debug) {
-                utils_1.printTime(`[发送群消息] 群号:${group_id} msg:${message}`, CQLog_1.CQLog.LOG_INFO_SEND);
+                utils_1.printTime(`[发送群消息] 群号:${group_id} msg:${JSON.stringify(message)}`, CQLog_1.CQLog.LOG_INFO_SEND);
                 return 0;
             }
             return this.cqBasicOperate('send_group_msg', {
@@ -321,7 +321,7 @@ class CoolQ {
     send_discuss_msg(discuss_id, message) {
         return __awaiter(this, void 0, void 0, function* () {
             if (this.debug) {
-                utils_1.printTime(`[发送讨论组消息] 讨论组号:${discuss_id} msg:${message}`, CQLog_1.CQLog.LOG_INFO_SEND);
+                utils_1.printTime(`[发送讨论组消息] 讨论组号:${discuss_id} msg:${JSON.stringify(message)}`, CQLog_1.CQLog.LOG_INFO_SEND);
                 return 0;
             }
             return this.cqBasicOperate('send_discuss_msg', {

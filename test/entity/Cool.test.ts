@@ -1,11 +1,11 @@
-import { CoolQ } from '../../src/entity'
+import { CoolQ, CQMessage } from '../../src/entity'
 import 'should'
 describe('CoolQ', () => {
     let CQ: CoolQ
     before(() => {
         CQ = new CoolQ('com.example.demo', 'E:\\我的学习\\JS项目开发\\node-cq-robot\\test\\app\\com.example.demo')
     })
-    describe.skip('api调用', () => {
+    describe('api调用', () => {
         it('APP_ID校验', () => {
             CQ.APP_ID.should.equal('com.example.demo')
         })
@@ -28,6 +28,24 @@ describe('CoolQ', () => {
         })
         it('发送讨论组消息', () => {
             CQ.send_discuss_msg(10001, '测试讨论组消息').then(result => {
+                result.should.equal(0)
+            })
+        })
+        it('发送私聊消息', () => {
+            let msg: CQMessage = { type: 'text', data: { text: '123' }}
+            CQ.send_private_msg(10001, msg).then(result => {
+                result.should.equal(0)
+            })
+        })
+        it('发送群聊消息', () => {
+            let msg: CQMessage = { type: 'text', data: { text: '123' }}
+            CQ.send_group_msg(10001, msg).then(result => {
+                result.should.equal(0)
+            })
+        })
+        it('发送讨论组消息', () => {
+            let msg: CQMessage = { type: 'text', data: { text: '123' }}
+            CQ.send_discuss_msg(10001, msg).then(result => {
                 result.should.equal(0)
             })
         })
