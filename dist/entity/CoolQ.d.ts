@@ -221,7 +221,7 @@ export declare class CoolQ {
      * @returns
      * @memberof CoolQ
      */
-    delete_msg(message_id: number): Promise<number | import("cq-websocket").APIResponse<unknown>>;
+    delete_msg(message_id: number): Promise<number | import("_cq-websocket@2.0.1@cq-websocket").APIResponse<unknown>>;
     /**
      * 发送好友赞
      *
@@ -238,7 +238,7 @@ export declare class CoolQ {
      * @param {boolean} [reject_add_request=false] 拒绝此人的加群请求
      * @returns
      */
-    set_group_kick(group_id: number, user_id: number, reject_add_request?: boolean): Promise<number | import("cq-websocket").APIResponse<unknown>>;
+    set_group_kick(group_id: number, user_id: number, reject_add_request?: boolean): Promise<number | import("_cq-websocket@2.0.1@cq-websocket").APIResponse<unknown>>;
     /**
      * 群组单人禁言
      *
@@ -247,7 +247,7 @@ export declare class CoolQ {
      * @param {number} [duration=30 * 60] 禁言时长，单位秒，0 表示取消禁言
      * @returns
      */
-    set_group_ban(group_id: number, user_id: number, duration?: number): Promise<number | import("cq-websocket").APIResponse<unknown>>;
+    set_group_ban(group_id: number, user_id: number, duration?: number): Promise<number | import("_cq-websocket@2.0.1@cq-websocket").APIResponse<unknown>>;
     /**
      * 群组匿名用户禁言
      *
@@ -256,7 +256,7 @@ export declare class CoolQ {
      * @param {number}[duration=30 * 60] 禁言时长，单位秒，0 表示取消禁言
      * @returns
      */
-    set_group_anonymous_ban(group_id: number, anonymous_flag: string, duration?: number): Promise<number | import("cq-websocket").APIResponse<unknown>>;
+    set_group_anonymous_ban(group_id: number, anonymous_flag: string, duration?: number): Promise<number | import("_cq-websocket@2.0.1@cq-websocket").APIResponse<unknown>>;
     /**
      *
      * 群组全员禁言
@@ -264,7 +264,7 @@ export declare class CoolQ {
      * @param {boolean} [enable=true] 是否禁言
      * @returns
      */
-    set_group_whole_ban(group_id: number, enable?: boolean): Promise<number | import("cq-websocket").APIResponse<unknown>>;
+    set_group_whole_ban(group_id: number, enable?: boolean): Promise<number | import("_cq-websocket@2.0.1@cq-websocket").APIResponse<unknown>>;
     /**
      * 群组设置管理员
      * @param {number} group_id 群号
@@ -272,14 +272,14 @@ export declare class CoolQ {
      * @param {boolean} [enable=true] 是否禁言
      * @returns
      */
-    set_group_admin(group_id: number, user_id: number, enable?: boolean): Promise<number | import("cq-websocket").APIResponse<unknown>>;
+    set_group_admin(group_id: number, user_id: number, enable?: boolean): Promise<number | import("_cq-websocket@2.0.1@cq-websocket").APIResponse<unknown>>;
     /**
      * 群组匿名
      * @param {number} group_id 群号
      * @param {boolean} [enable=true] 是否允许匿名聊天
      * @returns
      */
-    set_group_anonymous(group_id: number, enable?: boolean): Promise<number | import("cq-websocket").APIResponse<unknown>>;
+    set_group_anonymous(group_id: number, enable?: boolean): Promise<number | import("_cq-websocket@2.0.1@cq-websocket").APIResponse<unknown>>;
     /**
      * 设置群名片（群备注）
      * @param {number} group_id 群号
@@ -287,14 +287,14 @@ export declare class CoolQ {
      * @param {string} card 群名片内容，不填或空字符串表示删除群名片
      * @returns
      */
-    set_group_card(group_id: number, user_id: number, card?: string): Promise<number | import("cq-websocket").APIResponse<unknown>>;
+    set_group_card(group_id: number, user_id: number, card?: string): Promise<number | import("_cq-websocket@2.0.1@cq-websocket").APIResponse<unknown>>;
     /**
      * 退出群组
      * @param {number} group_id 群号
      * @param {boolean} is_dismiss 是否解散，如果登录号是群主，则仅在此项为 true 时能够解散
      * @returns
      */
-    set_group_leave(group_id: number, is_dismiss?: boolean): Promise<number | import("cq-websocket").APIResponse<unknown>>;
+    set_group_leave(group_id: number, is_dismiss?: boolean): Promise<number | import("_cq-websocket@2.0.1@cq-websocket").APIResponse<unknown>>;
     /**
      * 置群成员专属头衔；
      * Auth=128 需群主权限
@@ -308,7 +308,7 @@ export declare class CoolQ {
      * @returns
      * @memberof CoolQ
      */
-    set_group_special_title(group_id: number, user_id: number, special_title: string, duration: number): Promise<number | import("cq-websocket").APIResponse<unknown>>;
+    set_group_special_title(group_id: number, user_id: number, special_title: string, duration: number): Promise<number | import("_cq-websocket@2.0.1@cq-websocket").APIResponse<unknown>>;
     /**
      * 置讨论组退出
      * Auth=140
@@ -318,7 +318,7 @@ export declare class CoolQ {
      * @returns
      * @memberof CoolQ
      */
-    set_discuss_leave(discuss_id: number): Promise<number | import("cq-websocket").APIResponse<unknown>>;
+    set_discuss_leave(discuss_id: number): Promise<number | import("_cq-websocket@2.0.1@cq-websocket").APIResponse<unknown>>;
     /**
      *  置好友添加请求
      *
@@ -330,7 +330,7 @@ export declare class CoolQ {
      * @returns
      * @memberof CoolQ
      */
-    set_friend_add_request(flag: string, approve: boolean, remark: string): Promise<number | import("cq-websocket").APIResponse<unknown>>;
+    set_friend_add_request(flag: string, approve: boolean, remark: string): Promise<number | import("_cq-websocket@2.0.1@cq-websocket").APIResponse<unknown>>;
     /**
      * 获取登录号信息
      *
@@ -488,7 +488,7 @@ export declare class CoolQ {
      * @returns
      * @memberof CoolQ
      */
-    set_restart_plugin(delay?: number): Promise<number | import("cq-websocket").APIResponse<unknown>>;
+    set_restart_plugin(delay?: number): Promise<number | import("_cq-websocket@2.0.1@cq-websocket").APIResponse<unknown>>;
     /**
      *清理数据目录
      *
@@ -498,7 +498,7 @@ export declare class CoolQ {
      * @returns
      * @memberof CoolQ
      */
-    clean_data_dir(data_dir: 'image' | 'record' | 'show' | 'bface'): Promise<number | import("cq-websocket").APIResponse<unknown>>;
+    clean_data_dir(data_dir: 'image' | 'record' | 'show' | 'bface'): Promise<number | import("_cq-websocket@2.0.1@cq-websocket").APIResponse<unknown>>;
     /**
      *清理插件日志
      *
@@ -507,7 +507,7 @@ export declare class CoolQ {
      * @returns
      * @memberof CoolQ
      */
-    clean_plugin_log(): Promise<number | import("cq-websocket").APIResponse<unknown>>;
+    clean_plugin_log(): Promise<number | import("_cq-websocket@2.0.1@cq-websocket").APIResponse<unknown>>;
     /** *********  camelCase 小驼峰风格  ***************/
     /**
     * 发送私聊消息
@@ -550,7 +550,7 @@ export declare class CoolQ {
     * @returns
     * @memberof CoolQ
     */
-    deleteMsg(message_id: number): Promise<number | import("cq-websocket").APIResponse<unknown>>;
+    deleteMsg(message_id: number): Promise<number | import("_cq-websocket@2.0.1@cq-websocket").APIResponse<unknown>>;
     /**
     * 发送好友赞
     *
@@ -567,7 +567,7 @@ export declare class CoolQ {
     * @param {boolean} [reject_add_request=false] 拒绝此人的加群请求
     * @returns
     */
-    setGroupKick(group_id: number, user_id: number, reject_add_request?: boolean): Promise<number | import("cq-websocket").APIResponse<unknown>>;
+    setGroupKick(group_id: number, user_id: number, reject_add_request?: boolean): Promise<number | import("_cq-websocket@2.0.1@cq-websocket").APIResponse<unknown>>;
     /**
      * 群组单人禁言
      *
@@ -576,7 +576,7 @@ export declare class CoolQ {
      * @param {number} [duration=30 * 60] 禁言时长，单位秒，0 表示取消禁言
      * @returns
      */
-    setGroupBan(group_id: number, user_id: number, duration?: number): Promise<number | import("cq-websocket").APIResponse<unknown>>;
+    setGroupBan(group_id: number, user_id: number, duration?: number): Promise<number | import("_cq-websocket@2.0.1@cq-websocket").APIResponse<unknown>>;
     /**
    * 群组匿名用户禁言
    *
@@ -585,7 +585,7 @@ export declare class CoolQ {
    * @param {number}[duration=30 * 60] 禁言时长，单位秒，0 表示取消禁言
    * @returns
    */
-    setGroupAnonymousBan(group_id: number, anonymous_flag: string, duration?: number): Promise<number | import("cq-websocket").APIResponse<unknown>>;
+    setGroupAnonymousBan(group_id: number, anonymous_flag: string, duration?: number): Promise<number | import("_cq-websocket@2.0.1@cq-websocket").APIResponse<unknown>>;
     /**
      *
      * 群组全员禁言
@@ -593,7 +593,7 @@ export declare class CoolQ {
      * @param {boolean} [enable=true] 是否禁言
      * @returns
      */
-    setGroupWholeBan(group_id: number, enable?: boolean): Promise<number | import("cq-websocket").APIResponse<unknown>>;
+    setGroupWholeBan(group_id: number, enable?: boolean): Promise<number | import("_cq-websocket@2.0.1@cq-websocket").APIResponse<unknown>>;
     /**
      * 群组设置管理员
      * @param {number} group_id 群号
@@ -601,14 +601,14 @@ export declare class CoolQ {
      * @param {boolean} [enable=true] 是否禁言
      * @returns
      */
-    setGroupAdmin(group_id: number, user_id: number, enable?: boolean): Promise<number | import("cq-websocket").APIResponse<unknown>>;
+    setGroupAdmin(group_id: number, user_id: number, enable?: boolean): Promise<number | import("_cq-websocket@2.0.1@cq-websocket").APIResponse<unknown>>;
     /**
       * 群组匿名
       * @param {number} group_id 群号
       * @param {boolean} [enable=true] 是否允许匿名聊天
       * @returns
       */
-    setGroupAnonymous(group_id: number, enable?: boolean): Promise<number | import("cq-websocket").APIResponse<unknown>>;
+    setGroupAnonymous(group_id: number, enable?: boolean): Promise<number | import("_cq-websocket@2.0.1@cq-websocket").APIResponse<unknown>>;
     /**
     * 设置群名片（群备注）
     * @param {number} group_id 群号
@@ -616,14 +616,14 @@ export declare class CoolQ {
     * @param {string} card 群名片内容，不填或空字符串表示删除群名片
     * @returns
     */
-    setGroupCard(group_id: number, user_id: number, card?: string): Promise<number | import("cq-websocket").APIResponse<unknown>>;
+    setGroupCard(group_id: number, user_id: number, card?: string): Promise<number | import("_cq-websocket@2.0.1@cq-websocket").APIResponse<unknown>>;
     /**
     * 退出群组
     * @param {number} group_id 群号
     * @param {boolean} is_dismiss 是否解散，如果登录号是群主，则仅在此项为 true 时能够解散
     * @returns
     */
-    setGroupLeave(group_id: number, is_dismiss?: boolean): Promise<number | import("cq-websocket").APIResponse<unknown>>;
+    setGroupLeave(group_id: number, is_dismiss?: boolean): Promise<number | import("_cq-websocket@2.0.1@cq-websocket").APIResponse<unknown>>;
     /**
    * 置群成员专属头衔；
    * Auth=128 需群主权限
@@ -637,7 +637,7 @@ export declare class CoolQ {
    * @returns
    * @memberof CoolQ
    */
-    setGroupSpecialTitle(group_id: number, user_id: number, special_title: string, duration: number): Promise<number | import("cq-websocket").APIResponse<unknown>>;
+    setGroupSpecialTitle(group_id: number, user_id: number, special_title: string, duration: number): Promise<number | import("_cq-websocket@2.0.1@cq-websocket").APIResponse<unknown>>;
     /**
     * 置讨论组退出
     * Auth=140
@@ -647,7 +647,7 @@ export declare class CoolQ {
     * @returns
     * @memberof CoolQ
     */
-    setDiscussLeave(discuss_id: number): Promise<number | import("cq-websocket").APIResponse<unknown>>;
+    setDiscussLeave(discuss_id: number): Promise<number | import("_cq-websocket@2.0.1@cq-websocket").APIResponse<unknown>>;
     /**
     *  置好友添加请求
     *
@@ -659,7 +659,7 @@ export declare class CoolQ {
     * @returns
     * @memberof CoolQ
     */
-    setFriendAddRequest(flag: string, approve: boolean, remark: string): Promise<number | import("cq-websocket").APIResponse<unknown>>;
+    setFriendAddRequest(flag: string, approve: boolean, remark: string): Promise<number | import("_cq-websocket@2.0.1@cq-websocket").APIResponse<unknown>>;
     /**
     * 获取登录号信息
     *
@@ -817,7 +817,7 @@ export declare class CoolQ {
      * @returns
      * @memberof CoolQ
      */
-    setRestartPlugin(delay?: number): Promise<number | import("cq-websocket").APIResponse<unknown>>;
+    setRestartPlugin(delay?: number): Promise<number | import("_cq-websocket@2.0.1@cq-websocket").APIResponse<unknown>>;
     /**
      *清理数据目录
      *
@@ -827,7 +827,7 @@ export declare class CoolQ {
      * @returns
      * @memberof CoolQ
      */
-    cleanDataDir(data_dir: 'image' | 'record' | 'show' | 'bface'): Promise<number | import("cq-websocket").APIResponse<unknown>>;
+    cleanDataDir(data_dir: 'image' | 'record' | 'show' | 'bface'): Promise<number | import("_cq-websocket@2.0.1@cq-websocket").APIResponse<unknown>>;
     /**
      *清理插件日志
      *
@@ -836,5 +836,5 @@ export declare class CoolQ {
      * @returns
      * @memberof CoolQ
      */
-    cleanPluginLog(): Promise<number | import("cq-websocket").APIResponse<unknown>>;
+    cleanPluginLog(): Promise<number | import("_cq-websocket@2.0.1@cq-websocket").APIResponse<unknown>>;
 }
