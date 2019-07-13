@@ -10,7 +10,7 @@ import { IVer } from '../entity/IVer'
  */
 export interface CQListener extends IVer {
     /**
-    * 本函数的内容仅在debug模式下会执行，即CQ.setMode(true)
+    * 本函数的内容仅在debug模式下会执行，即CQ.setDebug(true)
     *
     * @memberof CQListener
     */
