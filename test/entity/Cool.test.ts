@@ -1,9 +1,10 @@
 import { CoolQ, CQMessage } from '../../src/entity'
+import path = require('path')
 import 'should'
 describe('CoolQ', () => {
     let CQ: CoolQ
     before(() => {
-        CQ = new CoolQ('com.example.demo', 'E:\\我的学习\\JS项目开发\\node-cq-robot\\test\\app\\com.example.demo')
+        CQ = new CoolQ('com.example.demo', path.join(__dirname, '../app/com.example.demo/'))
     })
     describe('api调用', () => {
         it('APP_ID校验', () => {
