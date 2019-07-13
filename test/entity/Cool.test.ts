@@ -18,36 +18,112 @@ describe('CoolQ', () => {
             CQ.getAppDirectory().includes('app\\ltd.cmyr.js.demo\\data\\').should.be.not.equal(-1)
         })
         it('发送私聊消息', () => {
-            CQ.send_private_msg(10001, '测试私聊消息').then(result => {
+            CQ.sendPrivateMsg(10001, '测试私聊消息').then(result => {
                 result.should.equal(0)
             })
         })
         it('发送群聊消息', () => {
-            CQ.send_group_msg(10001, '测试群聊消息').then(result => {
+            CQ.sendGroupMsg(10001, '测试群聊消息').then(result => {
                 result.should.equal(0)
             })
         })
         it('发送讨论组消息', () => {
-            CQ.send_discuss_msg(10001, '测试讨论组消息').then(result => {
+            CQ.sendDiscussMsg(10001, '测试讨论组消息').then(result => {
                 result.should.equal(0)
             })
         })
         it('发送私聊消息', () => {
             let msg: CQMessage = { type: 'text', data: { text: '123' }}
-            CQ.send_private_msg(10001, msg).then(result => {
+            CQ.sendPrivateMsg(10001, msg).then(result => {
                 result.should.equal(0)
             })
         })
         it('发送群聊消息', () => {
             let msg: CQMessage = { type: 'text', data: { text: '123' }}
-            CQ.send_group_msg(10001, msg).then(result => {
+            CQ.sendGroupMsg(10001, msg).then(result => {
                 result.should.equal(0)
             })
         })
         it('发送讨论组消息', () => {
             let msg: CQMessage = { type: 'text', data: { text: '123' }}
-            CQ.send_discuss_msg(10001, msg).then(result => {
+            CQ.sendDiscussMsg(10001, msg).then(result => {
                 result.should.equal(0)
+            })
+        })
+        it('置调试日志，应该返回0', () => {
+            CQ.logDebug('测试', '这是一条测试日志').should.equal(0)
+        })
+        it('撤回消息，应该返回0', () => {
+            CQ.deleteMsg(1).then(result => {
+                result.should.equal(0)
+            })
+        })
+        it('发送好友赞，应该返回0', () => {
+            CQ.sendLike(10001, 1).then(result => {
+                result.should.equal(0)
+            })
+        })
+        it('获取登录号信息', () => {
+            CQ.getLoginInfo().then(result => {
+                result.nickname.should.equal('酷Q')
+                result.user_id.should.equal(10001)
+            })
+        })
+        it('获取陌生人信息', () => {
+            CQ.getStrangerInfo(10001, false).then(result => {
+                result.user_id.should.equal(10001)
+                result.nickname.should.equal('测试昵称')
+                result.sex.should.equal('male')
+                result.age.should.equal(0)
+            })
+        })
+        it('获取群列表', () => {
+            CQ.getGroupList().then(result => {
+                result[0].group_id.should.equal(10001)
+            })
+        })
+        it('取群成员信息', () => {
+            CQ.getGroupMemberInfo(10001, 10001, false).then(result => {
+                result.group_id.should.equal(10001)
+                result.level.should.equal('萌新')
+            })
+        })
+        it('取Cookies', () => {
+            CQ.getCookies().then(result => {
+                result.should.equal('')
+            })
+        })
+        it('取CsrfToken', () => {
+            CQ.getCsrfToken().then(result => {
+                result.should.equal(0)
+            })
+        })
+        it('是否可以发送图片', () => {
+            CQ.canSendImage().then(result => {
+                result.should.equal(true)
+            })
+        })
+        it('是否可以发送语音', () => {
+            CQ.canSendRecord().then(result => {
+                result.should.equal(true)
+            })
+        })
+        it('取插件运行状态', () => {
+            CQ.getStatus().then(result => {
+                result.online.should.equal(true)
+                result.good.should.equal(true)
+            })
+        })
+        it('取酷Q及HTTP_API插件的版本信息', () => {
+            CQ.getVersionInfo().then(result => {
+                result.coolq_edition.should.equal('air')
+                result.plugin_version.should.equal('4.10')
+                result.plugin_build_configuration.should.equal('debug')
+            })
+        })
+        it('重启HTTP_API插件', () => {
+            CQ.setRestartPlugin().then(result => {
+                result.should.equal(1)
             })
         })
 

@@ -401,14 +401,20 @@ export class CoolQ {
      */
     async send_like(user_id: number, times: number = 1) {
         if (this.debug) {
-            printTime(`[发送赞] QQID:${user_id} 次数:${times}`)
+            printTime(`[发送赞] QQID:${user_id} 次数:${times}`, CQLog.LOG_INFO_SEND)
             return 0
         }
-        return this.cqBasicOperate('send_like', {
+        let result = this.cqBasicOperate('send_like', {
             user_id,
             times
         })
+        if (result['status'] === 'ok') {
+            return result['retcode']
+        } else {
+            return -1
+        }
     }
+
 
     /**
      * 群组踢人
@@ -630,11 +636,12 @@ export class CoolQ {
      */
     async get_login_info(): Promise<{ user_id: number; nickname: string; }> {
         if (this.debug) {
-            printTime('[取登录号信息] qq:10001 昵称:酷Q')
-            return {
+            let info = {
                 user_id: 10001,
                 nickname: '酷Q'
             }
+            printTime(`[取登录号信息] qq:${info.user_id} 昵称:${info.nickname}`)
+            return info
         }
         let result = await this.cqBasicOperate('get_login_info', {
         })
@@ -737,7 +744,7 @@ export class CoolQ {
         }
     }
     /**
-     *获取群成员信息
+     *取群成员信息
      *
      * @author CaoMeiYouRen
      * @date 2019-07-13
@@ -747,7 +754,7 @@ export class CoolQ {
      * @returns {Promise<MemberInfo>}
      * @memberof CoolQ
      */
-    async get_group_member_info(group_id: number, user_id: number, no_cache: boolean): Promise<MemberInfo> {
+    async get_group_member_info(group_id: number, user_id: number, no_cache: boolean = false): Promise<MemberInfo> {
         if (this.debug) {
             let testMemberInfo: MemberInfo = {
                 group_id,
@@ -828,7 +835,7 @@ export class CoolQ {
      */
     async get_cookies(): Promise<string> {
         if (this.debug) {
-            printTime('[取Cookies] 本函数请在酷Q中测试')
+            printTime('[取Cookies] 本函数请在酷Q中测试 返回:""', CQLog.LOG_INFO)
             return ''
         }
         let result = await this.cqBasicOperate('get_cookies', {
@@ -841,7 +848,7 @@ export class CoolQ {
     }
 
     /**
-     *取Cookies;Auth=20 慎用,此接口需要严格授权
+     *取CsrfToken Auth=20 即QQ网页用到的bkn/g_tk等 慎用,此接口需要严格授权 //getCsrfToken
      *
      * @author CaoMeiYouRen
      * @date 2019-07-13
@@ -850,7 +857,7 @@ export class CoolQ {
      */
     async get_csrf_token(): Promise<number> {
         if (this.debug) {
-            printTime('[取CsrfToken] 本函数请在酷Q中测试')
+            printTime('[取CsrfToken] 本函数请在酷Q中测试 返回:0', CQLog.LOG_INFO)
             return 0
         }
         let result = await this.cqBasicOperate('get_csrf_token', {
@@ -869,11 +876,11 @@ export class CoolQ {
      * @date 2019-07-13
      * @param {string} file 收到的语音文件名（CQ 码的 file 参数），如 0B38145AA44505000B38145AA4450500.silk
      * @param {string} out_format 要转换到的格式，目前支持 mp3、amr、wma、m4a、spx、ogg、wav、flac
-     * @param {string} full_path 是否返回文件的绝对路径（Windows 环境下建议使用，Docker 中不建议）
+     * @param {boolean} full_path 是否返回文件的绝对路径（Windows 环境下建议使用，Docker 中不建议）
      * @returns {Promise<string>} 转换后的语音文件名或路径，如 0B38145AA44505000B38145AA4450500.mp3，如果开启了 full_path，则如 C:\Apps\CoolQ\data\record\0B38145AA44505000B38145AA4450500.mp3
      * @memberof CoolQ
      */
-    async get_record(file: string, out_format: string, full_path: string): Promise<string> {
+    async get_record(file: string, out_format: string, full_path: boolean = false): Promise<string> {
         if (this.debug) {
             printTime(`[接收语音] 本函数请在酷Q中测试 文件名:${file} 指定格式:${out_format} 是否返回文件的绝对路径:${full_path}`)
             return ''
@@ -932,7 +939,7 @@ export class CoolQ {
         }
     }
     /**
-    *是否可以发送图片
+    *是否可以发送语音
     *
     * @author CaoMeiYouRen
     * @date 2019-07-13
@@ -1031,7 +1038,8 @@ export class CoolQ {
      */
     async set_restart_plugin(delay: number = 0) {
         if (this.debug) {
-            printTime(`[重启HTTP_API插件] 本函数请在酷Q中测试 延时:${delay}返回:重启成功！`, CQLog.LOG_INFO)
+            printTime(`[重启HTTP_API插件] 本函数请在酷Q中测试 延时:${delay} 返回:重启成功！`, CQLog.LOG_INFO)
+            return 1
         }
         return this.cqBasicOperate('set_restart_plugin', {
             delay
@@ -1072,4 +1080,400 @@ export class CoolQ {
         })
     }
     /** *********  camelCase 小驼峰风格  ***************/
+    /**
+    * 发送私聊消息
+    *
+    * @author CaoMeiYouRen
+    * @date 2019-07-10
+    * @param {number} user_id 对方 QQ 号
+    * @param {(string | CQMessage | Array<CQMessage>)} message 要发送的内容，支持纯文本和数组格式
+    * @returns {Promise<number>} 成功返回message_id，失败返回retcode
+    * @memberof CoolQ
+    */
+    async sendPrivateMsg(user_id: number, message: string | CQMessage | Array<CQMessage>): Promise<number> {
+        return this.send_private_msg(user_id, message)
+    }
+    /**
+    * 发送群消息
+    * @author CaoMeiYouRen
+    * @date 2019-07-10
+    * @param {number} group_id 群号
+    * @param {(string | CQMessage | Array<CQMessage>)} message 要发送的内容，支持纯文本和数组格式
+    * @returns 成功返回message_id，失败返回retcode
+    * @memberof CoolQ
+    */
+    async sendGroupMsg(group_id: number, message: string | CQMessage | Array<CQMessage>): Promise<number> {
+        return this.send_group_msg(group_id, message)
+    }
+    /**
+     * 发送讨论组消息
+     * 成功返回message_id，失败返回retcode
+     * @author CaoMeiYouRen
+     * @date 2019-07-10
+     * @param {number} discuss_id 讨论组 ID（正常情况下看不到，需要从讨论组消息上报的数据中获得）
+     * @param {(string | CQMessage | Array<CQMessage>)} message 要发送的内容
+     * @returns
+     * @memberof CoolQ
+     */
+    async sendDiscussMsg(discuss_id: number, message: string | CQMessage | Array<CQMessage>): Promise<number> {
+        return this.send_discuss_msg(discuss_id, message)
+    }
+    /**
+    * 撤回消息
+    *
+    * @author CaoMeiYouRen
+    * @date 2019-07-12
+    * @param {number} message_id 消息 ID
+    * @returns
+    * @memberof CoolQ
+    */
+    async deleteMsg(message_id: number) {
+        return this.delete_msg(message_id)
+    }
+    /**
+    * 发送好友赞
+    *
+    * @param {number} user_id  对方 QQ 号
+    * @param {number} times 赞的次数，每个好友每天最多 10 次，默认为1
+    * @returns
+    */
+    async sendLike(user_id: number, times: number = 1) {
+        return this.send_like(user_id, times)
+    }
+    /**
+    * 群组踢人
+    *
+    * @param {number} group_id 群号
+    * @param {number} user_id  要踢的 QQ 号
+    * @param {boolean} [reject_add_request=false] 拒绝此人的加群请求
+    * @returns
+    */
+    async setGroupKick(group_id: number, user_id: number, reject_add_request: boolean = false) {
+        return this.set_group_kick(group_id, user_id, reject_add_request)
+    }
+    /**
+     * 群组单人禁言
+     *
+     * @param {number} group_id 群号
+     * @param {number} user_id  要禁言的 QQ 号
+     * @param {number} [duration=30 * 60] 禁言时长，单位秒，0 表示取消禁言
+     * @returns
+     */
+    async setGroupBan(group_id: number, user_id: number, duration: number = 30 * 60) {
+        return this.set_group_ban(group_id, user_id, duration)
+    }
+    /**
+   * 群组匿名用户禁言
+   *
+   * @param {number} group_id 群号
+   * @param {string} anonymous_flag  要禁言的匿名用户的 flag（需从群消息上报的数据中获得）
+   * @param {number}[duration=30 * 60] 禁言时长，单位秒，0 表示取消禁言
+   * @returns
+   */
+    async setGroupAnonymousBan(group_id: number, anonymous_flag: string, duration: number = 30 * 60) {
+        return this.set_group_anonymous_ban(group_id, anonymous_flag, duration)
+    }
+
+    /**
+     *
+     * 群组全员禁言
+     * @param {number} group_id 群号
+     * @param {boolean} [enable=true] 是否禁言
+     * @returns
+     */
+    async setGroupWholeBan(group_id: number, enable: boolean = true) {
+        return this.set_group_whole_ban(group_id, enable)
+    }
+    /**
+     * 群组设置管理员
+     * @param {number} group_id 群号
+     * @param {number} user_id
+     * @param {boolean} [enable=true] 是否禁言
+     * @returns
+     */
+    async setGroupAdmin(group_id: number, user_id: number, enable: boolean = true) {
+        return this.set_group_admin(group_id, user_id, enable)
+    }
+    /**
+      * 群组匿名
+      * @param {number} group_id 群号
+      * @param {boolean} [enable=true] 是否允许匿名聊天
+      * @returns
+      */
+    async setGroupAnonymous(group_id: number, enable: boolean = true) {
+        return this.set_group_anonymous(group_id, enable)
+    }
+    /**
+    * 设置群名片（群备注）
+    * @param {number} group_id 群号
+    * @param {number} user_id 要设置的 QQ 号
+    * @param {string} card 群名片内容，不填或空字符串表示删除群名片
+    * @returns
+    */
+    async setGroupCard(group_id: number, user_id: number, card: string = '') {
+        return this.set_group_card(group_id, user_id, card)
+    }
+    /**
+    * 退出群组
+    * @param {number} group_id 群号
+    * @param {boolean} is_dismiss 是否解散，如果登录号是群主，则仅在此项为 true 时能够解散
+    * @returns
+    */
+    async setGroupLeave(group_id: number, is_dismiss: boolean = false) {
+        return this.set_group_leave(group_id, is_dismiss)
+    }
+    /**
+   * 置群成员专属头衔；
+   * Auth=128 需群主权限
+   *
+   * @author CaoMeiYouRen
+   * @date 2019-07-12
+   * @param {number} group_id 目标群
+   * @param {number} user_id 目标QQ
+   * @param {string} special_title 如果要删除，这里填空
+   * @param {number} duration 专属头衔有效期，单位为秒。如果永久有效，这里填写-1
+   * @returns
+   * @memberof CoolQ
+   */
+    async setGroupSpecialTitle(group_id: number, user_id: number, special_title: string, duration: number) {
+        return this.set_group_special_title(group_id, user_id, special_title, duration)
+    }
+    /**
+    * 置讨论组退出
+    * Auth=140
+    * @author CaoMeiYouRen
+    * @date 2019-07-12
+    * @param {number} discuss_id 讨论组 ID（正常情况下看不到，需要从讨论组消息上报的数据中获得
+    * @returns
+    * @memberof CoolQ
+    */
+    async setDiscussLeave(discuss_id: number) {
+        return this.set_discuss_leave(discuss_id)
+    }
+    /**
+    *  置好友添加请求
+    *
+    * @author CaoMeiYouRen
+    * @date 2019-07-12
+    * @param {string} flag 加好友请求的 flag（需从上报的数据中获得）
+    * @param {boolean} [approve=true] 是否同意请求
+    * @param {string} remark 添加后的好友备注（仅在同意时有效）
+    * @returns
+    * @memberof CoolQ
+    */
+    async setFriendAddRequest(flag: string, approve: boolean = true, remark: string) {
+        return this.set_friend_add_request(flag, approve, remark)
+    }
+    /**
+    * 获取登录号信息
+    *
+    * @author CaoMeiYouRen
+    * @date 2019-07-12
+    * @returns {Promise<{ user_id: number; nickname: string; }>}
+    * @memberof CoolQ
+    */
+    async getLoginInfo(): Promise<{ user_id: number; nickname: string; }> {
+        return this.get_login_info()
+    }
+    /**
+    * 取登录QQ
+    *
+    * @author CaoMeiYouRen
+    * @date 2019-07-12
+    * @returns {Promise<number>}
+    * @memberof CoolQ
+    */
+    async getLoginQq(): Promise<number> {
+        return this.get_login_qq()
+    }
+    /**
+   *取登录昵称
+   *
+   * @author CaoMeiYouRen
+   * @date 2019-07-12
+   * @returns {Promise<string>}
+   * @memberof CoolQ
+   */
+    async getLoginNick(): Promise<string> {
+        return this.get_login_nick()
+    }
+    /**
+     *获取陌生人信息
+     *
+     * @author CaoMeiYouRen
+     * @date 2019-07-12
+     * @param {number} user_id QQ 号
+     * @param {boolean} [no_cache=false] 是否不使用缓存（使用缓存可能更新不及时，但响应更快）
+     * @returns {Promise<QQInfo>}
+     * @memberof CoolQ
+     */
+    async getStrangerInfo(user_id: number, no_cache: boolean = false): Promise<QQInfo> {
+        return this.get_stranger_info(user_id, no_cache)
+    }
+    /**
+    * 获取群列表
+    *
+    * @author CaoMeiYouRen
+    * @date 2019-07-13
+    * @returns {Promise<Array<GroupInfo>>}
+    * @memberof CoolQ
+    */
+    async getGroupList(): Promise<Array<GroupInfo>> {
+        return this.get_group_list()
+    }
+    /**
+   *获取群成员信息
+   *
+   * @author CaoMeiYouRen
+   * @date 2019-07-13
+   * @param {number} group_id 群号
+   * @param {number} user_id QQ 号
+   * @param {boolean} no_cache 是否不使用缓存（使用缓存可能更新不及时，但响应更快）
+   * @returns {Promise<MemberInfo>}
+   * @memberof CoolQ
+   */
+    async getGroupMemberInfo(group_id: number, user_id: number, no_cache: boolean): Promise<MemberInfo> {
+        return this.get_group_member_info(group_id, user_id, no_cache)
+    }
+    /**
+     *取群成员列表
+     *
+     * @author CaoMeiYouRen
+     * @date 2019-07-13
+     * @param {number} group_id
+     * @returns {Promise<Array<MemberInfo>>} 响应内容为 JSON 数组，每个元素的内容和上面的 /get_group_member_info 接口相同，但对于同一个群组的同一个成员，获取列表时和获取单独的成员信息时，某些字段可能有所不同，例如 area、title 等字段在获取列表时无法获得，具体应以单独的成员信息为准。
+     * @memberof CoolQ
+     */
+    async getGroupMemberList(group_id: number): Promise<Array<MemberInfo>> {
+        return this.get_group_member_list(group_id)
+    }
+    /**
+     *取Cookies;Auth=20 慎用,此接口需要严格授权
+     *
+     * @author CaoMeiYouRen
+     * @date 2019-07-13
+     * @returns {Promise<string>}
+     * @memberof CoolQ
+     */
+    async getCookies(): Promise<string> {
+        return this.get_cookies()
+    }
+    /**
+     *取CsrfToken Auth=20 即QQ网页用到的bkn/g_tk等 慎用,此接口需要严格授权 //getCsrfToken
+     *
+     * @author CaoMeiYouRen
+     * @date 2019-07-13
+     * @returns {Promise<string>}
+     * @memberof CoolQ
+     */
+    async getCsrfToken(): Promise<number> {
+        return this.get_csrf_token()
+    }
+    /**
+   * 接收语音。
+   * 其实并不是真的获取语音，而是转换语音到指定的格式，然后返回语音文件名（data\record 目录下）。注意，要使用此接口，需要安装 酷Q 的 语音组件。
+   * @author CaoMeiYouRen
+   * @date 2019-07-13
+   * @param {string} file 收到的语音文件名（CQ 码的 file 参数），如 0B38145AA44505000B38145AA4450500.silk
+   * @param {string} out_format 要转换到的格式，目前支持 mp3、amr、wma、m4a、spx、ogg、wav、flac
+   * @param {boolean} full_path 是否返回文件的绝对路径（Windows 环境下建议使用，Docker 中不建议）
+   * @returns {Promise<string>} 转换后的语音文件名或路径，如 0B38145AA44505000B38145AA4450500.mp3，如果开启了 full_path，则如 C:\Apps\CoolQ\data\record\0B38145AA44505000B38145AA4450500.mp3
+   * @memberof CoolQ
+   */
+    async getRecord(file: string, out_format: string, full_path: boolean): Promise<string> {
+        return this.get_record(file, out_format, full_path)
+    }
+    /**
+     *接收图片；
+     *Auth=30 收到的图片文件名（CQ 码的 file 参数），如 6B4DE3DFD1BD271E3297859D41C530F5.jpg
+     * @author CaoMeiYouRen
+     * @date 2019-07-13
+     * @param {string} file
+     * @returns {Promise<string>} 下载后的图片文件路径，如 C:\Apps\CoolQ\data\image\6B4DE3DFD1BD271E3297859D41C530F5.jpg
+     * @memberof CoolQ
+     */
+    async getImage(file: string): Promise<string> {
+        return this.get_image(file)
+    }
+    /**
+     *是否可以发送图片
+     *
+     * @author CaoMeiYouRen
+     * @date 2019-07-13
+     * @returns {Promise<boolean>}
+     * @memberof CoolQ
+     */
+    async canSendImage(): Promise<boolean> {
+        return this.can_send_image()
+    }
+    /**
+   *是否可以发送语音
+   *
+   * @author CaoMeiYouRen
+   * @date 2019-07-13
+   * @returns {Promise<boolean>}
+   * @memberof CoolQ
+   */
+    async canSendRecord(): Promise<boolean> {
+        return this.can_send_record()
+    }
+    /**
+     *取插件运行状态
+     *
+     * @author CaoMeiYouRen
+     * @date 2019-07-13
+     * @returns {Promise<HttpApiStatus>} 通常情况下建议只使用 online 和 good 这两个字段来判断运行状态，因为随着插件的更新，其它字段有可能频繁变化。
+     * @memberof CoolQ
+     */
+    async getStatus(): Promise<HttpApiStatus> {
+        return this.get_status()
+    }
+
+    /**
+     *取 酷Q 及 HTTP API 插件的版本信息
+     *
+     * @author CaoMeiYouRen
+     * @date 2019-07-13
+     * @returns {Promise<HttpApiInfo>}
+     * @memberof CoolQ
+     */
+    async getVersionInfo(): Promise<HttpApiInfo> {
+        return this.get_version_info()
+    }
+    /**
+     *重启 HTTP API 插件；
+     *由于重启插件同时需要重启 API 服务，这意味着当前的 API 请求会被中断，因此需在异步地重启插件，接口返回的 status 是 async。
+     * @author CaoMeiYouRen
+     * @date 2019-07-13
+     * @param {number} [delay=0]
+     * @returns
+     * @memberof CoolQ
+     */
+    async setRestartPlugin(delay: number = 0) {
+        return this.set_restart_plugin(delay)
+    }
+
+    /**
+     *清理数据目录
+     *
+     * @author CaoMeiYouRen
+     * @date 2019-07-13
+     * @param {string} data_dir 要清理的目录名，支持 image、record、show、bface
+     * @returns
+     * @memberof CoolQ
+     */
+    async cleanDataDir(data_dir: 'image' | 'record' | 'show' | 'bface') {
+        return this.clean_data_dir(data_dir)
+    }
+    /**
+     *清理插件日志
+     *
+     * @author CaoMeiYouRen
+     * @date 2019-07-13
+     * @returns
+     * @memberof CoolQ
+     */
+    async cleanPluginLog() {
+        return this.clean_plugin_log()
+    }
 }
