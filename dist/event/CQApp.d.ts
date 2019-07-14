@@ -49,14 +49,14 @@ export declare class CQApp extends CQAppAbstract implements CQListener {
     exit(): 0;
     enable(): 0;
     disable(): 0;
-    privateMsg(subType: string, msgId: number, fromQQ: number, msg: string, font: number): 0 | 1;
-    groupMsg(subType: string, msgId: number, fromGroup: number, fromQQ: number, fromAnonymous: string, msg: string, font: number): 0 | 1;
-    discussMsg(subType: string, msgId: number, fromDiscuss: number, fromQQ: number, msg: string, font: number): 0 | 1;
-    groupUpload(subType: string, sendTime: number, fromGroup: number, fromQQ: number, file: CQFile): 0 | 1;
-    groupAdmin(subType: string, sendTime: number, fromGroup: number, beingOperateQQ: number): 0 | 1;
-    groupDecrease(subType: string, sendTime: number, fromGroup: number, fromQQ: number, beingOperateQQ: number): 0 | 1;
-    groupIncrease(subType: string, sendTime: number, fromGroup: number, fromQQ: number, beingOperateQQ: number): 0 | 1;
-    friendAdd(subType: string, sendTime: number, fromQQ: number): 0 | 1;
-    requestAddFriend(subType: string, sendTime: number, fromQQ: number, msg: string, responseFlag: string): 0 | 1;
-    requestAddGroup(subType: string, sendTime: number, fromGroup: number, fromQQ: number, msg: string, responseFlag: string): 0 | 1;
+    privateMsg(subType: string, msgId: number, fromQQ: number, msg: string, font: number): Promise<0 | 1>;
+    groupMsg(subType: string, msgId: number, fromGroup: number, fromQQ: number, fromAnonymous: string, msg: string, font: number): Promise<0 | 1>;
+    discussMsg(subType: string, msgId: number, fromDiscuss: number, fromQQ: number, msg: string, font: number): Promise<0 | 1>;
+    groupUpload(subType: string, sendTime: number, fromGroup: number, fromQQ: number, file: CQFile): Promise<0 | 1>;
+    groupAdmin(subType: string, sendTime: number, fromGroup: number, beingOperateQQ: number): Promise<0 | 1>;
+    groupDecrease(subType: string, sendTime: number, fromGroup: number, fromQQ: number, beingOperateQQ: number): Promise<0 | 1>;
+    groupIncrease(subType: string, sendTime: number, fromGroup: number, fromQQ: number, beingOperateQQ: number): Promise<0 | 1>;
+    friendAdd(subType: string, sendTime: number, fromQQ: number): Promise<0 | 1>;
+    requestAddFriend(subType: string, sendTime: number, fromQQ: number, msg: string, responseFlag: string): Promise<0 | 1>;
+    requestAddGroup(subType: string, sendTime: number, fromGroup: number, fromQQ: number, msg: string, responseFlag: string): Promise<0 | 1>;
 }

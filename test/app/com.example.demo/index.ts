@@ -48,43 +48,43 @@ class LtdCmyrDemo extends CQApp {
         this.isEnable = false
         return 0
     }
-    privateMsg(subType: string, msgId: number, fromQQ: number, msg: string, font: number): 0 | 1 {
+    async privateMsg(subType: string, msgId: number, fromQQ: number, msg: string, font: number): Promise<0 | 1> {
         if (fromQQ === 996881204) {
             this.CQ.send_private_msg(fromQQ, `你好，这是${this.APP_ID}的回复`)
         }
         return 0
     }
-    groupMsg(subType: string, msgId: number, fromGroup: number, fromQQ: number, fromAnonymous: string, msg: string, font: number): 0 | 1 {
+    async groupMsg(subType: string, msgId: number, fromGroup: number, fromQQ: number, fromAnonymous: string, msg: string, font: number): Promise<0 | 1> {
         if (fromQQ === 996881204) {
             this.CQ.send_group_msg(fromGroup, `${new CQAt(fromQQ)}你好，这是${this.APP_ID}的回复`)
         }
         return 0
     }
-    discussMsg(subType: string, msgId: number, fromDiscuss: number, fromQQ: number, msg: string, font: number): 0 | 1 {
+    async discussMsg(subType: string, msgId: number, fromDiscuss: number, fromQQ: number, msg: string, font: number): Promise<0 | 1> {
         if (fromQQ === 996881204) {
             this.CQ.send_discuss_msg(fromDiscuss, `${new CQAt(fromQQ)}你发送了：${msg}`)
         }
         return 0
     }
-    groupUpload(subType: string, sendTime: number, fromGroup: number, fromQQ: number, file: CQFile): 0 | 1 {
+    async groupUpload(subType: string, sendTime: number, fromGroup: number, fromQQ: number, file: CQFile): Promise<0 | 1> {
         return 0
     }
-    groupAdmin(subType: string, sendTime: number, fromGroup: number, beingOperateQQ: number): 0 | 1 {
+    async groupAdmin(subType: string, sendTime: number, fromGroup: number, beingOperateQQ: number): Promise<0 | 1> {
         return 0
     }
-    groupDecrease(subType: string, sendTime: number, fromGroup: number, fromQQ: number, beingOperateQQ: number): 0 | 1 {
+    async groupDecrease(subType: string, sendTime: number, fromGroup: number, fromQQ: number, beingOperateQQ: number): Promise<0 | 1> {
         return 0
     }
-    groupIncrease(subType: string, sendTime: number, fromGroup: number, fromQQ: number, beingOperateQQ: number): 0 | 1 {
+    async groupIncrease(subType: string, sendTime: number, fromGroup: number, fromQQ: number, beingOperateQQ: number): Promise<0 | 1> {
         return 0
     }
-    friendAdd(subType: string, sendTime: number, fromQQ: number): 0 | 1 {
+    async friendAdd(subType: string, sendTime: number, fromQQ: number): Promise<0 | 1> {
         return 0
     }
-    requestAddFriend(subType: string, sendTime: number, fromQQ: number, msg: string, responseFlag: string): 0 | 1 {
+    async requestAddFriend(subType: string, sendTime: number, fromQQ: number, msg: string, responseFlag: string): Promise<0 | 1> {
         return 0
     }
-    requestAddGroup(subType: string, sendTime: number, fromGroup: number, fromQQ: number, msg: string, responseFlag: string): 0 | 1 {
+    async requestAddGroup(subType: string, sendTime: number, fromGroup: number, fromQQ: number, msg: string, responseFlag: string): Promise<0 | 1> {
         return 0
     }
 

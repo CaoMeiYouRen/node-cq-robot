@@ -62,7 +62,7 @@ export interface CQListener extends IVer {
 
      * @memberof CQListener
      */
-    privateMsg(subType: string, msgId: number, fromQQ: number, msg: string, font: number): 0 | 1
+    privateMsg(subType: string, msgId: number, fromQQ: number, msg: string, font: number): Promise<0 | 1>
     /**
      *
      * Type=2 群消息
@@ -76,7 +76,7 @@ export interface CQListener extends IVer {
      * @returns {number} 关于返回值说明, 见 privateMsg 私聊消息 方法
      * @memberof CQListener
      */
-    groupMsg(subType: string, msgId: number, fromGroup: number, fromQQ: number, fromAnonymous: string, msg: string, font: number): 0 | 1
+    groupMsg(subType: string, msgId: number, fromGroup: number, fromQQ: number, fromAnonymous: string, msg: string, font: number): Promise<0 | 1>
     /**
      *
      * Type=4 讨论组消息
@@ -89,7 +89,7 @@ export interface CQListener extends IVer {
      * @returns {number}
      * @memberof CQListener
      */
-    discussMsg(subType: string, msgId: number, fromDiscuss: number, fromQQ: number, msg: string, font: number): 0 | 1
+    discussMsg(subType: string, msgId: number, fromDiscuss: number, fromQQ: number, msg: string, font: number): Promise<0 | 1>
     /**
      *
      *
@@ -102,7 +102,7 @@ export interface CQListener extends IVer {
     * @returns {(number)}
     * @memberof CQApp
     */
-    groupUpload(subType: string, sendTime: number, fromGroup: number, fromQQ: number, file: CQFile): 0 | 1
+    groupUpload(subType: string, sendTime: number, fromGroup: number, fromQQ: number, file: CQFile): Promise<0 | 1>
     /**
      *
      *Type=101 群事件-管理员变动
@@ -113,7 +113,7 @@ export interface CQListener extends IVer {
      * @returns {number}
      * @memberof CQListener
      */
-    groupAdmin(subType: string, sendTime: number, fromGroup: number, beingOperateQQ: number): 0 | 1
+    groupAdmin(subType: string, sendTime: number, fromGroup: number, beingOperateQQ: number): Promise<0 | 1>
     /**
      *
      * Type=102 群事件-群成员减少
@@ -125,7 +125,7 @@ export interface CQListener extends IVer {
      * @returns {number}
      * @memberof CQListener
      */
-    groupDecrease(subType: string, sendTime: number, fromGroup: number, fromQQ: number, beingOperateQQ: number): 0 | 1
+    groupDecrease(subType: string, sendTime: number, fromGroup: number, fromQQ: number, beingOperateQQ: number): Promise<0 | 1>
     /**
      *
      * Type=103 群事件-群成员增加
@@ -137,7 +137,7 @@ export interface CQListener extends IVer {
      * @returns {number}
      * @memberof CQListener
      */
-    groupIncrease(subType: string, sendTime: number, fromGroup: number, fromQQ: number, beingOperateQQ: number): 0 | 1
+    groupIncrease(subType: string, sendTime: number, fromGroup: number, fromQQ: number, beingOperateQQ: number): Promise<0 | 1>
     /**
      *
      * Type=201 好友事件-好友已添加
@@ -147,7 +147,7 @@ export interface CQListener extends IVer {
      * @returns {number}
      * @memberof CQListener
      */
-    friendAdd(subType: string, sendTime: number, fromQQ: number): 0 | 1
+    friendAdd(subType: string, sendTime: number, fromQQ: number): Promise<0 | 1>
     /**
      *
      * Type=301 请求-好友添加
@@ -159,7 +159,7 @@ export interface CQListener extends IVer {
      * @returns {number}
      * @memberof CQListener
      */
-    requestAddFriend(subType: string, sendTime: number, fromQQ: number, msg: string, responseFlag: string): 0 | 1
+    requestAddFriend(subType: string, sendTime: number, fromQQ: number, msg: string, responseFlag: string): Promise<0 | 1>
     /**
      *
      * Type=302 请求-群添加
@@ -172,6 +172,6 @@ export interface CQListener extends IVer {
      * @returns {number}
      * @memberof CQListener
      */
-    requestAddGroup(subType: string, sendTime: number, fromGroup: number, fromQQ: number, msg: string, responseFlag: string): 0 | 1
+    requestAddGroup(subType: string, sendTime: number, fromGroup: number, fromQQ: number, msg: string, responseFlag: string): Promise<0 | 1>
 
 }

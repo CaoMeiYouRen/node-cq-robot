@@ -1,4 +1,12 @@
 "use strict";
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
 Object.defineProperty(exports, "__esModule", { value: true });
 const CQAppAbstract_1 = require("./CQAppAbstract");
 const CoolQ_1 = require("../entity/CoolQ");
@@ -63,34 +71,54 @@ class CQApp extends CQAppAbstract_1.CQAppAbstract {
         return 0;
     }
     privateMsg(subType, msgId, fromQQ, msg, font) {
-        return 0;
+        return __awaiter(this, void 0, void 0, function* () {
+            return 0;
+        });
     }
     groupMsg(subType, msgId, fromGroup, fromQQ, fromAnonymous, msg, font) {
-        return 0;
+        return __awaiter(this, void 0, void 0, function* () {
+            return 0;
+        });
     }
     discussMsg(subType, msgId, fromDiscuss, fromQQ, msg, font) {
-        return 0;
+        return __awaiter(this, void 0, void 0, function* () {
+            return 0;
+        });
     }
     groupUpload(subType, sendTime, fromGroup, fromQQ, file) {
-        return 0;
+        return __awaiter(this, void 0, void 0, function* () {
+            return 0;
+        });
     }
     groupAdmin(subType, sendTime, fromGroup, beingOperateQQ) {
-        return 0;
+        return __awaiter(this, void 0, void 0, function* () {
+            return 0;
+        });
     }
     groupDecrease(subType, sendTime, fromGroup, fromQQ, beingOperateQQ) {
-        return 0;
+        return __awaiter(this, void 0, void 0, function* () {
+            return 0;
+        });
     }
     groupIncrease(subType, sendTime, fromGroup, fromQQ, beingOperateQQ) {
-        return 0;
+        return __awaiter(this, void 0, void 0, function* () {
+            return 0;
+        });
     }
     friendAdd(subType, sendTime, fromQQ) {
-        return 0;
+        return __awaiter(this, void 0, void 0, function* () {
+            return 0;
+        });
     }
     requestAddFriend(subType, sendTime, fromQQ, msg, responseFlag) {
-        return 0;
+        return __awaiter(this, void 0, void 0, function* () {
+            return 0;
+        });
     }
     requestAddGroup(subType, sendTime, fromGroup, fromQQ, msg, responseFlag) {
-        return 0;
+        return __awaiter(this, void 0, void 0, function* () {
+            return 0;
+        });
     }
 }
 exports.CQApp = CQApp;

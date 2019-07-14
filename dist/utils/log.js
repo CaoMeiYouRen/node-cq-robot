@@ -2,7 +2,6 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const log4js_1 = require("log4js");
 exports.getLogger = log4js_1.getLogger;
-const path = require("path");
 log4js_1.configure({
     appenders: {
         out: {
@@ -17,7 +16,7 @@ log4js_1.configure({
             // 设置类型为 dateFile
             type: 'dateFile',
             // 配置文件名
-            filename: path.join(__dirname, '../../log/app/app.log'),
+            filename: './log/app/app.log',
             // 指定编码格式为 utf-8
             encoding: 'utf-8',
             // 配置 layout，此处使用自定义模式 pattern
@@ -37,7 +36,7 @@ log4js_1.configure({
             // 设置类型为 dateFile
             type: 'dateFile',
             // 配置文件名为 myLog.log
-            filename: path.join(__dirname, '../../log/debug/debug.log'),
+            filename: './log/app/app.log',
             // 指定编码格式为 utf-8
             encoding: 'utf-8',
             // 配置 layout，此处使用自定义模式 pattern
