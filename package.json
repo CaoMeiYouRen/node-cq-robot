@@ -1,7 +1,7 @@
 {
     "name": "cq-robot",
-    "version": "0.2.0",
-    "description": "基于http-api和cq-websocket的酷Q机器人封装",
+    "version": "0.3.0",
+    "description": "基于http-api和cq-websocket的酷Q机器人SDK",
     "main": "dist/index.js",
     "keywords": [
         "CoolQ",
@@ -9,8 +9,8 @@
         "QQRobot"
     ],
     "scripts": {
-        "build": "webpack --config webpack.config.prod.js",
-        "dev": "webpack-dev-server --config webpack.config.dev.js",
+        "build": "rimraf dist &&tsc -d",
+        "dev": "tsc -w",
         "lint": "eslint src --ext .ts",
         "test": "mocha -r ts-node/register test/**/*.test.ts -R nyan",
         "deploy": "npm publish"
@@ -20,7 +20,10 @@
     "dependencies": {
         "cq-websocket": "^2.0.1",
         "moment": "^2.24.0",
-        "json5": "^2.1.0"
+        "json5": "^2.1.0",
+        "log4js": "^4.4.0",
+        "colors": "^1.3.3",
+        "ts-node": "^8.3.0"
     },
     "devDependencies": {
         "@babel/core": "^7.3.4",
@@ -39,17 +42,14 @@
         "babel-preset-stage-0": "^6.24.1",
         "chai": "^4.2.0",
         "clean-webpack-plugin": "^3.0.0",
-        "colors": "^1.3.3",
         "eslint": "^5.16.0",
         "eslint-config-alloy": "^2.0.4",
         "eslint-plugin-typescript": "^0.14.0",
-        "log4js": "^4.4.0",
         "mocha": "^6.1.4",
         "nyc": "^14.1.1",
         "should": "^13.2.3",
         "tern": "^0.24.1",
         "ts-loader": "^6.0.0",
-        "ts-node": "^8.3.0",
         "typescript": "^3.5.2",
         "typescript-eslint-parser": "^22.0.0",
         "uglifyjs-webpack-plugin": "^2.1.3",
