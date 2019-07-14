@@ -1,5 +1,4 @@
 import { configure, getLogger } from 'log4js'
-import { timeFormat } from './timeHelp'
 import path = require('path')
 configure({
     appenders: {
