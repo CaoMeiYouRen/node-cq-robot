@@ -2,13 +2,13 @@
 
 酷Q操作的核心类
 
-| 方法                 | 说明                                                         |
-| -------------------- | ------------------------------------------------------------ |
 | addLog               | 不推荐使用本方法,请使用log开头的方法                         |
+| -------------------- | ------------------------------------------------------------ |
 | canSendImage         | 是否可以发送图片                                             |
 | canSendRecord        | 是否可以发送语音                                             |
-| cleanDataDir         | 清理HTTP API数据目录                                         |
-| cleanPluginLog       | 清理HTTP API插件日志                                         |
+| cleanDataDir         | 清理数据目录                                                 |
+| cleanPluginLog       | 清理插件日志                                                 |
+| customMusic          | 音乐自定义分享                                               |
 | deleteMsg            | 撤回消息,需Pro版                                             |
 | getAnonymous         | 获取匿名信息                                                 |
 | getAppDirectory      | 获取应用目录,如果目录不存在则自动创建,目录末尾带 "\"         |
@@ -20,7 +20,7 @@
 | getLoginNick         | 获取登录昵称                                                 |
 | getLoginQQ           | 获取登录QQ                                                   |
 | getRecord            | 接收消息中的语音(record)                                     |
-| getStatus            | 取HTTP API插件运行状态                                       |
+| getStatus            | 取插件运行状态                                               |
 | getStrangerInfo      | 获取陌生人信息                                               |
 | getVersionInfo       | 取 酷Q 及 HTTP API 插件的版本信息                            |
 | logDebug             | 添加日志，级别：调试，颜色：灰色                             |

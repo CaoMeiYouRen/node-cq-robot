@@ -123,7 +123,7 @@ export class CQCode {
         return `[CQ:music,id=${musicId},type=${type ? type : 'qq'}${style ? ',style=1' : ''}]`
     }
     /**
-     * 发送音乐自定义分享(music)
+     * 发送音乐自定义分享
      *
      * @author CaoMeiYouRen
      * @date 2019-07-09

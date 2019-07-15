@@ -17,7 +17,10 @@ npm i cq-robot -S
 ```
 本项目的注释十分完善，更多内容可以直接查看相应函数、类、接口的注释和*d.ts
 
+文档参考https://github.com/CaoMeiYouRen/node-cq-robot/tree/master/docs
+
 ## 项目参考
+
 本项目在开发中参考了官方易语言SDK，coolq-http-api，node-cq-websocket及JCQ-CoolQ
 
 在部分内容参考了JCQ-CoolQ(JavaCQ SDK)的源码，可以说给了我很大启发。这也使我意识到一个优秀了sdk的开发不易。
