@@ -15,7 +15,7 @@ describe('CoolQ', () => {
             CQ.getDebug().should.equal(true)
         })
         it('获取应用路径', () => {
-            CQ.getAppDirectory().includes('app\\ltd.cmyr.js.demo\\data\\').should.be.not.equal(-1)
+            CQ.getAppDirectory().includes('app\\com.example.demo\\data\\').should.be.not.equal(-1)
         })
         it('发送私聊消息', () => {
             CQ.sendPrivateMsg(10001, '测试私聊消息').then(result => {
@@ -33,19 +33,19 @@ describe('CoolQ', () => {
             })
         })
         it('发送私聊消息', () => {
-            let msg: CQMessage = { type: 'text', data: { text: '123' }}
+            let msg: CQMessage = { type: 'text', data: { text: '123' } }
             CQ.sendPrivateMsg(10001, msg).then(result => {
                 result.should.equal(0)
             })
         })
         it('发送群聊消息', () => {
-            let msg: CQMessage = { type: 'text', data: { text: '123' }}
+            let msg: CQMessage = { type: 'text', data: { text: '123' } }
             CQ.sendGroupMsg(10001, msg).then(result => {
                 result.should.equal(0)
             })
         })
         it('发送讨论组消息', () => {
-            let msg: CQMessage = { type: 'text', data: { text: '123' }}
+            let msg: CQMessage = { type: 'text', data: { text: '123' } }
             CQ.sendDiscussMsg(10001, msg).then(result => {
                 result.should.equal(0)
             })

@@ -122,9 +122,10 @@ export class CoolQ {
         this.debug = debug
         if (this.debug) {
             printTime(`[setDebug] 应用 ${this.APP_ID} 已开启debug模式，所有api调用都不会真正执行`, CQLog.LOG_INFO_SUCCESS)
-        } else {
-            printTime(`[setDebug] 应用 ${this.APP_ID} 已关闭debug模式，api调用将真正执行`, CQLog.LOG_INFO_SUCCESS)
         }
+        // else {
+        //     printTime(`[setDebug] 应用 ${this.APP_ID} 已关闭debug模式，api调用将真正执行`, CQLog.LOG_INFO_SUCCESS)
+        // }
     }
     /**
      * 获取当前环境模式
