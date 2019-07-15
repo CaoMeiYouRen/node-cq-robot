@@ -23,11 +23,6 @@ class LtdCmyrDemo extends CQApp {
         this.CQ.setDebug(true)// 开启调试模式
     }
     debug(): void {
-        // console.log('debug()方法只会在debug模式下执行')
-        this.privateMsg('test', 1, 996881204, '这是一条私聊消息', 1)
-        this.groupMsg('test', 1, 947983200, 996881204, '', '这是一条群消息', 1)
-        this.discussMsg('test', 1, 580771123, 996881204, '这是一条讨论组消息', 1)
-        // E:\我的学习\JS项目开发\node.js机器人封装\dist\app\ltd.cmyr.demo\data\
     }
     startup(): 0 {
         // console.log('与服务器的连接即将建立')
@@ -49,21 +44,13 @@ class LtdCmyrDemo extends CQApp {
         return 0
     }
     async privateMsg(subType: string, msgId: number, fromQQ: number, msg: string, font: number): Promise<0 | 1> {
-        if (fromQQ === 996881204) {
-            this.CQ.send_private_msg(fromQQ, `你好，这是${this.APP_ID}的回复`)
-        }
         return 0
     }
     async groupMsg(subType: string, msgId: number, fromGroup: number, fromQQ: number, fromAnonymous: string, msg: string, font: number): Promise<0 | 1> {
-        if (fromQQ === 996881204) {
-            this.CQ.send_group_msg(fromGroup, `${new CQAt(fromQQ)}你好，这是${this.APP_ID}的回复`)
-        }
         return 0
     }
     async discussMsg(subType: string, msgId: number, fromDiscuss: number, fromQQ: number, msg: string, font: number): Promise<0 | 1> {
-        if (fromQQ === 996881204) {
-            this.CQ.send_discuss_msg(fromDiscuss, `${new CQAt(fromQQ)}你发送了：${msg}`)
-        }
+
         return 0
     }
     async groupUpload(subType: string, sendTime: number, fromGroup: number, fromQQ: number, file: CQFile): Promise<0 | 1> {

@@ -33,6 +33,6 @@ ssl
 sessions
 
 *.txt
-/src
-/test
+src
+test/app/
 /log
