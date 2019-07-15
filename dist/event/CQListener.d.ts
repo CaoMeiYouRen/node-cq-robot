@@ -98,8 +98,8 @@ export interface CQListener extends IVer {
     * @param {number} fromGroup 来源群号
     * @param {number} fromQQ 来源QQ号
     * @param {CQFile} file 上传文件的信息
-    * @returns {(number)}
-    * @memberof CQApp
+    * @returns {number}
+    * @memberof CQListener
     */
     groupUpload(subType: string, sendTime: number, fromGroup: number, fromQQ: number, file: CQFile): Promise<0 | 1>;
     /**
