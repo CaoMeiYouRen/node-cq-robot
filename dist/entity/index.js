@@ -8,6 +8,7 @@ __export(require("./CQAuth"));
 __export(require("./CQCode"));
 __export(require("./CQFile"));
 __export(require("./CQLog"));
+__export(require("./CQMsg"));
 __export(require("./CQStatus"));
 __export(require("./GroupInfo"));
 __export(require("./HttpApiInfo"));

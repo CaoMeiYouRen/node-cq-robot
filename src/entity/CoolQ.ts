@@ -254,12 +254,15 @@ export class CoolQ {
             if (this.appOption.auth.includes(auth)) { // 判断是否有权限执行该操作
                 if (bot.isReady()) {
                     let result = await bot(opName, param)
-                    printTime(`执行函数${opName},参数:${JSON.stringify(param)},执行结果:${JSON.stringify(result)}`, CQLog.LOG_INFO_SUCCESS)
                     // return result
                     // 返回内容格式 {"data":{"message_id":273},"retcode":0,"status":"ok"}
-                    if (opName.startsWith('send_') || opName.startsWith('get_')) {
+                    if (opName.startsWith('send_')) {
+                        return result
+                    } else if (opName.startsWith('get_')) {
+                        printTime(`执行函数 ${opName} , 参数:${JSON.stringify(param)} , 执行结果:${JSON.stringify(result)}`, CQLog.LOG_INFO_SUCCESS)
                         return result
                     } else {
+                        printTime(`执行函数 ${opName} , 参数:${JSON.stringify(param)} , 执行结果:${JSON.stringify(result)}`, CQLog.LOG_INFO_SUCCESS)
                         return result.retcode
                     }
                 } else {
@@ -309,6 +312,7 @@ export class CoolQ {
             user_id,
             message
         })
+        printTime(`[发送私聊消息] QQID:${user_id} msg:${JSON.stringify(message)} 执行结果:${JSON.stringify(result)}`, CQLog.LOG_INFO_SEND)
         if (result['status'] === 'ok') {
             return result['data']['message_id']
         } else {
@@ -336,6 +340,7 @@ export class CoolQ {
             group_id,
             message
         })
+        printTime(`[发送群消息] 群号:${group_id} msg:${JSON.stringify(message)} 执行结果:${JSON.stringify(result)}`, CQLog.LOG_INFO_SEND)
         if (result['status'] === 'ok') {
             return result['data']['message_id']
         } else {
@@ -364,6 +369,7 @@ export class CoolQ {
             discuss_id,
             message
         })
+        printTime(`[发送讨论组消息] 讨论组号:${discuss_id} msg:${JSON.stringify(message)} 执行结果:${JSON.stringify(result)}`, CQLog.LOG_INFO_SEND)
         if (result['status'] === 'ok') {
             return result['data']['message_id']
         } else {
@@ -408,6 +414,7 @@ export class CoolQ {
             user_id,
             times
         })
+        printTime(`[发送赞] QQID:${user_id} 次数:${times} 执行结果:${JSON.stringify(result)}`, CQLog.LOG_INFO_SEND)
         if (result['status'] === 'ok') {
             return result['retcode']
         } else {
