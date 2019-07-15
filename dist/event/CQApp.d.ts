@@ -28,22 +28,14 @@ export declare class CQApp extends CQAppAbstract implements CQListener {
     APP_ID: string;
     CQ_API_VER: number;
     HTTP_API_VER: number;
-    isEnable: boolean;
-    appDirectory: string;
     /**
-     * 本函数请勿继承覆盖
-     * 返回应用的API_VER、APP_ID、HTTP_API_VER
-     * @author CaoMeiYouRen
-     * @date 2019-07-08
-     * @abstract
-     * @returns {{ CQ_API_VER: number, APP_ID: string, HTTP_API_VER: number }}
+     * 应用启用状态，默认为false
+     *
+     * @type {boolean}
      * @memberof CQApp
      */
-    protected appInfo(): {
-        CQ_API_VER: number;
-        APP_ID: string;
-        HTTP_API_VER: number;
-    };
+    isEnable: boolean;
+    appDirectory: string;
     debug(): void;
     startup(): 0;
     exit(): 0;

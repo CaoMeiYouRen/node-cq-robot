@@ -40,22 +40,22 @@ class CQApp extends CQAppAbstract_1.CQAppAbstract {
         this.isEnable = false;
         this.appDirectory = this.CQ.getAppDirectory();
     }
-    /**
-     * 本函数请勿继承覆盖
-     * 返回应用的API_VER、APP_ID、HTTP_API_VER
-     * @author CaoMeiYouRen
-     * @date 2019-07-08
-     * @abstract
-     * @returns {{ CQ_API_VER: number, APP_ID: string, HTTP_API_VER: number }}
-     * @memberof CQApp
-     */
-    appInfo() {
-        return {
-            CQ_API_VER: this.CQ_API_VER,
-            APP_ID: this.APP_ID,
-            HTTP_API_VER: this.HTTP_API_VER
-        };
-    }
+    // /**
+    //  * 本函数请勿继承覆盖
+    //  * 返回应用的API_VER、APP_ID、HTTP_API_VER
+    //  * @author CaoMeiYouRen
+    //  * @date 2019-07-08
+    //  * @abstract
+    //  * @returns {{ CQ_API_VER: number, APP_ID: string, HTTP_API_VER: number }}
+    //  * @memberof CQApp
+    //  */
+    // protected appInfo(): { CQ_API_VER: number, APP_ID: string, HTTP_API_VER: number } {
+    //     return {
+    //         CQ_API_VER: this.CQ_API_VER,
+    //         APP_ID: this.APP_ID,
+    //         HTTP_API_VER: this.HTTP_API_VER
+    //     }
+    // }
     debug() {
     }
     startup() {
