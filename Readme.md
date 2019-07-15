@@ -2,7 +2,7 @@
 
 ### 作者：草梅友仁
 
-本项目是node-coolq-robot 项目的主要依赖包，基于[coolq-http-api]( https://github.com/richardchien/coolq-http-api)、[cq-websocket](https://github.com/momocow/node-cq-websocket) ，按照官方SDK风格重新封装了事件函数和api函数
+本项目是[node-coolq-robot ](https://github.com/CaoMeiYouRen/node-coolq-robot)项目的主要依赖包，基于[coolq-http-api]( https://github.com/richardchien/coolq-http-api)、[cq-websocket](https://github.com/momocow/node-cq-websocket) ，按照官方SDK风格重新封装了事件函数和api函数
 
 ## 项目特色
 
