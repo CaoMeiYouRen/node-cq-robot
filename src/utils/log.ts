@@ -34,7 +34,7 @@ configure({
             // 设置类型为 dateFile
             type: 'dateFile',
             // 配置文件名为 myLog.log
-            filename: './log/app/app.log',
+            filename: './log/debug/debug.log',
             // 指定编码格式为 utf-8
             encoding: 'utf-8',
             // 配置 layout，此处使用自定义模式 pattern
@@ -54,9 +54,9 @@ configure({
     categories: {
         // getLogger 参数为空时，默认使用该分类
         default: { appenders: ['out'], level: 'info' },
-        'app-debug': { appenders: ['out', 'app-debug'], level: 'debug' },
-        app: { appenders: ['out', 'app'], level: 'info' },
-        'cq-robot': { appenders: ['out', 'app'], level: 'info' }
+        'app-debug': { appenders: ['app-debug'], level: 'debug' },
+        app: { appenders: ['app'], level: 'info' },
+        'cq-robot': { appenders: ['app'], level: 'info' },
     }
 })
 // const logger = getLogger('app-debug')

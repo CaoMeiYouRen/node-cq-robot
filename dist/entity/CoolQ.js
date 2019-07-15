@@ -230,7 +230,7 @@ class CoolQ {
                 if (this.appOption.auth.includes(auth)) { // 判断是否有权限执行该操作
                     if (bot.isReady()) {
                         let result = yield bot(opName, param);
-                        utils_1.printTime(JSON.stringify(result));
+                        utils_1.printTime(`执行函数${opName},参数:${JSON.stringify(param)},执行结果:${JSON.stringify(result)}`, index_1.CQLog.LOG_INFO_SUCCESS);
                         // return result
                         // 返回内容格式 {"data":{"message_id":273},"retcode":0,"status":"ok"}
                         if (opName.startsWith('send_') || opName.startsWith('get_')) {
@@ -283,7 +283,7 @@ class CoolQ {
     send_private_msg(user_id, message) {
         return __awaiter(this, void 0, void 0, function* () {
             if (this.debug) {
-                utils_1.printTime(`[发送私聊消息] QQID:${user_id} msg:${JSON.stringify(message)}`, index_1.CQLog.LOG_INFO_SEND);
+                utils_1.printTime(`[发送私聊消息] QQID:${user_id} msg:${JSON.stringify(message)}`, index_1.CQLog.LOG_DEBUG);
                 return 0;
             }
             // 返回内容格式 {"data":{"message_id":273},"retcode":0,"status":"ok"}
@@ -314,7 +314,7 @@ class CoolQ {
     send_group_msg(group_id, message) {
         return __awaiter(this, void 0, void 0, function* () {
             if (this.debug) {
-                utils_1.printTime(`[发送群消息] 群号:${group_id} msg:${JSON.stringify(message)}`, index_1.CQLog.LOG_INFO_SEND);
+                utils_1.printTime(`[发送群消息] 群号:${group_id} msg:${JSON.stringify(message)}`, index_1.CQLog.LOG_DEBUG);
                 return 0;
             }
             let result = yield this.cqBasicOperate('send_group_msg', {
@@ -345,7 +345,7 @@ class CoolQ {
     send_discuss_msg(discuss_id, message) {
         return __awaiter(this, void 0, void 0, function* () {
             if (this.debug) {
-                utils_1.printTime(`[发送讨论组消息] 讨论组号:${discuss_id} msg:${JSON.stringify(message)}`, index_1.CQLog.LOG_INFO_SEND);
+                utils_1.printTime(`[发送讨论组消息] 讨论组号:${discuss_id} msg:${JSON.stringify(message)}`, index_1.CQLog.LOG_DEBUG);
                 return 0;
             }
             let result = yield this.cqBasicOperate('send_discuss_msg', {
@@ -375,7 +375,7 @@ class CoolQ {
     delete_msg(message_id) {
         return __awaiter(this, void 0, void 0, function* () {
             if (this.debug) {
-                utils_1.printTime(`[撤回消息] 消息ID:${message_id}`, index_1.CQLog.LOG_INFO_SEND);
+                utils_1.printTime(`[撤回消息] 消息ID:${message_id}`, index_1.CQLog.LOG_DEBUG);
                 return 0;
             }
             return this.cqBasicOperate('delete_msg', {
@@ -393,7 +393,7 @@ class CoolQ {
     send_like(user_id, times = 1) {
         return __awaiter(this, void 0, void 0, function* () {
             if (this.debug) {
-                utils_1.printTime(`[发送赞] QQID:${user_id} 次数:${times}`, index_1.CQLog.LOG_INFO_SEND);
+                utils_1.printTime(`[发送赞] QQID:${user_id} 次数:${times}`, index_1.CQLog.LOG_DEBUG);
                 return 0;
             }
             let result = this.cqBasicOperate('send_like', {
@@ -860,7 +860,7 @@ class CoolQ {
     get_cookies() {
         return __awaiter(this, void 0, void 0, function* () {
             if (this.debug) {
-                utils_1.printTime('[取Cookies] 本函数请在酷Q中测试 返回:""', index_1.CQLog.LOG_INFO);
+                utils_1.printTime('[取Cookies] 本函数请在酷Q中测试 返回:""');
                 return '';
             }
             let result = yield this.cqBasicOperate('get_cookies', {});
@@ -883,7 +883,7 @@ class CoolQ {
     get_csrf_token() {
         return __awaiter(this, void 0, void 0, function* () {
             if (this.debug) {
-                utils_1.printTime('[取CsrfToken] 本函数请在酷Q中测试 返回:0', index_1.CQLog.LOG_INFO);
+                utils_1.printTime('[取CsrfToken] 本函数请在酷Q中测试 返回:0');
                 return 0;
             }
             let result = yield this.cqBasicOperate('get_csrf_token', {});
@@ -1076,7 +1076,7 @@ class CoolQ {
     set_restart_plugin(delay = 0) {
         return __awaiter(this, void 0, void 0, function* () {
             if (this.debug) {
-                utils_1.printTime(`[重启HTTP_API插件] 本函数请在酷Q中测试 延时:${delay} 返回:重启成功！`, index_1.CQLog.LOG_INFO);
+                utils_1.printTime(`[重启HTTP_API插件] 本函数请在酷Q中测试 延时:${delay} 返回:重启成功！`);
                 return 1;
             }
             return this.cqBasicOperate('set_restart_plugin', {

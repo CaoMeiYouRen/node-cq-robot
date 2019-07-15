@@ -254,7 +254,7 @@ export class CoolQ {
             if (this.appOption.auth.includes(auth)) { // 判断是否有权限执行该操作
                 if (bot.isReady()) {
                     let result = await bot(opName, param)
-                    printTime(JSON.stringify(result))
+                    printTime(`执行函数${opName},参数:${JSON.stringify(param)},执行结果:${JSON.stringify(result)}`, CQLog.LOG_INFO_SUCCESS)
                     // return result
                     // 返回内容格式 {"data":{"message_id":273},"retcode":0,"status":"ok"}
                     if (opName.startsWith('send_') || opName.startsWith('get_')) {
@@ -301,7 +301,7 @@ export class CoolQ {
      */
     async send_private_msg(user_id: number, message: string | CQMessage | Array<CQMessage>): Promise<number> {
         if (this.debug) {
-            printTime(`[发送私聊消息] QQID:${user_id} msg:${JSON.stringify(message)}`, CQLog.LOG_INFO_SEND)
+            printTime(`[发送私聊消息] QQID:${user_id} msg:${JSON.stringify(message)}`, CQLog.LOG_DEBUG)
             return 0
         }
         // 返回内容格式 {"data":{"message_id":273},"retcode":0,"status":"ok"}
@@ -329,7 +329,7 @@ export class CoolQ {
      */
     async send_group_msg(group_id: number, message: string | CQMessage | Array<CQMessage>): Promise<number> {
         if (this.debug) {
-            printTime(`[发送群消息] 群号:${group_id} msg:${JSON.stringify(message)}`, CQLog.LOG_INFO_SEND)
+            printTime(`[发送群消息] 群号:${group_id} msg:${JSON.stringify(message)}`, CQLog.LOG_DEBUG)
             return 0
         }
         let result = await this.cqBasicOperate('send_group_msg', {
@@ -357,7 +357,7 @@ export class CoolQ {
      */
     async send_discuss_msg(discuss_id: number, message: string | CQMessage | Array<CQMessage>): Promise<number> {
         if (this.debug) {
-            printTime(`[发送讨论组消息] 讨论组号:${discuss_id} msg:${JSON.stringify(message)}`, CQLog.LOG_INFO_SEND)
+            printTime(`[发送讨论组消息] 讨论组号:${discuss_id} msg:${JSON.stringify(message)}`, CQLog.LOG_DEBUG)
             return 0
         }
         let result = await this.cqBasicOperate('send_discuss_msg', {
@@ -384,7 +384,7 @@ export class CoolQ {
      */
     async delete_msg(message_id: number) {
         if (this.debug) {
-            printTime(`[撤回消息] 消息ID:${message_id}`, CQLog.LOG_INFO_SEND)
+            printTime(`[撤回消息] 消息ID:${message_id}`, CQLog.LOG_DEBUG)
             return 0
         }
         return this.cqBasicOperate('delete_msg', {
@@ -401,7 +401,7 @@ export class CoolQ {
      */
     async send_like(user_id: number, times: number = 1) {
         if (this.debug) {
-            printTime(`[发送赞] QQID:${user_id} 次数:${times}`, CQLog.LOG_INFO_SEND)
+            printTime(`[发送赞] QQID:${user_id} 次数:${times}`, CQLog.LOG_DEBUG)
             return 0
         }
         let result = this.cqBasicOperate('send_like', {
@@ -835,7 +835,7 @@ export class CoolQ {
      */
     async get_cookies(): Promise<string> {
         if (this.debug) {
-            printTime('[取Cookies] 本函数请在酷Q中测试 返回:""', CQLog.LOG_INFO)
+            printTime('[取Cookies] 本函数请在酷Q中测试 返回:""')
             return ''
         }
         let result = await this.cqBasicOperate('get_cookies', {
@@ -857,7 +857,7 @@ export class CoolQ {
      */
     async get_csrf_token(): Promise<number> {
         if (this.debug) {
-            printTime('[取CsrfToken] 本函数请在酷Q中测试 返回:0', CQLog.LOG_INFO)
+            printTime('[取CsrfToken] 本函数请在酷Q中测试 返回:0')
             return 0
         }
         let result = await this.cqBasicOperate('get_csrf_token', {
@@ -1038,7 +1038,7 @@ export class CoolQ {
      */
     async set_restart_plugin(delay: number = 0) {
         if (this.debug) {
-            printTime(`[重启HTTP_API插件] 本函数请在酷Q中测试 延时:${delay} 返回:重启成功！`, CQLog.LOG_INFO)
+            printTime(`[重启HTTP_API插件] 本函数请在酷Q中测试 延时:${delay} 返回:重启成功！`)
             return 1
         }
         return this.cqBasicOperate('set_restart_plugin', {

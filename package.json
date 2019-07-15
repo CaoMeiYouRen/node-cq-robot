@@ -1,7 +1,7 @@
 {
     "name": "cq-robot",
-    "version": "0.5.0",
-    "description": "基于http-api和cq-websocket的酷Q机器人SDK",
+    "version": "0.6.0",
+    "description": "基于http-api和cq-websocket封装的酷Q机器人SDK",
     "main": "dist/index.js",
     "keywords": [
         "CoolQ",
