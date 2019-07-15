@@ -15,7 +15,7 @@
 ```bash
 npm i cq-robot -S
 ```
-更多内容可以直接查看相应函数、类、接口的注释和*d.ts
+本项目的注释十分完善，更多内容可以直接查看相应函数、类、接口的注释和*d.ts
 
 ## 项目参考
 本项目在开发中参考了官方易语言SDK，coolq-http-api，node-cq-websocket及JCQ-CoolQ
