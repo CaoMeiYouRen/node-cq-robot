@@ -92,7 +92,7 @@ export declare class CQCode {
      */
     music(musicId: number, type?: '' | 'qq' | '163' | 'xiami', style?: boolean): string;
     /**
-     * 发送音乐自定义分享(music)
+     * 发送音乐自定义分享
      *
      * @author CaoMeiYouRen
      * @date 2019-07-09

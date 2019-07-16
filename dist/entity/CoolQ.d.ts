@@ -32,7 +32,7 @@ export declare class CoolQ {
      * @param {boolean} [debug=false] 调试模式
      * @memberof CoolQ
      */
-    constructor(APP_ID: string, dirname: string, debug?: boolean);
+    constructor(APP_ID?: string, dirname?: string, debug?: boolean);
     /**
      * CQ码
      *
