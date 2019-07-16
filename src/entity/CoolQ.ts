@@ -61,20 +61,24 @@ export class CoolQ {
      * @param {boolean} [debug=false] 调试模式
      * @memberof CoolQ
      */
-    constructor(APP_ID: string, dirname: string, debug: boolean = false) {
+    constructor(APP_ID: string = '', dirname: string = '', debug: boolean = false) {
         this.CQCode = new CQCode()
         this.APP_ID = APP_ID
         this.debug = debug
-        this.appDirectory = path.join(dirname, 'data/')
-        if (!fs.existsSync(this.appDirectory)) {
-            fs.mkdirSync(this.appDirectory)
+        if (dirname) {
+            this.appDirectory = path.join(dirname, 'data/')
+            if (!fs.existsSync(this.appDirectory)) {
+                fs.mkdirSync(this.appDirectory)
+            }
         }
-        if (fs.existsSync(path.join(dirname, 'index.jsonc'))) {
-            this.appOption = getCQOption(path.join(dirname, 'index.jsonc'))
-        } else if (fs.existsSync(path.join(dirname, 'index.json'))) {
-            this.appOption = getCQOption(path.join(dirname, 'index.json'))
-        } else {
-            printTime(`找不到 ${APP_ID} 配置文件在：${dirname} 目录下`, CQLog.LOG_ERROR)
+        if (!debug) {
+            if (fs.existsSync(path.join(dirname, 'index.jsonc'))) {
+                this.appOption = getCQOption(path.join(dirname, 'index.jsonc'))
+            } else if (fs.existsSync(path.join(dirname, 'index.json'))) {
+                this.appOption = getCQOption(path.join(dirname, 'index.json'))
+            } else {
+                printTime(`找不到 ${APP_ID} 配置文件在：${dirname} 目录下`, CQLog.LOG_ERROR)
+            }
         }
     }
     /**
@@ -120,7 +124,7 @@ export class CoolQ {
     */
     setDebug(debug: boolean) {
         this.debug = debug
-        if (this.debug) {
+        if (this.debug && this.APP_ID) {
             printTime(`[setDebug] 应用 ${this.APP_ID} 已开启debug模式，所有api调用都不会真正执行`, CQLog.LOG_INFO_SUCCESS)
         }
         // else {
