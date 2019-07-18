@@ -256,7 +256,7 @@ export class CoolQ {
                 return 0
             }
             let auth = getAuth(opName)
-            if (this.appOption.auth.includes(auth)) { // 判断是否有权限执行该操作
+            if (this.appOption.auth.includes(auth) || auth === 1) { // 判断是否有权限执行该操作
                 if (bot.isReady()) {
                     let result = await bot(opName, param)
                     // return result

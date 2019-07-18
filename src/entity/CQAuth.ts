@@ -161,6 +161,18 @@ const authList = [
         name: 'delete_msg'
     },
 ]
+let list = [
+    'clean_plugin_log',
+    'clean_data_dir',
+    'set_restart_plugin',
+    'get_version_info',
+    'get_status',
+    'can_send_record',
+    'can_send_image',
+    'get_image',
+    'get_record',
+    'get_login_info'
+]
 /**
  * @export
  * @param {number} auth
@@ -188,6 +200,9 @@ export function getAuthName(auth: number): string {
  * @returns {number}
  */
 export function getAuth(authName: string): number {
+    if (list.includes(authName)) {
+        return 1
+    }
     for (let i = 0; i < authList.length; i++) {
         if (authList[i].name === authName) {
             return authList[i].auth
