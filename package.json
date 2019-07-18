@@ -1,6 +1,6 @@
 {
     "name": "cq-robot",
-    "version": "1.1.0",
+    "version": "1.1.1",
     "description": "基于http-api和cq-websocket封装的酷Q机器人SDK",
     "main": "dist/index.js",
     "keywords": [
@@ -14,7 +14,7 @@
         "lint": "eslint src --ext .ts",
         "test": "mocha -r ts-node/register test/**/*.test.ts -R nyan",
         "deploy": "npm run build && npm publish",
-        "uninstall": "rimraf node_modules"
+        "rm": "rimraf node_modules"
     },
     "author": "CaoMeiYouRen",
     "license": "MIT",
