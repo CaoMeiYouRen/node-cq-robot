@@ -205,11 +205,11 @@ describe('CoolQ', () => {
         it('获取语音路径:含url', () => {
             CQ.CQCode.getRecord('[CQ:record,file=1.amr,url=https://www.example.com]').should.equal('1.amr')
         })
-        it('发送签到(sign)', () => {
-            let res = CQ.CQCode.sign('北京[],&', '[],&这是一个标题', 'https://www.example.com?qq=123&msg=abc')
-            res.should.equal('[CQ:sign,location=北京&#91;&#93;&#44;&amp;,title=&#91;&#93;&#44;&amp;这是一个标题,image=https://www.example.com?qq=123&amp;msg=abc]')
-            // let res = CQ.CQCode.share('https://www.example.com?qq=123&msg=abc', '[],&这是一个标题', '这是一段内容', 'https://www.example.com')
-            // res.should.equal('[CQ:share,url=,title=&#91;&#93;&#44;&amp;这是一个标题,content=这是一段内容,image=https://www.example.com]')
-        })
+        // it('发送签到(sign)', () => {
+        //     let res = CQ.CQCode.sign('北京[],&', '[],&这是一个标题', 'https://www.example.com?qq=123&msg=abc')
+        //     res.should.equal('[CQ:sign,location=北京&#91;&#93;&#44;&amp;,title=&#91;&#93;&#44;&amp;这是一个标题,image=https://www.example.com?qq=123&amp;msg=abc]')
+        //     // let res = CQ.CQCode.share('https://www.example.com?qq=123&msg=abc', '[],&这是一个标题', '这是一段内容', 'https://www.example.com')
+        //     // res.should.equal('[CQ:share,url=,title=&#91;&#93;&#44;&amp;这是一个标题,content=这是一段内容,image=https://www.example.com]')
+        // })
     })
 })
