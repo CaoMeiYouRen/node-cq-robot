@@ -1,80 +1,82 @@
 {
-  "name": "cq-robot",
-  "version": "1.1.6",
-  "description": "基于http-api和cq-websocket封装的酷Q机器人SDK",
-  "main": "dist/index.js",
-  "keywords": [
-    "CoolQ",
-    "CQ",
-    "QQRobot"
-  ],
-  "scripts": {
-    "build": "rimraf dist && tsc -d",
-    "dev": "tsc -w",
-    "lint": "eslint src --ext .ts",
-    "test": "mocha -r ts-node/register test/**/*.test.ts -R nyan",
-    "deploy": "npm run test && npm run build && npm publish",
-    "rm": "rimraf node_modules",
-    "doc": "typedoc --out docs src"
-  },
-  "author": "CaoMeiYouRen",
-  "license": "MIT",
-  "dependencies": {
-    "colors": "^1.3.3",
-    "cq-websocket": "^2.0.2",
-    "json5": "^2.1.0",
-    "log4js": "^4.4.0",
-    "moment": "^2.24.0",
-    "ts-node": "^8.3.0"
-  },
-  "devDependencies": {
-    "@babel/core": "^7.3.4",
-    "@types/chai": "^4.1.7",
-    "@types/json5": "^0.0.30",
-    "@types/mocha": "^5.2.7",
-    "@types/node": "^12.0.10",
-    "@typescript-eslint/eslint-plugin": "^1.11.0",
-    "@typescript-eslint/parser": "^1.11.0",
-    "babel-core": "^6.26.3",
-    "babel-eslint": "^10.0.2",
-    "babel-loader": "^8.0.5",
-    "babel-plugin-transform-runtime": "^6.23.0",
-    "babel-polyfill": "^6.26.0",
-    "babel-preset-env": "^1.7.0",
-    "babel-preset-stage-0": "^6.24.1",
-    "chai": "^4.2.0",
-    "clean-webpack-plugin": "^3.0.0",
-    "cz-conventional-changelog": "^3.0.2",
-    "eslint": "^5.16.0",
-    "eslint-config-alloy": "^2.0.4",
-    "eslint-plugin-typescript": "^0.14.0",
-    "gulp": "^4.0.2",
-    "gulp-typedoc": "^2.2.2",
-    "husky": "^3.0.1",
-    "mocha": "^6.1.4",
-    "nyc": "^14.1.1",
-    "should": "^13.2.3",
-    "tern": "^0.24.1",
-    "ts-loader": "^6.0.0",
-    "typedoc": "^0.14.2",
-    "typedoc-plugin-external-module-name": "^2.1.0",
-    "typedoc-plugin-markdown": "^2.0.11",
-    "typescript": "^3.5.2",
-    "typescript-eslint-parser": "^22.0.0",
-    "uglifyjs-webpack-plugin": "^2.1.3",
-    "validate-commit-msg": "^2.14.0",
-    "webpack": "4.29.6",
-    "webpack-bundle-analyzer": "^3.3.2",
-    "webpack-cli": "3.2.3"
-  },
-  "config": {
-    "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
+    "name": "cq-robot",
+    "version": "1.1.5",
+    "description": "基于http-api和cq-websocket封装的酷Q机器人SDK",
+    "main": "dist/index.js",
+    "keywords": [
+        "CoolQ",
+        "CQ",
+        "QQRobot"
+    ],
+    "scripts": {
+        "build": "rimraf dist && tsc -d",
+        "dev": "tsc -w",
+        "lint": "eslint src --ext .ts",
+        "test": "mocha -r ts-node/register test/**/*.test.ts -R nyan",
+        "deploy": "npm run test && npm run build && npm publish",
+        "rm": "rimraf node_modules",
+        "doc": "gulp typedoc",
+        "mit": "git add . && git cz",
+        "cglog": "conventional-changelog -p angular -i CHANGELOG.md -s -p"
+    },
+    "author": "CaoMeiYouRen",
+    "license": "MIT",
+    "dependencies": {
+        "colors": "^1.3.3",
+        "cq-websocket": "^2.0.2",
+        "json5": "^2.1.0",
+        "log4js": "^4.4.0",
+        "moment": "^2.24.0",
+        "ts-node": "^8.3.0"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.3.4",
+        "@types/chai": "^4.1.7",
+        "@types/json5": "^0.0.30",
+        "@types/mocha": "^5.2.7",
+        "@types/node": "^12.0.10",
+        "@typescript-eslint/eslint-plugin": "^1.11.0",
+        "@typescript-eslint/parser": "^1.11.0",
+        "babel-core": "^6.26.3",
+        "babel-eslint": "^10.0.2",
+        "babel-loader": "^8.0.5",
+        "babel-plugin-transform-runtime": "^6.23.0",
+        "babel-polyfill": "^6.26.0",
+        "babel-preset-env": "^1.7.0",
+        "babel-preset-stage-0": "^6.24.1",
+        "chai": "^4.2.0",
+        "clean-webpack-plugin": "^3.0.0",
+        "cz-conventional-changelog": "^3.0.2",
+        "eslint": "^5.16.0",
+        "eslint-config-alloy": "^2.0.4",
+        "eslint-plugin-typescript": "^0.14.0",
+        "gulp": "^4.0.2",
+        "gulp-typedoc": "^2.2.2",
+        "husky": "^3.0.1",
+        "mocha": "^6.1.4",
+        "nyc": "^14.1.1",
+        "should": "^13.2.3",
+        "tern": "^0.24.1",
+        "ts-loader": "^6.0.0",
+        "typedoc": "^0.14.2",
+        "typedoc-plugin-external-module-name": "^2.1.0",
+        "typedoc-plugin-markdown": "^2.0.11",
+        "typescript": "^3.5.2",
+        "typescript-eslint-parser": "^22.0.0",
+        "uglifyjs-webpack-plugin": "^2.1.3",
+        "validate-commit-msg": "^2.14.0",
+        "webpack": "4.29.6",
+        "webpack-bundle-analyzer": "^3.3.2",
+        "webpack-cli": "3.2.3"
+    },
+    "config": {
+        "commitizen": {
+            "path": "./node_modules/cz-conventional-changelog"
+        }
+    },
+    "husky": {
+        "hooks": {
+            "commit-msg": "validate-commit-msg"
+        }
     }
-  },
-  "husky": {
-    "hooks": {
-      "commit-msg": "validate-commit-msg"
-    }
-  }
 }
