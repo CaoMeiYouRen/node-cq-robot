@@ -189,4 +189,16 @@ export declare class CQCode {
      * @memberof CQCode
      */
     getRecord(code: string): string;
+    /**
+     * 发送签到
+     *
+     * @author CaoMeiYouRen
+     * @date 2019-07-23
+     * @param {string} location 地点
+     * @param {string} title 标题
+     * @param {string} image 图片地址
+     * @returns {string}
+     * @memberof CQCode
+     */
+    sign(location: string, title: string, image: string): string;
 }

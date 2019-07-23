@@ -250,5 +250,19 @@ class CQCode {
         }
         return utils_1.getMidStr(code, '[CQ:record,file=', ']');
     }
+    /**
+     * 发送签到
+     *
+     * @author CaoMeiYouRen
+     * @date 2019-07-23
+     * @param {string} location 地点
+     * @param {string} title 标题
+     * @param {string} image 图片地址
+     * @returns {string}
+     * @memberof CQCode
+     */
+    sign(location, title, image) {
+        return `[CQ:sign,location=${this.encode(location)},title=${this.encode(title)},image=${this.encode(image)}]`;
+    }
 }
 exports.CQCode = CQCode;
