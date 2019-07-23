@@ -14,7 +14,9 @@
     "lint": "eslint src --ext .ts",
     "test": "mocha -r ts-node/register test/**/*.test.ts -R nyan",
     "deploy": "npm run test && npm run build && npm publish",
-    "rm": "rimraf node_modules"
+    "rm": "rimraf node_modules",
+    "commitmsg": "validate-commit-msg",
+    "changelog": "cp package.json _package.json &&preset=`conventional-commits-detector` && echo $preset && bump=`conventional-recommended-bump -p angular` && echo ${1:-$bump} && npm --no-git-tag-version version ${1:-$bump} &>/dev/null && conventional-changelog -i CHANGELOG.md -s -p ${2:-$preset} && git add CHANGELOG.md package.json package-lock.json && version=`cat package.json` && git commit -m'docs(CHANGELOG): $version' && mv -f _package.json package.json && npm version ${1:-$bump} -m 'chore(release): %s' && git push --follow-tags "
   },
   "author": "CaoMeiYouRen",
   "license": "MIT",
@@ -43,9 +45,11 @@
     "babel-preset-stage-0": "^6.24.1",
     "chai": "^4.2.0",
     "clean-webpack-plugin": "^3.0.0",
+    "cz-conventional-changelog": "^3.0.2",
     "eslint": "^5.16.0",
     "eslint-config-alloy": "^2.0.4",
     "eslint-plugin-typescript": "^0.14.0",
+    "husky": "^3.0.1",
     "mocha": "^6.1.4",
     "nyc": "^14.1.1",
     "should": "^13.2.3",
@@ -54,8 +58,14 @@
     "typescript": "^3.5.2",
     "typescript-eslint-parser": "^22.0.0",
     "uglifyjs-webpack-plugin": "^2.1.3",
+    "validate-commit-msg": "^2.14.0",
     "webpack": "4.29.6",
     "webpack-bundle-analyzer": "^3.3.2",
     "webpack-cli": "3.2.3"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
