@@ -36,3 +36,5 @@ sessions
 src
 test/app/
 /log
+_site
+webroot
