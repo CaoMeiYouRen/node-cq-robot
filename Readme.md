@@ -17,7 +17,7 @@ npm i cq-robot -S
 ```
 本项目的注释十分完善，更多内容可以直接查看相应函数、类、接口的注释和*d.ts
 
-文档参考https://github.com/CaoMeiYouRen/node-cq-robot/tree/master/docs
+文档参考https://github.com/CaoMeiYouRen/node-cq-robot/tree/master/doc
 
 ## 项目参考
 
