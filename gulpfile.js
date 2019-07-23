@@ -13,7 +13,7 @@ gulp.task('typedoc', () => {
             includeDeclarations: false,
 
             // Output options (see typedoc docs)
-            out: './doc',
+            out: './docs',
 
             // TypeDoc options (see typedoc docs)
             name: 'cq-robot',

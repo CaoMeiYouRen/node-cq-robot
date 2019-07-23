@@ -31,7 +31,7 @@
 
 • **group_id**: *number*
 
-*Defined in [entity/GroupInfo.ts:16](https://github.com/CaoMeiYouRen/node-cq-robot/blob/0d80772/src/entity/GroupInfo.ts#L16)*
+*Defined in [entity/GroupInfo.ts:16](https://github.com/CaoMeiYouRen/node-cq-robot/blob/2d55f8e/src/entity/GroupInfo.ts#L16)*
 
 群号
 
@@ -45,7 +45,7 @@ ___
 
 • **group_name**: *string*
 
-*Defined in [entity/GroupInfo.ts:23](https://github.com/CaoMeiYouRen/node-cq-robot/blob/0d80772/src/entity/GroupInfo.ts#L23)*
+*Defined in [entity/GroupInfo.ts:23](https://github.com/CaoMeiYouRen/node-cq-robot/blob/2d55f8e/src/entity/GroupInfo.ts#L23)*
 
 群名称
 

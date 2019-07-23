@@ -122,7 +122,7 @@ CoolQ 操作的核心类
 
 \+ **new CoolQ**(`APP_ID`: string, `dirname`: string, `debug`: boolean): *[CoolQ](_entity_coolq_.coolq.md)*
 
-*Defined in [entity/CoolQ.ts:54](https://github.com/CaoMeiYouRen/node-cq-robot/blob/0d80772/src/entity/CoolQ.ts#L54)*
+*Defined in [entity/CoolQ.ts:54](https://github.com/CaoMeiYouRen/node-cq-robot/blob/2d55f8e/src/entity/CoolQ.ts#L54)*
 
 CoolQ构造函数
 
@@ -148,7 +148,7 @@ Name | Type | Default | Description |
 
 • **APP_ID**: *string*
 
-*Defined in [entity/CoolQ.ts:104](https://github.com/CaoMeiYouRen/node-cq-robot/blob/0d80772/src/entity/CoolQ.ts#L104)*
+*Defined in [entity/CoolQ.ts:104](https://github.com/CaoMeiYouRen/node-cq-robot/blob/2d55f8e/src/entity/CoolQ.ts#L104)*
 
 应用ID
 
@@ -162,7 +162,7 @@ ___
 
 • **CQCode**: *[CQCode](_entity_cqcode_.cqcode.md)*
 
-*Defined in [entity/CoolQ.ts:90](https://github.com/CaoMeiYouRen/node-cq-robot/blob/0d80772/src/entity/CoolQ.ts#L90)*
+*Defined in [entity/CoolQ.ts:90](https://github.com/CaoMeiYouRen/node-cq-robot/blob/2d55f8e/src/entity/CoolQ.ts#L90)*
 
 CQ码
 
@@ -176,7 +176,7 @@ ___
 
 • **appDirectory**: *string*
 
-*Defined in [entity/CoolQ.ts:118](https://github.com/CaoMeiYouRen/node-cq-robot/blob/0d80772/src/entity/CoolQ.ts#L118)*
+*Defined in [entity/CoolQ.ts:118](https://github.com/CaoMeiYouRen/node-cq-robot/blob/2d55f8e/src/entity/CoolQ.ts#L118)*
 
 应用目录
 
@@ -190,7 +190,7 @@ ___
 
 • **appOption**: *[CQOption](../interfaces/_entity_cqoption_.cqoption.md)*
 
-*Defined in [entity/CoolQ.ts:97](https://github.com/CaoMeiYouRen/node-cq-robot/blob/0d80772/src/entity/CoolQ.ts#L97)*
+*Defined in [entity/CoolQ.ts:97](https://github.com/CaoMeiYouRen/node-cq-robot/blob/2d55f8e/src/entity/CoolQ.ts#L97)*
 
 插件配置
 
@@ -204,7 +204,7 @@ ___
 
 • **debug**: *boolean*
 
-*Defined in [entity/CoolQ.ts:111](https://github.com/CaoMeiYouRen/node-cq-robot/blob/0d80772/src/entity/CoolQ.ts#L111)*
+*Defined in [entity/CoolQ.ts:111](https://github.com/CaoMeiYouRen/node-cq-robot/blob/2d55f8e/src/entity/CoolQ.ts#L111)*
 
 是否为调试模式。默认false
 
@@ -218,7 +218,7 @@ ___
 
 ▸ **addLog**(`level`: [LogLevel](../modules/_entity_coolq_.md#loglevel), `type`: string, `content`: string): *`0`*
 
-*Defined in [entity/CoolQ.ts:152](https://github.com/CaoMeiYouRen/node-cq-robot/blob/0d80772/src/entity/CoolQ.ts#L152)*
+*Defined in [entity/CoolQ.ts:152](https://github.com/CaoMeiYouRen/node-cq-robot/blob/2d55f8e/src/entity/CoolQ.ts#L152)*
 
 在控制台调试输出日志。不推荐使用本方法,请使用log开头的方法
 
@@ -240,7 +240,7 @@ ___
 
 ▸ **canSendImage**(): *`Promise<boolean>`*
 
-*Defined in [entity/CoolQ.ts:1418](https://github.com/CaoMeiYouRen/node-cq-robot/blob/0d80772/src/entity/CoolQ.ts#L1418)*
+*Defined in [entity/CoolQ.ts:1418](https://github.com/CaoMeiYouRen/node-cq-robot/blob/2d55f8e/src/entity/CoolQ.ts#L1418)*
 
 是否可以发送图片
 
@@ -258,7 +258,7 @@ ___
 
 ▸ **canSendRecord**(): *`Promise<boolean>`*
 
-*Defined in [entity/CoolQ.ts:1429](https://github.com/CaoMeiYouRen/node-cq-robot/blob/0d80772/src/entity/CoolQ.ts#L1429)*
+*Defined in [entity/CoolQ.ts:1429](https://github.com/CaoMeiYouRen/node-cq-robot/blob/2d55f8e/src/entity/CoolQ.ts#L1429)*
 
 是否可以发送语音
 
@@ -276,7 +276,7 @@ ___
 
 ▸ **can_send_image**(): *`Promise<boolean>`*
 
-*Defined in [entity/CoolQ.ts:940](https://github.com/CaoMeiYouRen/node-cq-robot/blob/0d80772/src/entity/CoolQ.ts#L940)*
+*Defined in [entity/CoolQ.ts:940](https://github.com/CaoMeiYouRen/node-cq-robot/blob/2d55f8e/src/entity/CoolQ.ts#L940)*
 
 是否可以发送图片
 
@@ -294,7 +294,7 @@ ___
 
 ▸ **can_send_record**(): *`Promise<boolean>`*
 
-*Defined in [entity/CoolQ.ts:961](https://github.com/CaoMeiYouRen/node-cq-robot/blob/0d80772/src/entity/CoolQ.ts#L961)*
+*Defined in [entity/CoolQ.ts:961](https://github.com/CaoMeiYouRen/node-cq-robot/blob/2d55f8e/src/entity/CoolQ.ts#L961)*
 
 是否可以发送语音
 
@@ -312,7 +312,7 @@ ___
 
 ▸ **cleanDataDir**(`data_dir`: "image" | "record" | "show" | "bface"): *`Promise<number | APIResponse<Object>>`*
 
-*Defined in [entity/CoolQ.ts:1477](https://github.com/CaoMeiYouRen/node-cq-robot/blob/0d80772/src/entity/CoolQ.ts#L1477)*
+*Defined in [entity/CoolQ.ts:1477](https://github.com/CaoMeiYouRen/node-cq-robot/blob/2d55f8e/src/entity/CoolQ.ts#L1477)*
 
 清理数据目录
 
@@ -336,7 +336,7 @@ ___
 
 ▸ **cleanPluginLog**(): *`Promise<number | APIResponse<Object>>`*
 
-*Defined in [entity/CoolQ.ts:1488](https://github.com/CaoMeiYouRen/node-cq-robot/blob/0d80772/src/entity/CoolQ.ts#L1488)*
+*Defined in [entity/CoolQ.ts:1488](https://github.com/CaoMeiYouRen/node-cq-robot/blob/2d55f8e/src/entity/CoolQ.ts#L1488)*
 
 清理插件日志
 
@@ -354,7 +354,7 @@ ___
 
 ▸ **clean_data_dir**(`data_dir`: "image" | "record" | "show" | "bface"): *`Promise<number | APIResponse<Object>>`*
 
-*Defined in [entity/CoolQ.ts:1070](https://github.com/CaoMeiYouRen/node-cq-robot/blob/0d80772/src/entity/CoolQ.ts#L1070)*
+*Defined in [entity/CoolQ.ts:1070](https://github.com/CaoMeiYouRen/node-cq-robot/blob/2d55f8e/src/entity/CoolQ.ts#L1070)*
 
 清理数据目录
 
@@ -378,7 +378,7 @@ ___
 
 ▸ **clean_plugin_log**(): *`Promise<number | APIResponse<Object>>`*
 
-*Defined in [entity/CoolQ.ts:1086](https://github.com/CaoMeiYouRen/node-cq-robot/blob/0d80772/src/entity/CoolQ.ts#L1086)*
+*Defined in [entity/CoolQ.ts:1086](https://github.com/CaoMeiYouRen/node-cq-robot/blob/2d55f8e/src/entity/CoolQ.ts#L1086)*
 
 清理插件日志
 
@@ -396,7 +396,7 @@ ___
 
 ▸ **cqBasicOperate**(`opName`: string, `param`: `Record<string, any>`): *`Promise<number | APIResponse<Object>>`*
 
-*Defined in [entity/CoolQ.ts:252](https://github.com/CaoMeiYouRen/node-cq-robot/blob/0d80772/src/entity/CoolQ.ts#L252)*
+*Defined in [entity/CoolQ.ts:252](https://github.com/CaoMeiYouRen/node-cq-robot/blob/2d55f8e/src/entity/CoolQ.ts#L252)*
 
 酷Q基本操作（通过api方式调用）
 
@@ -417,7 +417,7 @@ ___
 
 ▸ **deleteMsg**(`message_id`: number): *`Promise<number | APIResponse<Object>>`*
 
-*Defined in [entity/CoolQ.ts:1142](https://github.com/CaoMeiYouRen/node-cq-robot/blob/0d80772/src/entity/CoolQ.ts#L1142)*
+*Defined in [entity/CoolQ.ts:1142](https://github.com/CaoMeiYouRen/node-cq-robot/blob/2d55f8e/src/entity/CoolQ.ts#L1142)*
 
 撤回消息
 
@@ -441,7 +441,7 @@ ___
 
 ▸ **delete_msg**(`message_id`: number): *`Promise<number | APIResponse<Object>>`*
 
-*Defined in [entity/CoolQ.ts:396](https://github.com/CaoMeiYouRen/node-cq-robot/blob/0d80772/src/entity/CoolQ.ts#L396)*
+*Defined in [entity/CoolQ.ts:396](https://github.com/CaoMeiYouRen/node-cq-robot/blob/2d55f8e/src/entity/CoolQ.ts#L396)*
 
 撤回消息
 
@@ -465,7 +465,7 @@ ___
 
 ▸ **getAppDirectory**(): *string*
 
-*Defined in [entity/CoolQ.ts:293](https://github.com/CaoMeiYouRen/node-cq-robot/blob/0d80772/src/entity/CoolQ.ts#L293)*
+*Defined in [entity/CoolQ.ts:293](https://github.com/CaoMeiYouRen/node-cq-robot/blob/2d55f8e/src/entity/CoolQ.ts#L293)*
 
 取应用目录
 返回的路径末尾带 \\ 或 /
@@ -480,7 +480,7 @@ ___
 
 ▸ **getCookies**(): *`Promise<string>`*
 
-*Defined in [entity/CoolQ.ts:1370](https://github.com/CaoMeiYouRen/node-cq-robot/blob/0d80772/src/entity/CoolQ.ts#L1370)*
+*Defined in [entity/CoolQ.ts:1370](https://github.com/CaoMeiYouRen/node-cq-robot/blob/2d55f8e/src/entity/CoolQ.ts#L1370)*
 
 取Cookies;Auth=20 慎用,此接口需要严格授权
 
@@ -498,7 +498,7 @@ ___
 
 ▸ **getCsrfToken**(): *`Promise<number>`*
 
-*Defined in [entity/CoolQ.ts:1381](https://github.com/CaoMeiYouRen/node-cq-robot/blob/0d80772/src/entity/CoolQ.ts#L1381)*
+*Defined in [entity/CoolQ.ts:1381](https://github.com/CaoMeiYouRen/node-cq-robot/blob/2d55f8e/src/entity/CoolQ.ts#L1381)*
 
 取CsrfToken Auth=20 即QQ网页用到的bkn/g_tk等 慎用,此接口需要严格授权 //getCsrfToken
 
@@ -516,7 +516,7 @@ ___
 
 ▸ **getDebug**(): *boolean*
 
-*Defined in [entity/CoolQ.ts:140](https://github.com/CaoMeiYouRen/node-cq-robot/blob/0d80772/src/entity/CoolQ.ts#L140)*
+*Defined in [entity/CoolQ.ts:140](https://github.com/CaoMeiYouRen/node-cq-robot/blob/2d55f8e/src/entity/CoolQ.ts#L140)*
 
 获取当前环境模式
 
@@ -530,7 +530,7 @@ ___
 
 ▸ **getGroupList**(): *`Promise<Array<GroupInfo>>`*
 
-*Defined in [entity/CoolQ.ts:1333](https://github.com/CaoMeiYouRen/node-cq-robot/blob/0d80772/src/entity/CoolQ.ts#L1333)*
+*Defined in [entity/CoolQ.ts:1333](https://github.com/CaoMeiYouRen/node-cq-robot/blob/2d55f8e/src/entity/CoolQ.ts#L1333)*
 
 获取群列表
 
@@ -548,7 +548,7 @@ ___
 
 ▸ **getGroupMemberInfo**(`group_id`: number, `user_id`: number, `no_cache`: boolean): *`Promise<MemberInfo>`*
 
-*Defined in [entity/CoolQ.ts:1347](https://github.com/CaoMeiYouRen/node-cq-robot/blob/0d80772/src/entity/CoolQ.ts#L1347)*
+*Defined in [entity/CoolQ.ts:1347](https://github.com/CaoMeiYouRen/node-cq-robot/blob/2d55f8e/src/entity/CoolQ.ts#L1347)*
 
 获取群成员信息
 
@@ -574,7 +574,7 @@ ___
 
 ▸ **getGroupMemberList**(`group_id`: number): *`Promise<Array<MemberInfo>>`*
 
-*Defined in [entity/CoolQ.ts:1359](https://github.com/CaoMeiYouRen/node-cq-robot/blob/0d80772/src/entity/CoolQ.ts#L1359)*
+*Defined in [entity/CoolQ.ts:1359](https://github.com/CaoMeiYouRen/node-cq-robot/blob/2d55f8e/src/entity/CoolQ.ts#L1359)*
 
 取群成员列表
 
@@ -600,7 +600,7 @@ ___
 
 ▸ **getImage**(`file`: string): *`Promise<string>`*
 
-*Defined in [entity/CoolQ.ts:1407](https://github.com/CaoMeiYouRen/node-cq-robot/blob/0d80772/src/entity/CoolQ.ts#L1407)*
+*Defined in [entity/CoolQ.ts:1407](https://github.com/CaoMeiYouRen/node-cq-robot/blob/2d55f8e/src/entity/CoolQ.ts#L1407)*
 
 接收图片；
 Auth=30 收到的图片文件名（CQ 码的 file 参数），如 6B4DE3DFD1BD271E3297859D41C530F5.jpg
@@ -627,7 +627,7 @@ ___
 
 ▸ **getLoginInfo**(): *`Promise<object>`*
 
-*Defined in [entity/CoolQ.ts:1287](https://github.com/CaoMeiYouRen/node-cq-robot/blob/0d80772/src/entity/CoolQ.ts#L1287)*
+*Defined in [entity/CoolQ.ts:1287](https://github.com/CaoMeiYouRen/node-cq-robot/blob/2d55f8e/src/entity/CoolQ.ts#L1287)*
 
 获取登录号信息
 
@@ -647,7 +647,7 @@ ___
 
 ▸ **getLoginNick**(): *`Promise<string>`*
 
-*Defined in [entity/CoolQ.ts:1309](https://github.com/CaoMeiYouRen/node-cq-robot/blob/0d80772/src/entity/CoolQ.ts#L1309)*
+*Defined in [entity/CoolQ.ts:1309](https://github.com/CaoMeiYouRen/node-cq-robot/blob/2d55f8e/src/entity/CoolQ.ts#L1309)*
 
 取登录昵称
 
@@ -665,7 +665,7 @@ ___
 
 ▸ **getLoginQq**(): *`Promise<number>`*
 
-*Defined in [entity/CoolQ.ts:1298](https://github.com/CaoMeiYouRen/node-cq-robot/blob/0d80772/src/entity/CoolQ.ts#L1298)*
+*Defined in [entity/CoolQ.ts:1298](https://github.com/CaoMeiYouRen/node-cq-robot/blob/2d55f8e/src/entity/CoolQ.ts#L1298)*
 
 取登录QQ
 
@@ -683,7 +683,7 @@ ___
 
 ▸ **getRecord**(`file`: string, `out_format`: string, `full_path`: boolean): *`Promise<string>`*
 
-*Defined in [entity/CoolQ.ts:1395](https://github.com/CaoMeiYouRen/node-cq-robot/blob/0d80772/src/entity/CoolQ.ts#L1395)*
+*Defined in [entity/CoolQ.ts:1395](https://github.com/CaoMeiYouRen/node-cq-robot/blob/2d55f8e/src/entity/CoolQ.ts#L1395)*
 
 接收语音。
 其实并不是真的获取语音，而是转换语音到指定的格式，然后返回语音文件名（data\record 目录下）。注意，要使用此接口，需要安装 酷Q 的 语音组件。
@@ -712,7 +712,7 @@ ___
 
 ▸ **getStatus**(): *`Promise<HttpApiStatus>`*
 
-*Defined in [entity/CoolQ.ts:1440](https://github.com/CaoMeiYouRen/node-cq-robot/blob/0d80772/src/entity/CoolQ.ts#L1440)*
+*Defined in [entity/CoolQ.ts:1440](https://github.com/CaoMeiYouRen/node-cq-robot/blob/2d55f8e/src/entity/CoolQ.ts#L1440)*
 
 取插件运行状态
 
@@ -732,7 +732,7 @@ ___
 
 ▸ **getStrangerInfo**(`user_id`: number, `no_cache`: boolean): *`Promise<QQInfo>`*
 
-*Defined in [entity/CoolQ.ts:1322](https://github.com/CaoMeiYouRen/node-cq-robot/blob/0d80772/src/entity/CoolQ.ts#L1322)*
+*Defined in [entity/CoolQ.ts:1322](https://github.com/CaoMeiYouRen/node-cq-robot/blob/2d55f8e/src/entity/CoolQ.ts#L1322)*
 
 获取陌生人信息
 
@@ -757,7 +757,7 @@ ___
 
 ▸ **getVersionInfo**(): *`Promise<HttpApiInfo>`*
 
-*Defined in [entity/CoolQ.ts:1452](https://github.com/CaoMeiYouRen/node-cq-robot/blob/0d80772/src/entity/CoolQ.ts#L1452)*
+*Defined in [entity/CoolQ.ts:1452](https://github.com/CaoMeiYouRen/node-cq-robot/blob/2d55f8e/src/entity/CoolQ.ts#L1452)*
 
 取 酷Q 及 HTTP API 插件的版本信息
 
@@ -775,7 +775,7 @@ ___
 
 ▸ **get_cookies**(): *`Promise<string>`*
 
-*Defined in [entity/CoolQ.ts:848](https://github.com/CaoMeiYouRen/node-cq-robot/blob/0d80772/src/entity/CoolQ.ts#L848)*
+*Defined in [entity/CoolQ.ts:848](https://github.com/CaoMeiYouRen/node-cq-robot/blob/2d55f8e/src/entity/CoolQ.ts#L848)*
 
 取Cookies;Auth=20 慎用,此接口需要严格授权
 
@@ -793,7 +793,7 @@ ___
 
 ▸ **get_csrf_token**(): *`Promise<number>`*
 
-*Defined in [entity/CoolQ.ts:870](https://github.com/CaoMeiYouRen/node-cq-robot/blob/0d80772/src/entity/CoolQ.ts#L870)*
+*Defined in [entity/CoolQ.ts:870](https://github.com/CaoMeiYouRen/node-cq-robot/blob/2d55f8e/src/entity/CoolQ.ts#L870)*
 
 取CsrfToken Auth=20 即QQ网页用到的bkn/g_tk等 慎用,此接口需要严格授权 //getCsrfToken
 
@@ -811,7 +811,7 @@ ___
 
 ▸ **get_group_list**(): *`Promise<Array<GroupInfo>>`*
 
-*Defined in [entity/CoolQ.ts:739](https://github.com/CaoMeiYouRen/node-cq-robot/blob/0d80772/src/entity/CoolQ.ts#L739)*
+*Defined in [entity/CoolQ.ts:739](https://github.com/CaoMeiYouRen/node-cq-robot/blob/2d55f8e/src/entity/CoolQ.ts#L739)*
 
 获取群列表
 
@@ -829,7 +829,7 @@ ___
 
 ▸ **get_group_member_info**(`group_id`: number, `user_id`: number, `no_cache`: boolean): *`Promise<MemberInfo>`*
 
-*Defined in [entity/CoolQ.ts:769](https://github.com/CaoMeiYouRen/node-cq-robot/blob/0d80772/src/entity/CoolQ.ts#L769)*
+*Defined in [entity/CoolQ.ts:769](https://github.com/CaoMeiYouRen/node-cq-robot/blob/2d55f8e/src/entity/CoolQ.ts#L769)*
 
 取群成员信息
 
@@ -855,7 +855,7 @@ ___
 
 ▸ **get_group_member_list**(`group_id`: number): *`Promise<Array<MemberInfo>>`*
 
-*Defined in [entity/CoolQ.ts:809](https://github.com/CaoMeiYouRen/node-cq-robot/blob/0d80772/src/entity/CoolQ.ts#L809)*
+*Defined in [entity/CoolQ.ts:809](https://github.com/CaoMeiYouRen/node-cq-robot/blob/2d55f8e/src/entity/CoolQ.ts#L809)*
 
 取群成员列表
 
@@ -881,7 +881,7 @@ ___
 
 ▸ **get_image**(`file`: string): *`Promise<string>`*
 
-*Defined in [entity/CoolQ.ts:918](https://github.com/CaoMeiYouRen/node-cq-robot/blob/0d80772/src/entity/CoolQ.ts#L918)*
+*Defined in [entity/CoolQ.ts:918](https://github.com/CaoMeiYouRen/node-cq-robot/blob/2d55f8e/src/entity/CoolQ.ts#L918)*
 
 接收图片；
 Auth=30 收到的图片文件名（CQ 码的 file 参数），如 6B4DE3DFD1BD271E3297859D41C530F5.jpg
@@ -908,7 +908,7 @@ ___
 
 ▸ **get_login_info**(): *`Promise<object>`*
 
-*Defined in [entity/CoolQ.ts:649](https://github.com/CaoMeiYouRen/node-cq-robot/blob/0d80772/src/entity/CoolQ.ts#L649)*
+*Defined in [entity/CoolQ.ts:649](https://github.com/CaoMeiYouRen/node-cq-robot/blob/2d55f8e/src/entity/CoolQ.ts#L649)*
 
 获取登录号信息
 
@@ -928,7 +928,7 @@ ___
 
 ▸ **get_login_nick**(): *`Promise<string>`*
 
-*Defined in [entity/CoolQ.ts:693](https://github.com/CaoMeiYouRen/node-cq-robot/blob/0d80772/src/entity/CoolQ.ts#L693)*
+*Defined in [entity/CoolQ.ts:693](https://github.com/CaoMeiYouRen/node-cq-robot/blob/2d55f8e/src/entity/CoolQ.ts#L693)*
 
 取登录昵称
 
@@ -946,7 +946,7 @@ ___
 
 ▸ **get_login_qq**(): *`Promise<number>`*
 
-*Defined in [entity/CoolQ.ts:677](https://github.com/CaoMeiYouRen/node-cq-robot/blob/0d80772/src/entity/CoolQ.ts#L677)*
+*Defined in [entity/CoolQ.ts:677](https://github.com/CaoMeiYouRen/node-cq-robot/blob/2d55f8e/src/entity/CoolQ.ts#L677)*
 
 取登录QQ
 
@@ -964,7 +964,7 @@ ___
 
 ▸ **get_record**(`file`: string, `out_format`: string, `full_path`: boolean): *`Promise<string>`*
 
-*Defined in [entity/CoolQ.ts:895](https://github.com/CaoMeiYouRen/node-cq-robot/blob/0d80772/src/entity/CoolQ.ts#L895)*
+*Defined in [entity/CoolQ.ts:895](https://github.com/CaoMeiYouRen/node-cq-robot/blob/2d55f8e/src/entity/CoolQ.ts#L895)*
 
 接收语音。
 其实并不是真的获取语音，而是转换语音到指定的格式，然后返回语音文件名（data\record 目录下）。注意，要使用此接口，需要安装 酷Q 的 语音组件。
@@ -993,7 +993,7 @@ ___
 
 ▸ **get_status**(): *`Promise<HttpApiStatus>`*
 
-*Defined in [entity/CoolQ.ts:983](https://github.com/CaoMeiYouRen/node-cq-robot/blob/0d80772/src/entity/CoolQ.ts#L983)*
+*Defined in [entity/CoolQ.ts:983](https://github.com/CaoMeiYouRen/node-cq-robot/blob/2d55f8e/src/entity/CoolQ.ts#L983)*
 
 取插件运行状态
 
@@ -1013,7 +1013,7 @@ ___
 
 ▸ **get_stranger_info**(`user_id`: number, `no_cache`: boolean): *`Promise<QQInfo>`*
 
-*Defined in [entity/CoolQ.ts:711](https://github.com/CaoMeiYouRen/node-cq-robot/blob/0d80772/src/entity/CoolQ.ts#L711)*
+*Defined in [entity/CoolQ.ts:711](https://github.com/CaoMeiYouRen/node-cq-robot/blob/2d55f8e/src/entity/CoolQ.ts#L711)*
 
 获取陌生人信息
 
@@ -1038,7 +1038,7 @@ ___
 
 ▸ **get_version_info**(): *`Promise<HttpApiInfo>`*
 
-*Defined in [entity/CoolQ.ts:1020](https://github.com/CaoMeiYouRen/node-cq-robot/blob/0d80772/src/entity/CoolQ.ts#L1020)*
+*Defined in [entity/CoolQ.ts:1020](https://github.com/CaoMeiYouRen/node-cq-robot/blob/2d55f8e/src/entity/CoolQ.ts#L1020)*
 
 取 酷Q 及 HTTP API 插件的版本信息
 
@@ -1056,7 +1056,7 @@ ___
 
 ▸ **logDebug**(`type`: string, `content`: string): *`0`*
 
-*Defined in [entity/CoolQ.ts:164](https://github.com/CaoMeiYouRen/node-cq-robot/blob/0d80772/src/entity/CoolQ.ts#L164)*
+*Defined in [entity/CoolQ.ts:164](https://github.com/CaoMeiYouRen/node-cq-robot/blob/2d55f8e/src/entity/CoolQ.ts#L164)*
 
 调试日志
 
@@ -1077,7 +1077,7 @@ ___
 
 ▸ **logError**(`type`: string, `content`: string): *`0`*
 
-*Defined in [entity/CoolQ.ts:230](https://github.com/CaoMeiYouRen/node-cq-robot/blob/0d80772/src/entity/CoolQ.ts#L230)*
+*Defined in [entity/CoolQ.ts:230](https://github.com/CaoMeiYouRen/node-cq-robot/blob/2d55f8e/src/entity/CoolQ.ts#L230)*
 
 错误日志
 
@@ -1098,7 +1098,7 @@ ___
 
 ▸ **logFatal**(`type`: string, `content`: string): *`0`*
 
-*Defined in [entity/CoolQ.ts:241](https://github.com/CaoMeiYouRen/node-cq-robot/blob/0d80772/src/entity/CoolQ.ts#L241)*
+*Defined in [entity/CoolQ.ts:241](https://github.com/CaoMeiYouRen/node-cq-robot/blob/2d55f8e/src/entity/CoolQ.ts#L241)*
 
 致命错误日志
 
@@ -1119,7 +1119,7 @@ ___
 
 ▸ **logInfo**(`type`: string, `content`: string): *`0`*
 
-*Defined in [entity/CoolQ.ts:175](https://github.com/CaoMeiYouRen/node-cq-robot/blob/0d80772/src/entity/CoolQ.ts#L175)*
+*Defined in [entity/CoolQ.ts:175](https://github.com/CaoMeiYouRen/node-cq-robot/blob/2d55f8e/src/entity/CoolQ.ts#L175)*
 
 信息日志
 
@@ -1140,7 +1140,7 @@ ___
 
 ▸ **logInfoRecv**(`type`: string, `content`: string): *`0`*
 
-*Defined in [entity/CoolQ.ts:186](https://github.com/CaoMeiYouRen/node-cq-robot/blob/0d80772/src/entity/CoolQ.ts#L186)*
+*Defined in [entity/CoolQ.ts:186](https://github.com/CaoMeiYouRen/node-cq-robot/blob/2d55f8e/src/entity/CoolQ.ts#L186)*
 
 接受信息日志
 
@@ -1161,7 +1161,7 @@ ___
 
 ▸ **logInfoSend**(`type`: string, `content`: string): *`0`*
 
-*Defined in [entity/CoolQ.ts:197](https://github.com/CaoMeiYouRen/node-cq-robot/blob/0d80772/src/entity/CoolQ.ts#L197)*
+*Defined in [entity/CoolQ.ts:197](https://github.com/CaoMeiYouRen/node-cq-robot/blob/2d55f8e/src/entity/CoolQ.ts#L197)*
 
 发送信息日志
 
@@ -1182,7 +1182,7 @@ ___
 
 ▸ **logInfoSuccess**(`type`: string, `content`: string): *`0`*
 
-*Defined in [entity/CoolQ.ts:208](https://github.com/CaoMeiYouRen/node-cq-robot/blob/0d80772/src/entity/CoolQ.ts#L208)*
+*Defined in [entity/CoolQ.ts:208](https://github.com/CaoMeiYouRen/node-cq-robot/blob/2d55f8e/src/entity/CoolQ.ts#L208)*
 
 发送成功日志
 
@@ -1203,7 +1203,7 @@ ___
 
 ▸ **logWarning**(`type`: string, `content`: string): *`0`*
 
-*Defined in [entity/CoolQ.ts:219](https://github.com/CaoMeiYouRen/node-cq-robot/blob/0d80772/src/entity/CoolQ.ts#L219)*
+*Defined in [entity/CoolQ.ts:219](https://github.com/CaoMeiYouRen/node-cq-robot/blob/2d55f8e/src/entity/CoolQ.ts#L219)*
 
 警告日志
 
@@ -1224,7 +1224,7 @@ ___
 
 ▸ **sendDiscussMsg**(`discuss_id`: number, `message`: string | [CQMessage](../interfaces/_entity_cqmessage_.cqmessage.md) | `Array<CQMessage>`): *`Promise<number>`*
 
-*Defined in [entity/CoolQ.ts:1130](https://github.com/CaoMeiYouRen/node-cq-robot/blob/0d80772/src/entity/CoolQ.ts#L1130)*
+*Defined in [entity/CoolQ.ts:1130](https://github.com/CaoMeiYouRen/node-cq-robot/blob/2d55f8e/src/entity/CoolQ.ts#L1130)*
 
 发送讨论组消息
 成功返回message_id，失败返回retcode
@@ -1250,7 +1250,7 @@ ___
 
 ▸ **sendGroupMsg**(`group_id`: number, `message`: string | [CQMessage](../interfaces/_entity_cqmessage_.cqmessage.md) | `Array<CQMessage>`): *`Promise<number>`*
 
-*Defined in [entity/CoolQ.ts:1117](https://github.com/CaoMeiYouRen/node-cq-robot/blob/0d80772/src/entity/CoolQ.ts#L1117)*
+*Defined in [entity/CoolQ.ts:1117](https://github.com/CaoMeiYouRen/node-cq-robot/blob/2d55f8e/src/entity/CoolQ.ts#L1117)*
 
 发送群消息
 
@@ -1277,7 +1277,7 @@ ___
 
 ▸ **sendLike**(`user_id`: number, `times`: number): *`Promise<any>`*
 
-*Defined in [entity/CoolQ.ts:1152](https://github.com/CaoMeiYouRen/node-cq-robot/blob/0d80772/src/entity/CoolQ.ts#L1152)*
+*Defined in [entity/CoolQ.ts:1152](https://github.com/CaoMeiYouRen/node-cq-robot/blob/2d55f8e/src/entity/CoolQ.ts#L1152)*
 
 发送好友赞
 
@@ -1296,7 +1296,7 @@ ___
 
 ▸ **sendPrivateMsg**(`user_id`: number, `message`: string | [CQMessage](../interfaces/_entity_cqmessage_.cqmessage.md) | `Array<CQMessage>`): *`Promise<number>`*
 
-*Defined in [entity/CoolQ.ts:1105](https://github.com/CaoMeiYouRen/node-cq-robot/blob/0d80772/src/entity/CoolQ.ts#L1105)*
+*Defined in [entity/CoolQ.ts:1105](https://github.com/CaoMeiYouRen/node-cq-robot/blob/2d55f8e/src/entity/CoolQ.ts#L1105)*
 
 发送私聊消息
 
@@ -1323,7 +1323,7 @@ ___
 
 ▸ **send_discuss_msg**(`discuss_id`: number, `message`: string | [CQMessage](../interfaces/_entity_cqmessage_.cqmessage.md) | `Array<CQMessage>`): *`Promise<number>`*
 
-*Defined in [entity/CoolQ.ts:368](https://github.com/CaoMeiYouRen/node-cq-robot/blob/0d80772/src/entity/CoolQ.ts#L368)*
+*Defined in [entity/CoolQ.ts:368](https://github.com/CaoMeiYouRen/node-cq-robot/blob/2d55f8e/src/entity/CoolQ.ts#L368)*
 
 发送讨论组消息
 成功返回message_id，失败返回retcode
@@ -1349,7 +1349,7 @@ ___
 
 ▸ **send_group_msg**(`group_id`: number, `message`: string | [CQMessage](../interfaces/_entity_cqmessage_.cqmessage.md) | `Array<CQMessage>`): *`Promise<number>`*
 
-*Defined in [entity/CoolQ.ts:339](https://github.com/CaoMeiYouRen/node-cq-robot/blob/0d80772/src/entity/CoolQ.ts#L339)*
+*Defined in [entity/CoolQ.ts:339](https://github.com/CaoMeiYouRen/node-cq-robot/blob/2d55f8e/src/entity/CoolQ.ts#L339)*
 
 发送群消息
 
@@ -1376,7 +1376,7 @@ ___
 
 ▸ **send_like**(`user_id`: number, `times`: number): *`Promise<any>`*
 
-*Defined in [entity/CoolQ.ts:413](https://github.com/CaoMeiYouRen/node-cq-robot/blob/0d80772/src/entity/CoolQ.ts#L413)*
+*Defined in [entity/CoolQ.ts:413](https://github.com/CaoMeiYouRen/node-cq-robot/blob/2d55f8e/src/entity/CoolQ.ts#L413)*
 
 发送好友赞
 
@@ -1395,7 +1395,7 @@ ___
 
 ▸ **send_private_msg**(`user_id`: number, `message`: string | [CQMessage](../interfaces/_entity_cqmessage_.cqmessage.md) | `Array<CQMessage>`): *`Promise<number>`*
 
-*Defined in [entity/CoolQ.ts:310](https://github.com/CaoMeiYouRen/node-cq-robot/blob/0d80772/src/entity/CoolQ.ts#L310)*
+*Defined in [entity/CoolQ.ts:310](https://github.com/CaoMeiYouRen/node-cq-robot/blob/2d55f8e/src/entity/CoolQ.ts#L310)*
 
 发送私聊消息
 
@@ -1422,7 +1422,7 @@ ___
 
 ▸ **setDebug**(`debug`: boolean): *void*
 
-*Defined in [entity/CoolQ.ts:125](https://github.com/CaoMeiYouRen/node-cq-robot/blob/0d80772/src/entity/CoolQ.ts#L125)*
+*Defined in [entity/CoolQ.ts:125](https://github.com/CaoMeiYouRen/node-cq-robot/blob/2d55f8e/src/entity/CoolQ.ts#L125)*
 
 设置环境模式，用于区分生产环境和开发环境。
 
@@ -1442,7 +1442,7 @@ ___
 
 ▸ **setDiscussLeave**(`discuss_id`: number): *`Promise<number | APIResponse<Object>>`*
 
-*Defined in [entity/CoolQ.ts:1262](https://github.com/CaoMeiYouRen/node-cq-robot/blob/0d80772/src/entity/CoolQ.ts#L1262)*
+*Defined in [entity/CoolQ.ts:1262](https://github.com/CaoMeiYouRen/node-cq-robot/blob/2d55f8e/src/entity/CoolQ.ts#L1262)*
 
 置讨论组退出
 Auth=140
@@ -1467,7 +1467,7 @@ ___
 
 ▸ **setFriendAddRequest**(`flag`: string, `approve`: boolean, `remark`: string): *`Promise<number | APIResponse<Object>>`*
 
-*Defined in [entity/CoolQ.ts:1276](https://github.com/CaoMeiYouRen/node-cq-robot/blob/0d80772/src/entity/CoolQ.ts#L1276)*
+*Defined in [entity/CoolQ.ts:1276](https://github.com/CaoMeiYouRen/node-cq-robot/blob/2d55f8e/src/entity/CoolQ.ts#L1276)*
 
  置好友添加请求
 
@@ -1493,7 +1493,7 @@ ___
 
 ▸ **setGroupAdmin**(`group_id`: number, `user_id`: number, `enable`: boolean): *`Promise<number | APIResponse<Object>>`*
 
-*Defined in [entity/CoolQ.ts:1206](https://github.com/CaoMeiYouRen/node-cq-robot/blob/0d80772/src/entity/CoolQ.ts#L1206)*
+*Defined in [entity/CoolQ.ts:1206](https://github.com/CaoMeiYouRen/node-cq-robot/blob/2d55f8e/src/entity/CoolQ.ts#L1206)*
 
 群组设置管理员
 
@@ -1513,7 +1513,7 @@ ___
 
 ▸ **setGroupAnonymous**(`group_id`: number, `enable`: boolean): *`Promise<number | APIResponse<Object>>`*
 
-*Defined in [entity/CoolQ.ts:1215](https://github.com/CaoMeiYouRen/node-cq-robot/blob/0d80772/src/entity/CoolQ.ts#L1215)*
+*Defined in [entity/CoolQ.ts:1215](https://github.com/CaoMeiYouRen/node-cq-robot/blob/2d55f8e/src/entity/CoolQ.ts#L1215)*
 
 群组匿名
 
@@ -1532,7 +1532,7 @@ ___
 
 ▸ **setGroupAnonymousBan**(`group_id`: number, `anonymous_flag`: string, `duration`: number): *`Promise<number | APIResponse<Object>>`*
 
-*Defined in [entity/CoolQ.ts:1185](https://github.com/CaoMeiYouRen/node-cq-robot/blob/0d80772/src/entity/CoolQ.ts#L1185)*
+*Defined in [entity/CoolQ.ts:1185](https://github.com/CaoMeiYouRen/node-cq-robot/blob/2d55f8e/src/entity/CoolQ.ts#L1185)*
 
 群组匿名用户禁言
 
@@ -1552,7 +1552,7 @@ ___
 
 ▸ **setGroupBan**(`group_id`: number, `user_id`: number, `duration`: number): *`Promise<number | APIResponse<Object>>`*
 
-*Defined in [entity/CoolQ.ts:1174](https://github.com/CaoMeiYouRen/node-cq-robot/blob/0d80772/src/entity/CoolQ.ts#L1174)*
+*Defined in [entity/CoolQ.ts:1174](https://github.com/CaoMeiYouRen/node-cq-robot/blob/2d55f8e/src/entity/CoolQ.ts#L1174)*
 
 群组单人禁言
 
@@ -1572,7 +1572,7 @@ ___
 
 ▸ **setGroupCard**(`group_id`: number, `user_id`: number, `card`: string): *`Promise<number | APIResponse<Object>>`*
 
-*Defined in [entity/CoolQ.ts:1225](https://github.com/CaoMeiYouRen/node-cq-robot/blob/0d80772/src/entity/CoolQ.ts#L1225)*
+*Defined in [entity/CoolQ.ts:1225](https://github.com/CaoMeiYouRen/node-cq-robot/blob/2d55f8e/src/entity/CoolQ.ts#L1225)*
 
 设置群名片（群备注）
 
@@ -1592,7 +1592,7 @@ ___
 
 ▸ **setGroupKick**(`group_id`: number, `user_id`: number, `reject_add_request`: boolean): *`Promise<number | APIResponse<Object>>`*
 
-*Defined in [entity/CoolQ.ts:1163](https://github.com/CaoMeiYouRen/node-cq-robot/blob/0d80772/src/entity/CoolQ.ts#L1163)*
+*Defined in [entity/CoolQ.ts:1163](https://github.com/CaoMeiYouRen/node-cq-robot/blob/2d55f8e/src/entity/CoolQ.ts#L1163)*
 
 群组踢人
 
@@ -1612,7 +1612,7 @@ ___
 
 ▸ **setGroupLeave**(`group_id`: number, `is_dismiss`: boolean): *`Promise<number | APIResponse<Object>>`*
 
-*Defined in [entity/CoolQ.ts:1234](https://github.com/CaoMeiYouRen/node-cq-robot/blob/0d80772/src/entity/CoolQ.ts#L1234)*
+*Defined in [entity/CoolQ.ts:1234](https://github.com/CaoMeiYouRen/node-cq-robot/blob/2d55f8e/src/entity/CoolQ.ts#L1234)*
 
 退出群组
 
@@ -1631,7 +1631,7 @@ ___
 
 ▸ **setGroupSpecialTitle**(`group_id`: number, `user_id`: number, `special_title`: string, `duration`: number): *`Promise<number | APIResponse<Object>>`*
 
-*Defined in [entity/CoolQ.ts:1250](https://github.com/CaoMeiYouRen/node-cq-robot/blob/0d80772/src/entity/CoolQ.ts#L1250)*
+*Defined in [entity/CoolQ.ts:1250](https://github.com/CaoMeiYouRen/node-cq-robot/blob/2d55f8e/src/entity/CoolQ.ts#L1250)*
 
 置群成员专属头衔；
 Auth=128 需群主权限
@@ -1659,7 +1659,7 @@ ___
 
 ▸ **setGroupWholeBan**(`group_id`: number, `enable`: boolean): *`Promise<number | APIResponse<Object>>`*
 
-*Defined in [entity/CoolQ.ts:1196](https://github.com/CaoMeiYouRen/node-cq-robot/blob/0d80772/src/entity/CoolQ.ts#L1196)*
+*Defined in [entity/CoolQ.ts:1196](https://github.com/CaoMeiYouRen/node-cq-robot/blob/2d55f8e/src/entity/CoolQ.ts#L1196)*
 
 群组全员禁言
 
@@ -1678,7 +1678,7 @@ ___
 
 ▸ **setRestartPlugin**(`delay`: number): *`Promise<number | APIResponse<Object>>`*
 
-*Defined in [entity/CoolQ.ts:1464](https://github.com/CaoMeiYouRen/node-cq-robot/blob/0d80772/src/entity/CoolQ.ts#L1464)*
+*Defined in [entity/CoolQ.ts:1464](https://github.com/CaoMeiYouRen/node-cq-robot/blob/2d55f8e/src/entity/CoolQ.ts#L1464)*
 
 重启 HTTP API 插件；
 由于重启插件同时需要重启 API 服务，这意味着当前的 API 请求会被中断，因此需在异步地重启插件，接口返回的 status 是 async。
@@ -1703,7 +1703,7 @@ ___
 
 ▸ **set_discuss_leave**(`discuss_id`: number): *`Promise<number | APIResponse<Object>>`*
 
-*Defined in [entity/CoolQ.ts:612](https://github.com/CaoMeiYouRen/node-cq-robot/blob/0d80772/src/entity/CoolQ.ts#L612)*
+*Defined in [entity/CoolQ.ts:612](https://github.com/CaoMeiYouRen/node-cq-robot/blob/2d55f8e/src/entity/CoolQ.ts#L612)*
 
 置讨论组退出
 Auth=140
@@ -1728,7 +1728,7 @@ ___
 
 ▸ **set_friend_add_request**(`flag`: string, `approve`: boolean, `remark`: string): *`Promise<number | APIResponse<Object>>`*
 
-*Defined in [entity/CoolQ.ts:632](https://github.com/CaoMeiYouRen/node-cq-robot/blob/0d80772/src/entity/CoolQ.ts#L632)*
+*Defined in [entity/CoolQ.ts:632](https://github.com/CaoMeiYouRen/node-cq-robot/blob/2d55f8e/src/entity/CoolQ.ts#L632)*
 
  置好友添加请求
 
@@ -1754,7 +1754,7 @@ ___
 
 ▸ **set_group_admin**(`group_id`: number, `user_id`: number, `enable`: boolean): *`Promise<number | APIResponse<Object>>`*
 
-*Defined in [entity/CoolQ.ts:515](https://github.com/CaoMeiYouRen/node-cq-robot/blob/0d80772/src/entity/CoolQ.ts#L515)*
+*Defined in [entity/CoolQ.ts:515](https://github.com/CaoMeiYouRen/node-cq-robot/blob/2d55f8e/src/entity/CoolQ.ts#L515)*
 
 群组设置管理员
 
@@ -1774,7 +1774,7 @@ ___
 
 ▸ **set_group_anonymous**(`group_id`: number, `enable`: boolean): *`Promise<number | APIResponse<Object>>`*
 
-*Defined in [entity/CoolQ.ts:534](https://github.com/CaoMeiYouRen/node-cq-robot/blob/0d80772/src/entity/CoolQ.ts#L534)*
+*Defined in [entity/CoolQ.ts:534](https://github.com/CaoMeiYouRen/node-cq-robot/blob/2d55f8e/src/entity/CoolQ.ts#L534)*
 
 群组匿名
 
@@ -1793,7 +1793,7 @@ ___
 
 ▸ **set_group_anonymous_ban**(`group_id`: number, `anonymous_flag`: string, `duration`: number): *`Promise<number | APIResponse<Object>>`*
 
-*Defined in [entity/CoolQ.ts:479](https://github.com/CaoMeiYouRen/node-cq-robot/blob/0d80772/src/entity/CoolQ.ts#L479)*
+*Defined in [entity/CoolQ.ts:479](https://github.com/CaoMeiYouRen/node-cq-robot/blob/2d55f8e/src/entity/CoolQ.ts#L479)*
 
 群组匿名用户禁言
 
@@ -1813,7 +1813,7 @@ ___
 
 ▸ **set_group_ban**(`group_id`: number, `user_id`: number, `duration`: number): *`Promise<number | APIResponse<Object>>`*
 
-*Defined in [entity/CoolQ.ts:459](https://github.com/CaoMeiYouRen/node-cq-robot/blob/0d80772/src/entity/CoolQ.ts#L459)*
+*Defined in [entity/CoolQ.ts:459](https://github.com/CaoMeiYouRen/node-cq-robot/blob/2d55f8e/src/entity/CoolQ.ts#L459)*
 
 群组单人禁言
 
@@ -1833,7 +1833,7 @@ ___
 
 ▸ **set_group_card**(`group_id`: number, `user_id`: number, `card`: string): *`Promise<number | APIResponse<Object>>`*
 
-*Defined in [entity/CoolQ.ts:552](https://github.com/CaoMeiYouRen/node-cq-robot/blob/0d80772/src/entity/CoolQ.ts#L552)*
+*Defined in [entity/CoolQ.ts:552](https://github.com/CaoMeiYouRen/node-cq-robot/blob/2d55f8e/src/entity/CoolQ.ts#L552)*
 
 设置群名片（群备注）
 
@@ -1853,7 +1853,7 @@ ___
 
 ▸ **set_group_kick**(`group_id`: number, `user_id`: number, `reject_add_request`: boolean): *`Promise<number | APIResponse<Object>>`*
 
-*Defined in [entity/CoolQ.ts:439](https://github.com/CaoMeiYouRen/node-cq-robot/blob/0d80772/src/entity/CoolQ.ts#L439)*
+*Defined in [entity/CoolQ.ts:439](https://github.com/CaoMeiYouRen/node-cq-robot/blob/2d55f8e/src/entity/CoolQ.ts#L439)*
 
 群组踢人
 
@@ -1873,7 +1873,7 @@ ___
 
 ▸ **set_group_leave**(`group_id`: number, `is_dismiss`: boolean): *`Promise<number | APIResponse<Object>>`*
 
-*Defined in [entity/CoolQ.ts:570](https://github.com/CaoMeiYouRen/node-cq-robot/blob/0d80772/src/entity/CoolQ.ts#L570)*
+*Defined in [entity/CoolQ.ts:570](https://github.com/CaoMeiYouRen/node-cq-robot/blob/2d55f8e/src/entity/CoolQ.ts#L570)*
 
 退出群组
 
@@ -1892,7 +1892,7 @@ ___
 
 ▸ **set_group_special_title**(`group_id`: number, `user_id`: number, `special_title`: string, `duration`: number): *`Promise<number | APIResponse<Object>>`*
 
-*Defined in [entity/CoolQ.ts:593](https://github.com/CaoMeiYouRen/node-cq-robot/blob/0d80772/src/entity/CoolQ.ts#L593)*
+*Defined in [entity/CoolQ.ts:593](https://github.com/CaoMeiYouRen/node-cq-robot/blob/2d55f8e/src/entity/CoolQ.ts#L593)*
 
 置群成员专属头衔；
 Auth=128 需群主权限
@@ -1920,7 +1920,7 @@ ___
 
 ▸ **set_group_whole_ban**(`group_id`: number, `enable`: boolean): *`Promise<number | APIResponse<Object>>`*
 
-*Defined in [entity/CoolQ.ts:498](https://github.com/CaoMeiYouRen/node-cq-robot/blob/0d80772/src/entity/CoolQ.ts#L498)*
+*Defined in [entity/CoolQ.ts:498](https://github.com/CaoMeiYouRen/node-cq-robot/blob/2d55f8e/src/entity/CoolQ.ts#L498)*
 
 群组全员禁言
 
@@ -1939,7 +1939,7 @@ ___
 
 ▸ **set_restart_plugin**(`delay`: number): *`Promise<number | APIResponse<Object>>`*
 
-*Defined in [entity/CoolQ.ts:1051](https://github.com/CaoMeiYouRen/node-cq-robot/blob/0d80772/src/entity/CoolQ.ts#L1051)*
+*Defined in [entity/CoolQ.ts:1051](https://github.com/CaoMeiYouRen/node-cq-robot/blob/2d55f8e/src/entity/CoolQ.ts#L1051)*
 
 重启 HTTP API 插件；
 由于重启插件同时需要重启 API 服务，这意味着当前的 API 请求会被中断，因此需在异步地重启插件，接口返回的 status 是 async。
