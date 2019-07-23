@@ -1,33 +1,59 @@
-# node-cq-robot更新日志
+## node-cq-robot更新日志  by 草梅友仁
 
-### by 草梅友仁
+## <small>1.1.5 (2019-07-23)</small>
 
-## 1.1.5_2019-7-23
+### refactor(重构)
 
-1.  修复了CoolQ类的构造函数中传入空路径的问题，现在可以构造空CoolQ对象而不报错
+* style(package.json): 修改了包的依赖和script脚本 ([e512f8b](https://github.com/CaoMeiYouRen/node-cq-robot/commit/e512f8b))
 
-## 1.1.2_2019-7-18
+    
 
-1.  修复了CoolQ类中部分方法没有权限调用的bug
+## <small>1.1.4(2019-7-16)</small>
 
-## 1.1.1_2019-7-18
+### refactor(重构)
 
-1.  因与pm2冲突，移除了日志功能
-2.  修正了package.json中的错误
+-    更改了CoolQ的构造函数 ([42e1bf4](https://github.com/CaoMeiYouRen/node-cq-robot/commit/42e1bf4))
 
-## 2019-7-16
+### Fix Bugs
 
-1.  修改了CoolQ类的构造函数，现在，允许构造空的CoolQ对象，即 
+-   移除了签到的cq码，发现这个酷Q官方暂时不支持 ([628c7ea](https://github.com/CaoMeiYouRen/node-cq-robot/commit/628c7ea))
 
-    ```typescript
-    let CQ = new CoolQ() 
-    ```
+    
 
-    这使得调用api更加方便
+## <small>1.1.1 (2019-7-18)</small>
 
-2.  修改了CoolQ类读取配置的判断，现在，在debug模式下将不会读取该插件的配置
+### refactor(重构)
 
-## 2019-7-15
+-    修改了CoolQ类的构造函数，现在，允许构造空的CoolQ对象 ([628a3bf](https://github.com/CaoMeiYouRen/node-cq-robot/commit/628a3bf))
 
-首次发布
+### Fix Bugs
+
+-   因与pm2冲突，移除了日志功能 ([30ef8bb](https://github.com/CaoMeiYouRen/node-cq-robot/commit/30ef8bb))
+
+-   修正了package.json中的错误 ([f048543](https://github.com/CaoMeiYouRen/node-cq-robot/commit/f048543))
+
+-   修复了CoolQ类中部分方法没有权限调用的bug ([bb92716](https://github.com/CaoMeiYouRen/node-cq-robot/commit/bb92716))
+
+    
+
+## <small>1.1.0 (2019-7-16)</small>
+
+### refactor(重构)
+
+-    修改了CoolQ类的构造函数，现在，允许构造空的CoolQ对象 ([628a3bf](https://github.com/CaoMeiYouRen/node-cq-robot/commit/628a3bf))
+
+     
+
+## <small>1.0.0 (2019-7-15)</small>
+
+### feature(新功能)
+
+* 正式发布1.0.0版本 ([5a191ca](https://github.com/CaoMeiYouRen/node-cq-robot/commit/5a191ca))
+
+### Fix Bugs
+
+-   修正了文档的错误 ([a7edaae](https://github.com/CaoMeiYouRen/node-cq-robot/commit/a7edaae))
+-   修正了文档的细节 ([0a1bac2](https://github.com/CaoMeiYouRen/node-cq-robot/commit/0a1bac2))
+-   修正了部分事件函数的描述 ([417df76](https://github.com/CaoMeiYouRen/node-cq-robot/commit/417df76))
+-   修改了不需要公开的内容 ([724d69b](https://github.com/CaoMeiYouRen/node-cq-robot/commit/724d69b))
 
