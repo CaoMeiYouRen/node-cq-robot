@@ -71,7 +71,7 @@ export class CoolQ {
                 fs.mkdirSync(this.appDirectory)
             }
         }
-        if (!debug) {
+        if (!debug && dirname) {
             if (fs.existsSync(path.join(dirname, 'index.jsonc'))) {
                 this.appOption = getCQOption(path.join(dirname, 'index.jsonc'))
             } else if (fs.existsSync(path.join(dirname, 'index.json'))) {
