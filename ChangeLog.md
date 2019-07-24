@@ -1,3 +1,9 @@
+## <small>1.1.7 (2019-07-24)</small>
+
+### Fix Bugs
+
+-   修复`/set_group_add_request` 处理加群请求／邀请方法缺失的BUG
+
 ## <small>1.1.6 (2019-07-23)</small>
 
 * docs: 修改了更新日志的格式 ([0d80772](https://github.com/CaoMeiYouRen/node-cq-robot/commit/0d80772))
