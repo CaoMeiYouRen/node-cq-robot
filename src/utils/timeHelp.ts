@@ -2,7 +2,7 @@
 // import moment from 'moment'
 import moment = require('moment')
 import colors = require('colors')
-import { getLogger } from './log'
+// import { getLogger } from './log'
 
 /**
  * 格式化时间
