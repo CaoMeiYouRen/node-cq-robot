@@ -21,7 +21,7 @@
 
 ▪ **MSG_IGNORE**: *`0`* = 0
 
-*Defined in [entity/CQMsg.ts:5](https://github.com/CaoMeiYouRen/node-cq-robot/blob/2d55f8e/src/entity/CQMsg.ts#L5)*
+*Defined in [entity/CQMsg.ts:5](https://github.com/CaoMeiYouRen/node-cq-robot/blob/6797119/src/entity/CQMsg.ts#L5)*
 
 将此消息继续传递给其他应用
 
@@ -31,6 +31,6 @@ ___
 
 ▪ **MSG_INTERCEPT**: *`1`* = 1
 
-*Defined in [entity/CQMsg.ts:9](https://github.com/CaoMeiYouRen/node-cq-robot/blob/2d55f8e/src/entity/CQMsg.ts#L9)*
+*Defined in [entity/CQMsg.ts:9](https://github.com/CaoMeiYouRen/node-cq-robot/blob/6797119/src/entity/CQMsg.ts#L9)*
 
 拦截此条消息，不再传递给其他应用 //注意：应用优先级设置为"最高"(10000)时，不得使用本返回值

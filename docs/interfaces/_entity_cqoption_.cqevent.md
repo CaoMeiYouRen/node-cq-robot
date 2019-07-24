@@ -24,7 +24,7 @@
 
 • **function**: *string*
 
-*Defined in [entity/CQOption.ts:25](https://github.com/CaoMeiYouRen/node-cq-robot/blob/2d55f8e/src/entity/CQOption.ts#L25)*
+*Defined in [entity/CQOption.ts:25](https://github.com/CaoMeiYouRen/node-cq-robot/blob/6797119/src/entity/CQOption.ts#L25)*
 
 ___
 
@@ -32,7 +32,7 @@ ___
 
 • **id**: *number*
 
-*Defined in [entity/CQOption.ts:21](https://github.com/CaoMeiYouRen/node-cq-robot/blob/2d55f8e/src/entity/CQOption.ts#L21)*
+*Defined in [entity/CQOption.ts:21](https://github.com/CaoMeiYouRen/node-cq-robot/blob/6797119/src/entity/CQOption.ts#L21)*
 
 ___
 
@@ -40,7 +40,7 @@ ___
 
 • **name**: *string*
 
-*Defined in [entity/CQOption.ts:23](https://github.com/CaoMeiYouRen/node-cq-robot/blob/2d55f8e/src/entity/CQOption.ts#L23)*
+*Defined in [entity/CQOption.ts:23](https://github.com/CaoMeiYouRen/node-cq-robot/blob/6797119/src/entity/CQOption.ts#L23)*
 
 ___
 
@@ -48,7 +48,7 @@ ___
 
 • **priority**: *number*
 
-*Defined in [entity/CQOption.ts:24](https://github.com/CaoMeiYouRen/node-cq-robot/blob/2d55f8e/src/entity/CQOption.ts#L24)*
+*Defined in [entity/CQOption.ts:24](https://github.com/CaoMeiYouRen/node-cq-robot/blob/6797119/src/entity/CQOption.ts#L24)*
 
 ___
 
@@ -56,4 +56,4 @@ ___
 
 • **type**: *number*
 
-*Defined in [entity/CQOption.ts:22](https://github.com/CaoMeiYouRen/node-cq-robot/blob/2d55f8e/src/entity/CQOption.ts#L22)*
+*Defined in [entity/CQOption.ts:22](https://github.com/CaoMeiYouRen/node-cq-robot/blob/6797119/src/entity/CQOption.ts#L22)*

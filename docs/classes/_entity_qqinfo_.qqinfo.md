@@ -37,7 +37,7 @@ QQ信息
 
 \+ **new QQInfo**(`user_id`: number, `nickname`: string, `sex`: "male" | "female" | "unknown", `age`: number): *[QQInfo](_entity_qqinfo_.qqinfo.md)*
 
-*Defined in [entity/QQInfo.ts:13](https://github.com/CaoMeiYouRen/node-cq-robot/blob/2d55f8e/src/entity/QQInfo.ts#L13)*
+*Defined in [entity/QQInfo.ts:13](https://github.com/CaoMeiYouRen/node-cq-robot/blob/6797119/src/entity/QQInfo.ts#L13)*
 
 **Parameters:**
 
@@ -56,7 +56,7 @@ Name | Type |
 
 • **age**: *number*
 
-*Defined in [entity/QQInfo.ts:13](https://github.com/CaoMeiYouRen/node-cq-robot/blob/2d55f8e/src/entity/QQInfo.ts#L13)*
+*Defined in [entity/QQInfo.ts:13](https://github.com/CaoMeiYouRen/node-cq-robot/blob/6797119/src/entity/QQInfo.ts#L13)*
 
 ___
 
@@ -64,7 +64,7 @@ ___
 
 • **nickname**: *string*
 
-*Defined in [entity/QQInfo.ts:11](https://github.com/CaoMeiYouRen/node-cq-robot/blob/2d55f8e/src/entity/QQInfo.ts#L11)*
+*Defined in [entity/QQInfo.ts:11](https://github.com/CaoMeiYouRen/node-cq-robot/blob/6797119/src/entity/QQInfo.ts#L11)*
 
 ___
 
@@ -72,7 +72,7 @@ ___
 
 • **sex**: *string*
 
-*Defined in [entity/QQInfo.ts:12](https://github.com/CaoMeiYouRen/node-cq-robot/blob/2d55f8e/src/entity/QQInfo.ts#L12)*
+*Defined in [entity/QQInfo.ts:12](https://github.com/CaoMeiYouRen/node-cq-robot/blob/6797119/src/entity/QQInfo.ts#L12)*
 
 ___
 
@@ -80,4 +80,4 @@ ___
 
 • **user_id**: *number*
 
-*Defined in [entity/QQInfo.ts:10](https://github.com/CaoMeiYouRen/node-cq-robot/blob/2d55f8e/src/entity/QQInfo.ts#L10)*
+*Defined in [entity/QQInfo.ts:10](https://github.com/CaoMeiYouRen/node-cq-robot/blob/6797119/src/entity/QQInfo.ts#L10)*

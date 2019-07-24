@@ -37,7 +37,7 @@ CQ应用
 
 • **APP_ID**: *string*
 
-*Defined in [event/CQAppAbstract.ts:27](https://github.com/CaoMeiYouRen/node-cq-robot/blob/2d55f8e/src/event/CQAppAbstract.ts#L27)*
+*Defined in [event/CQAppAbstract.ts:27](https://github.com/CaoMeiYouRen/node-cq-robot/blob/6797119/src/event/CQAppAbstract.ts#L27)*
 
 应用ID。
 规则见https://d.cqp.me/Pro/%E5%BC%80%E5%8F%91/%E5%9F%BA%E7%A1%80%E4%BF%A1%E6%81%AF
@@ -52,7 +52,7 @@ ___
 
 • **CQ**: *[CoolQ](_entity_coolq_.coolq.md)*
 
-*Defined in [event/CQAppAbstract.ts:19](https://github.com/CaoMeiYouRen/node-cq-robot/blob/2d55f8e/src/event/CQAppAbstract.ts#L19)*
+*Defined in [event/CQAppAbstract.ts:19](https://github.com/CaoMeiYouRen/node-cq-robot/blob/6797119/src/event/CQAppAbstract.ts#L19)*
 
  CQ核心操作变量
 
@@ -68,7 +68,7 @@ ___
 
 • **appDirectory**: *string*
 
-*Defined in [event/CQAppAbstract.ts:42](https://github.com/CaoMeiYouRen/node-cq-robot/blob/2d55f8e/src/event/CQAppAbstract.ts#L42)*
+*Defined in [event/CQAppAbstract.ts:42](https://github.com/CaoMeiYouRen/node-cq-robot/blob/6797119/src/event/CQAppAbstract.ts#L42)*
 
 应用数据目录
 
@@ -84,7 +84,7 @@ ___
 
 • **isEnable**: *boolean*
 
-*Defined in [event/CQAppAbstract.ts:35](https://github.com/CaoMeiYouRen/node-cq-robot/blob/2d55f8e/src/event/CQAppAbstract.ts#L35)*
+*Defined in [event/CQAppAbstract.ts:35](https://github.com/CaoMeiYouRen/node-cq-robot/blob/6797119/src/event/CQAppAbstract.ts#L35)*
 
 应用启用状态
 

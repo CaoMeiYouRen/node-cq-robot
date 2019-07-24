@@ -65,7 +65,7 @@
 
 \+ **new CQApp**(`APP_ID`: string, `dirname`: string, `debug`: boolean, `HTTP_API_VER`: number, `CQ_API_VER`: number): *[CQApp](_event_cqapp_.cqapp.md)*
 
-*Defined in [event/CQApp.ts:14](https://github.com/CaoMeiYouRen/node-cq-robot/blob/2d55f8e/src/event/CQApp.ts#L14)*
+*Defined in [event/CQApp.ts:14](https://github.com/CaoMeiYouRen/node-cq-robot/blob/6797119/src/event/CQApp.ts#L14)*
 
 CQApp构造函数
 
@@ -95,7 +95,7 @@ Name | Type | Default | Description |
 
 *Overrides [CQAppAbstract](_event_cqappabstract_.cqappabstract.md).[APP_ID](_event_cqappabstract_.cqappabstract.md#app_id)*
 
-*Defined in [event/CQApp.ts:36](https://github.com/CaoMeiYouRen/node-cq-robot/blob/2d55f8e/src/event/CQApp.ts#L36)*
+*Defined in [event/CQApp.ts:36](https://github.com/CaoMeiYouRen/node-cq-robot/blob/6797119/src/event/CQApp.ts#L36)*
 
 ___
 
@@ -105,7 +105,7 @@ ___
 
 *Overrides [CQAppAbstract](_event_cqappabstract_.cqappabstract.md).[CQ](_event_cqappabstract_.cqappabstract.md#cq)*
 
-*Defined in [event/CQApp.ts:35](https://github.com/CaoMeiYouRen/node-cq-robot/blob/2d55f8e/src/event/CQApp.ts#L35)*
+*Defined in [event/CQApp.ts:35](https://github.com/CaoMeiYouRen/node-cq-robot/blob/6797119/src/event/CQApp.ts#L35)*
 
 ___
 
@@ -115,7 +115,7 @@ ___
 
 *Implementation of [CQListener](../interfaces/_event_cqlistener_.cqlistener.md).[CQ_API_VER](../interfaces/_event_cqlistener_.cqlistener.md#cq_api_ver)*
 
-*Defined in [event/CQApp.ts:37](https://github.com/CaoMeiYouRen/node-cq-robot/blob/2d55f8e/src/event/CQApp.ts#L37)*
+*Defined in [event/CQApp.ts:37](https://github.com/CaoMeiYouRen/node-cq-robot/blob/6797119/src/event/CQApp.ts#L37)*
 
 ___
 
@@ -125,7 +125,7 @@ ___
 
 *Implementation of [CQListener](../interfaces/_event_cqlistener_.cqlistener.md).[HTTP_API_VER](../interfaces/_event_cqlistener_.cqlistener.md#http_api_ver)*
 
-*Defined in [event/CQApp.ts:38](https://github.com/CaoMeiYouRen/node-cq-robot/blob/2d55f8e/src/event/CQApp.ts#L38)*
+*Defined in [event/CQApp.ts:38](https://github.com/CaoMeiYouRen/node-cq-robot/blob/6797119/src/event/CQApp.ts#L38)*
 
 ___
 
@@ -135,7 +135,7 @@ ___
 
 *Overrides [CQAppAbstract](_event_cqappabstract_.cqappabstract.md).[appDirectory](_event_cqappabstract_.cqappabstract.md#appdirectory)*
 
-*Defined in [event/CQApp.ts:46](https://github.com/CaoMeiYouRen/node-cq-robot/blob/2d55f8e/src/event/CQApp.ts#L46)*
+*Defined in [event/CQApp.ts:46](https://github.com/CaoMeiYouRen/node-cq-robot/blob/6797119/src/event/CQApp.ts#L46)*
 
 ___
 
@@ -145,7 +145,7 @@ ___
 
 *Overrides [CQAppAbstract](_event_cqappabstract_.cqappabstract.md).[isEnable](_event_cqappabstract_.cqappabstract.md#isenable)*
 
-*Defined in [event/CQApp.ts:45](https://github.com/CaoMeiYouRen/node-cq-robot/blob/2d55f8e/src/event/CQApp.ts#L45)*
+*Defined in [event/CQApp.ts:45](https://github.com/CaoMeiYouRen/node-cq-robot/blob/6797119/src/event/CQApp.ts#L45)*
 
 应用启用状态，默认为false
 
@@ -161,7 +161,7 @@ ___
 
 *Implementation of [CQListener](../interfaces/_event_cqlistener_.cqlistener.md)*
 
-*Defined in [event/CQApp.ts:63](https://github.com/CaoMeiYouRen/node-cq-robot/blob/2d55f8e/src/event/CQApp.ts#L63)*
+*Defined in [event/CQApp.ts:63](https://github.com/CaoMeiYouRen/node-cq-robot/blob/6797119/src/event/CQApp.ts#L63)*
 
 **Returns:** *void*
 
@@ -173,7 +173,7 @@ ___
 
 *Implementation of [CQListener](../interfaces/_event_cqlistener_.cqlistener.md)*
 
-*Defined in [event/CQApp.ts:74](https://github.com/CaoMeiYouRen/node-cq-robot/blob/2d55f8e/src/event/CQApp.ts#L74)*
+*Defined in [event/CQApp.ts:74](https://github.com/CaoMeiYouRen/node-cq-robot/blob/6797119/src/event/CQApp.ts#L74)*
 
 **Returns:** *`0`*
 
@@ -185,7 +185,7 @@ ___
 
 *Implementation of [CQListener](../interfaces/_event_cqlistener_.cqlistener.md)*
 
-*Defined in [event/CQApp.ts:83](https://github.com/CaoMeiYouRen/node-cq-robot/blob/2d55f8e/src/event/CQApp.ts#L83)*
+*Defined in [event/CQApp.ts:83](https://github.com/CaoMeiYouRen/node-cq-robot/blob/6797119/src/event/CQApp.ts#L83)*
 
 **Parameters:**
 
@@ -208,7 +208,7 @@ ___
 
 *Implementation of [CQListener](../interfaces/_event_cqlistener_.cqlistener.md)*
 
-*Defined in [event/CQApp.ts:71](https://github.com/CaoMeiYouRen/node-cq-robot/blob/2d55f8e/src/event/CQApp.ts#L71)*
+*Defined in [event/CQApp.ts:71](https://github.com/CaoMeiYouRen/node-cq-robot/blob/6797119/src/event/CQApp.ts#L71)*
 
 **Returns:** *`0`*
 
@@ -220,7 +220,7 @@ ___
 
 *Implementation of [CQListener](../interfaces/_event_cqlistener_.cqlistener.md)*
 
-*Defined in [event/CQApp.ts:68](https://github.com/CaoMeiYouRen/node-cq-robot/blob/2d55f8e/src/event/CQApp.ts#L68)*
+*Defined in [event/CQApp.ts:68](https://github.com/CaoMeiYouRen/node-cq-robot/blob/6797119/src/event/CQApp.ts#L68)*
 
 **Returns:** *`0`*
 
@@ -232,7 +232,7 @@ ___
 
 *Implementation of [CQListener](../interfaces/_event_cqlistener_.cqlistener.md)*
 
-*Defined in [event/CQApp.ts:98](https://github.com/CaoMeiYouRen/node-cq-robot/blob/2d55f8e/src/event/CQApp.ts#L98)*
+*Defined in [event/CQApp.ts:98](https://github.com/CaoMeiYouRen/node-cq-robot/blob/6797119/src/event/CQApp.ts#L98)*
 
 **Parameters:**
 
@@ -252,7 +252,7 @@ ___
 
 *Implementation of [CQListener](../interfaces/_event_cqlistener_.cqlistener.md)*
 
-*Defined in [event/CQApp.ts:89](https://github.com/CaoMeiYouRen/node-cq-robot/blob/2d55f8e/src/event/CQApp.ts#L89)*
+*Defined in [event/CQApp.ts:89](https://github.com/CaoMeiYouRen/node-cq-robot/blob/6797119/src/event/CQApp.ts#L89)*
 
 **Parameters:**
 
@@ -273,7 +273,7 @@ ___
 
 *Implementation of [CQListener](../interfaces/_event_cqlistener_.cqlistener.md)*
 
-*Defined in [event/CQApp.ts:92](https://github.com/CaoMeiYouRen/node-cq-robot/blob/2d55f8e/src/event/CQApp.ts#L92)*
+*Defined in [event/CQApp.ts:92](https://github.com/CaoMeiYouRen/node-cq-robot/blob/6797119/src/event/CQApp.ts#L92)*
 
 **Parameters:**
 
@@ -295,7 +295,7 @@ ___
 
 *Implementation of [CQListener](../interfaces/_event_cqlistener_.cqlistener.md)*
 
-*Defined in [event/CQApp.ts:95](https://github.com/CaoMeiYouRen/node-cq-robot/blob/2d55f8e/src/event/CQApp.ts#L95)*
+*Defined in [event/CQApp.ts:95](https://github.com/CaoMeiYouRen/node-cq-robot/blob/6797119/src/event/CQApp.ts#L95)*
 
 **Parameters:**
 
@@ -317,7 +317,7 @@ ___
 
 *Implementation of [CQListener](../interfaces/_event_cqlistener_.cqlistener.md)*
 
-*Defined in [event/CQApp.ts:80](https://github.com/CaoMeiYouRen/node-cq-robot/blob/2d55f8e/src/event/CQApp.ts#L80)*
+*Defined in [event/CQApp.ts:80](https://github.com/CaoMeiYouRen/node-cq-robot/blob/6797119/src/event/CQApp.ts#L80)*
 
 **Parameters:**
 
@@ -341,7 +341,7 @@ ___
 
 *Implementation of [CQListener](../interfaces/_event_cqlistener_.cqlistener.md)*
 
-*Defined in [event/CQApp.ts:86](https://github.com/CaoMeiYouRen/node-cq-robot/blob/2d55f8e/src/event/CQApp.ts#L86)*
+*Defined in [event/CQApp.ts:86](https://github.com/CaoMeiYouRen/node-cq-robot/blob/6797119/src/event/CQApp.ts#L86)*
 
 **Parameters:**
 
@@ -363,7 +363,7 @@ ___
 
 *Implementation of [CQListener](../interfaces/_event_cqlistener_.cqlistener.md)*
 
-*Defined in [event/CQApp.ts:77](https://github.com/CaoMeiYouRen/node-cq-robot/blob/2d55f8e/src/event/CQApp.ts#L77)*
+*Defined in [event/CQApp.ts:77](https://github.com/CaoMeiYouRen/node-cq-robot/blob/6797119/src/event/CQApp.ts#L77)*
 
 **Parameters:**
 
@@ -385,7 +385,7 @@ ___
 
 *Implementation of [CQListener](../interfaces/_event_cqlistener_.cqlistener.md)*
 
-*Defined in [event/CQApp.ts:101](https://github.com/CaoMeiYouRen/node-cq-robot/blob/2d55f8e/src/event/CQApp.ts#L101)*
+*Defined in [event/CQApp.ts:101](https://github.com/CaoMeiYouRen/node-cq-robot/blob/6797119/src/event/CQApp.ts#L101)*
 
 **Parameters:**
 
@@ -407,7 +407,7 @@ ___
 
 *Implementation of [CQListener](../interfaces/_event_cqlistener_.cqlistener.md)*
 
-*Defined in [event/CQApp.ts:104](https://github.com/CaoMeiYouRen/node-cq-robot/blob/2d55f8e/src/event/CQApp.ts#L104)*
+*Defined in [event/CQApp.ts:104](https://github.com/CaoMeiYouRen/node-cq-robot/blob/6797119/src/event/CQApp.ts#L104)*
 
 **Parameters:**
 
@@ -430,6 +430,6 @@ ___
 
 *Implementation of [CQListener](../interfaces/_event_cqlistener_.cqlistener.md)*
 
-*Defined in [event/CQApp.ts:65](https://github.com/CaoMeiYouRen/node-cq-robot/blob/2d55f8e/src/event/CQApp.ts#L65)*
+*Defined in [event/CQApp.ts:65](https://github.com/CaoMeiYouRen/node-cq-robot/blob/6797119/src/event/CQApp.ts#L65)*
 
 **Returns:** *`0`*

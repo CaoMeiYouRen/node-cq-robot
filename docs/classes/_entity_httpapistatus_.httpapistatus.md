@@ -35,7 +35,7 @@ HTTP_API插件运行状态
 
 • **app_enabled**: *boolean*
 
-*Defined in [entity/HttpApiStatus.ts:23](https://github.com/CaoMeiYouRen/node-cq-robot/blob/2d55f8e/src/entity/HttpApiStatus.ts#L23)*
+*Defined in [entity/HttpApiStatus.ts:23](https://github.com/CaoMeiYouRen/node-cq-robot/blob/6797119/src/entity/HttpApiStatus.ts#L23)*
 
 HTTP API 插件已启用
 
@@ -49,7 +49,7 @@ ___
 
 • **app_good**: *boolean*
 
-*Defined in [entity/HttpApiStatus.ts:37](https://github.com/CaoMeiYouRen/node-cq-robot/blob/2d55f8e/src/entity/HttpApiStatus.ts#L37)*
+*Defined in [entity/HttpApiStatus.ts:37](https://github.com/CaoMeiYouRen/node-cq-robot/blob/6797119/src/entity/HttpApiStatus.ts#L37)*
 
 HTTP API 插件正常运行（已初始化、已启用、各内部插件正常运行）
 
@@ -63,7 +63,7 @@ ___
 
 • **app_initialized**: *boolean*
 
-*Defined in [entity/HttpApiStatus.ts:16](https://github.com/CaoMeiYouRen/node-cq-robot/blob/2d55f8e/src/entity/HttpApiStatus.ts#L16)*
+*Defined in [entity/HttpApiStatus.ts:16](https://github.com/CaoMeiYouRen/node-cq-robot/blob/6797119/src/entity/HttpApiStatus.ts#L16)*
 
 HTTP API 插件已初始化
 
@@ -77,7 +77,7 @@ ___
 
 • **good**: *boolean*
 
-*Defined in [entity/HttpApiStatus.ts:51](https://github.com/CaoMeiYouRen/node-cq-robot/blob/2d55f8e/src/entity/HttpApiStatus.ts#L51)*
+*Defined in [entity/HttpApiStatus.ts:51](https://github.com/CaoMeiYouRen/node-cq-robot/blob/6797119/src/entity/HttpApiStatus.ts#L51)*
 
 HTTP API 插件状态符合预期，意味着插件已初始化，内部插件都在正常运行，且 QQ 在线
 
@@ -91,7 +91,7 @@ ___
 
 • **online**: *boolean*
 
-*Defined in [entity/HttpApiStatus.ts:44](https://github.com/CaoMeiYouRen/node-cq-robot/blob/2d55f8e/src/entity/HttpApiStatus.ts#L44)*
+*Defined in [entity/HttpApiStatus.ts:44](https://github.com/CaoMeiYouRen/node-cq-robot/blob/6797119/src/entity/HttpApiStatus.ts#L44)*
 
 当前 QQ 在线，null 表示无法查询到在线状态
 
@@ -105,7 +105,7 @@ ___
 
 • **plugins_good**: *object*
 
-*Defined in [entity/HttpApiStatus.ts:30](https://github.com/CaoMeiYouRen/node-cq-robot/blob/2d55f8e/src/entity/HttpApiStatus.ts#L30)*
+*Defined in [entity/HttpApiStatus.ts:30](https://github.com/CaoMeiYouRen/node-cq-robot/blob/6797119/src/entity/HttpApiStatus.ts#L30)*
 
 HTTP API 的各内部插件是否正常运行
 

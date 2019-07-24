@@ -646,6 +646,29 @@ class CoolQ {
         });
     }
     /**
+     *
+     * 置群添加请求
+     * @author CaoMeiYouRen
+     * @date 2019-07-24
+     * @param {string} flag 加群请求的 flag（需从上报的数据中获得）
+     * @param {string} type add 或 invite，请求类型（需要和上报消息中的 sub_type 字段相符）
+     * @param {boolean} [approve=true] 是否同意请求／邀请
+     * @param {string} reason 拒绝理由（仅在拒绝时有效）
+     * @returns
+     * @memberof CoolQ
+     */
+    set_group_add_request(flag, type, approve = true, reason = '') {
+        return __awaiter(this, void 0, void 0, function* () {
+            if (this.debug) {
+                utils_1.printTime(`[置群添加请求] 请求反馈标识:${flag} 请求类型:${type}反馈类型:${approve} 理由:${reason}`);
+                return 0;
+            }
+            return this.cqBasicOperate('set_group_add_request', {
+                flag, type, approve, reason
+            });
+        });
+    }
+    /**
      * 获取登录号信息
      *
      * @author CaoMeiYouRen
@@ -1345,6 +1368,23 @@ class CoolQ {
     setFriendAddRequest(flag, approve = true, remark) {
         return __awaiter(this, void 0, void 0, function* () {
             return this.set_friend_add_request(flag, approve, remark);
+        });
+    }
+    /**
+     *
+     * 置群添加请求
+     * @author CaoMeiYouRen
+     * @date 2019-07-24
+     * @param {string} flag 加群请求的 flag（需从上报的数据中获得）
+     * @param {string} type add 或 invite，请求类型（需要和上报消息中的 sub_type 字段相符）
+     * @param {boolean} [approve=true] 是否同意请求／邀请
+     * @param {string} reason 拒绝理由（仅在拒绝时有效）
+     * @returns
+     * @memberof CoolQ
+     */
+    setGroupAddRequest(flag, type, approve = true, reason = '') {
+        return __awaiter(this, void 0, void 0, function* () {
+            return this.set_group_add_request(flag, type, approve, reason);
         });
     }
     /**

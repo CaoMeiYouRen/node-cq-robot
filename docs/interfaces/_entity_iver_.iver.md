@@ -33,7 +33,7 @@
 
 • **CQ_API_VER**: *`9` | number*
 
-*Defined in [entity/IVer.ts:15](https://github.com/CaoMeiYouRen/node-cq-robot/blob/2d55f8e/src/entity/IVer.ts#L15)*
+*Defined in [entity/IVer.ts:15](https://github.com/CaoMeiYouRen/node-cq-robot/blob/6797119/src/entity/IVer.ts#L15)*
 
 当前酷Q Api 版本。
 详见 https://cqp.cc/t/15124
@@ -48,7 +48,7 @@ ___
 
 • **HTTP_API_VER**: *`4` | number*
 
-*Defined in [entity/IVer.ts:22](https://github.com/CaoMeiYouRen/node-cq-robot/blob/2d55f8e/src/entity/IVer.ts#L22)*
+*Defined in [entity/IVer.ts:22](https://github.com/CaoMeiYouRen/node-cq-robot/blob/6797119/src/entity/IVer.ts#L22)*
 
 当前CoolQ HTTP API 版本。
 详见 https://cqhttp.cc/docs

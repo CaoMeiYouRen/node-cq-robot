@@ -332,6 +332,19 @@ export declare class CoolQ {
      */
     set_friend_add_request(flag: string, approve: boolean, remark: string): Promise<number | import("cq-websocket").APIResponse<unknown>>;
     /**
+     *
+     * 置群添加请求
+     * @author CaoMeiYouRen
+     * @date 2019-07-24
+     * @param {string} flag 加群请求的 flag（需从上报的数据中获得）
+     * @param {string} type add 或 invite，请求类型（需要和上报消息中的 sub_type 字段相符）
+     * @param {boolean} [approve=true] 是否同意请求／邀请
+     * @param {string} reason 拒绝理由（仅在拒绝时有效）
+     * @returns
+     * @memberof CoolQ
+     */
+    set_group_add_request(flag: string, type: string, approve?: boolean, reason?: string): Promise<number | import("cq-websocket").APIResponse<unknown>>;
+    /**
      * 获取登录号信息
      *
      * @author CaoMeiYouRen
@@ -660,6 +673,19 @@ export declare class CoolQ {
     * @memberof CoolQ
     */
     setFriendAddRequest(flag: string, approve: boolean, remark: string): Promise<number | import("cq-websocket").APIResponse<unknown>>;
+    /**
+     *
+     * 置群添加请求
+     * @author CaoMeiYouRen
+     * @date 2019-07-24
+     * @param {string} flag 加群请求的 flag（需从上报的数据中获得）
+     * @param {string} type add 或 invite，请求类型（需要和上报消息中的 sub_type 字段相符）
+     * @param {boolean} [approve=true] 是否同意请求／邀请
+     * @param {string} reason 拒绝理由（仅在拒绝时有效）
+     * @returns
+     * @memberof CoolQ
+     */
+    setGroupAddRequest(flag: string, type: string, approve?: boolean, reason?: string): Promise<number | import("cq-websocket").APIResponse<unknown>>;
     /**
     * 获取登录号信息
     *
