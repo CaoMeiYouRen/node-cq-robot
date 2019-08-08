@@ -184,7 +184,7 @@
     },
 ]
 
-*Defined in [entity/CQAuth.ts:1](https://github.com/CaoMeiYouRen/node-cq-robot/blob/6797119/src/entity/CQAuth.ts#L1)*
+*Defined in [entity/CQAuth.ts:1](https://github.com/CaoMeiYouRen/node-cq-robot/blob/320aa4a/src/entity/CQAuth.ts#L1)*
 
 ___
 
@@ -203,7 +203,7 @@ ___
     'get_login_info'
 ]
 
-*Defined in [entity/CQAuth.ts:164](https://github.com/CaoMeiYouRen/node-cq-robot/blob/6797119/src/entity/CQAuth.ts#L164)*
+*Defined in [entity/CQAuth.ts:164](https://github.com/CaoMeiYouRen/node-cq-robot/blob/320aa4a/src/entity/CQAuth.ts#L164)*
 
 ## Functions
 
@@ -211,7 +211,7 @@ ___
 
 ▸ **getAuth**(`authName`: string): *number*
 
-*Defined in [entity/CQAuth.ts:202](https://github.com/CaoMeiYouRen/node-cq-robot/blob/6797119/src/entity/CQAuth.ts#L202)*
+*Defined in [entity/CQAuth.ts:202](https://github.com/CaoMeiYouRen/node-cq-robot/blob/320aa4a/src/entity/CQAuth.ts#L202)*
 
 根据操作名称获取操作权限值
 
@@ -231,7 +231,7 @@ ___
 
 ▸ **getAuthName**(`auth`: number): *string*
 
-*Defined in [entity/CQAuth.ts:181](https://github.com/CaoMeiYouRen/node-cq-robot/blob/6797119/src/entity/CQAuth.ts#L181)*
+*Defined in [entity/CQAuth.ts:181](https://github.com/CaoMeiYouRen/node-cq-robot/blob/320aa4a/src/entity/CQAuth.ts#L181)*
 
 **`export`** 
 

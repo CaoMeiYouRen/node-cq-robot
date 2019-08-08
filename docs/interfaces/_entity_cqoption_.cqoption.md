@@ -37,7 +37,7 @@
 
 • **apiver**: *number*
 
-*Defined in [entity/CQOption.ts:10](https://github.com/CaoMeiYouRen/node-cq-robot/blob/6797119/src/entity/CQOption.ts#L10)*
+*Defined in [entity/CQOption.ts:10](https://github.com/CaoMeiYouRen/node-cq-robot/blob/320aa4a/src/entity/CQOption.ts#L10)*
 
 ___
 
@@ -45,7 +45,7 @@ ___
 
 • **auth**: *`Array<number>`*
 
-*Defined in [entity/CQOption.ts:17](https://github.com/CaoMeiYouRen/node-cq-robot/blob/6797119/src/entity/CQOption.ts#L17)*
+*Defined in [entity/CQOption.ts:17](https://github.com/CaoMeiYouRen/node-cq-robot/blob/320aa4a/src/entity/CQOption.ts#L17)*
 
 ___
 
@@ -53,7 +53,7 @@ ___
 
 • **author**: *string*
 
-*Defined in [entity/CQOption.ts:14](https://github.com/CaoMeiYouRen/node-cq-robot/blob/6797119/src/entity/CQOption.ts#L14)*
+*Defined in [entity/CQOption.ts:14](https://github.com/CaoMeiYouRen/node-cq-robot/blob/320aa4a/src/entity/CQOption.ts#L14)*
 
 ___
 
@@ -61,7 +61,7 @@ ___
 
 • **description**: *string*
 
-*Defined in [entity/CQOption.ts:15](https://github.com/CaoMeiYouRen/node-cq-robot/blob/6797119/src/entity/CQOption.ts#L15)*
+*Defined in [entity/CQOption.ts:15](https://github.com/CaoMeiYouRen/node-cq-robot/blob/320aa4a/src/entity/CQOption.ts#L15)*
 
 ___
 
@@ -69,7 +69,7 @@ ___
 
 • **event**: *`Array<CQEvent>`*
 
-*Defined in [entity/CQOption.ts:16](https://github.com/CaoMeiYouRen/node-cq-robot/blob/6797119/src/entity/CQOption.ts#L16)*
+*Defined in [entity/CQOption.ts:16](https://github.com/CaoMeiYouRen/node-cq-robot/blob/320aa4a/src/entity/CQOption.ts#L16)*
 
 ___
 
@@ -77,7 +77,7 @@ ___
 
 • **name**: *string*
 
-*Defined in [entity/CQOption.ts:11](https://github.com/CaoMeiYouRen/node-cq-robot/blob/6797119/src/entity/CQOption.ts#L11)*
+*Defined in [entity/CQOption.ts:11](https://github.com/CaoMeiYouRen/node-cq-robot/blob/320aa4a/src/entity/CQOption.ts#L11)*
 
 ___
 
@@ -85,7 +85,7 @@ ___
 
 • **version**: *string*
 
-*Defined in [entity/CQOption.ts:12](https://github.com/CaoMeiYouRen/node-cq-robot/blob/6797119/src/entity/CQOption.ts#L12)*
+*Defined in [entity/CQOption.ts:12](https://github.com/CaoMeiYouRen/node-cq-robot/blob/320aa4a/src/entity/CQOption.ts#L12)*
 
 ___
 
@@ -93,4 +93,4 @@ ___
 
 • **version_id**: *number*
 
-*Defined in [entity/CQOption.ts:13](https://github.com/CaoMeiYouRen/node-cq-robot/blob/6797119/src/entity/CQOption.ts#L13)*
+*Defined in [entity/CQOption.ts:13](https://github.com/CaoMeiYouRen/node-cq-robot/blob/320aa4a/src/entity/CQOption.ts#L13)*
