@@ -26,6 +26,5 @@
 * ["event/CQApp"](modules/_event_cqapp_.md)
 * ["event/CQAppAbstract"](modules/_event_cqappabstract_.md)
 * ["event/CQListener"](modules/_event_cqlistener_.md)
-* ["utils/log"](modules/_utils_log_.md)
 * ["utils/strHelp"](modules/_utils_strhelp_.md)
 * ["utils/timeHelp"](modules/_utils_timehelp_.md)

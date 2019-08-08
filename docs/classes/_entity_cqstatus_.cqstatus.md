@@ -30,7 +30,7 @@
 
 \+ **new CQStatus**(`id`: number, `msg`: string): *[CQStatus](_entity_cqstatus_.cqstatus.md)*
 
-*Defined in [entity/CQStatus.ts:3](https://github.com/CaoMeiYouRen/node-cq-robot/blob/320aa4a/src/entity/CQStatus.ts#L3)*
+*Defined in [entity/CQStatus.ts:3](https://github.com/CaoMeiYouRen/node-cq-robot/blob/951adbf/src/entity/CQStatus.ts#L3)*
 
 **Parameters:**
 
@@ -47,7 +47,7 @@ Name | Type |
 
 • **id**: *number*
 
-*Defined in [entity/CQStatus.ts:2](https://github.com/CaoMeiYouRen/node-cq-robot/blob/320aa4a/src/entity/CQStatus.ts#L2)*
+*Defined in [entity/CQStatus.ts:2](https://github.com/CaoMeiYouRen/node-cq-robot/blob/951adbf/src/entity/CQStatus.ts#L2)*
 
 ___
 
@@ -55,7 +55,7 @@ ___
 
 • **msg**: *string*
 
-*Defined in [entity/CQStatus.ts:3](https://github.com/CaoMeiYouRen/node-cq-robot/blob/320aa4a/src/entity/CQStatus.ts#L3)*
+*Defined in [entity/CQStatus.ts:3](https://github.com/CaoMeiYouRen/node-cq-robot/blob/951adbf/src/entity/CQStatus.ts#L3)*
 
 ## Methods
 
@@ -63,7 +63,7 @@ ___
 
 ▸ **isSuccess**(): *boolean*
 
-*Defined in [entity/CQStatus.ts:16](https://github.com/CaoMeiYouRen/node-cq-robot/blob/320aa4a/src/entity/CQStatus.ts#L16)*
+*Defined in [entity/CQStatus.ts:16](https://github.com/CaoMeiYouRen/node-cq-robot/blob/951adbf/src/entity/CQStatus.ts#L16)*
 
 操作是否执行成功，成功返回true
 
@@ -81,7 +81,7 @@ ___
 
 ▸ **getStatus**(`status`: number): *[CQStatus](_entity_cqstatus_.cqstatus.md)*
 
-*Defined in [entity/CQStatus.ts:19](https://github.com/CaoMeiYouRen/node-cq-robot/blob/320aa4a/src/entity/CQStatus.ts#L19)*
+*Defined in [entity/CQStatus.ts:19](https://github.com/CaoMeiYouRen/node-cq-robot/blob/951adbf/src/entity/CQStatus.ts#L19)*
 
 **Parameters:**
 

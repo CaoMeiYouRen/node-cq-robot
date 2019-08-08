@@ -59,7 +59,7 @@
 
 *Inherited from [IVer](_entity_iver_.iver.md).[CQ_API_VER](_entity_iver_.iver.md#cq_api_ver)*
 
-*Defined in [entity/IVer.ts:15](https://github.com/CaoMeiYouRen/node-cq-robot/blob/320aa4a/src/entity/IVer.ts#L15)*
+*Defined in [entity/IVer.ts:15](https://github.com/CaoMeiYouRen/node-cq-robot/blob/951adbf/src/entity/IVer.ts#L15)*
 
 当前酷Q Api 版本。
 详见 https://cqp.cc/t/15124
@@ -76,7 +76,7 @@ ___
 
 *Inherited from [IVer](_entity_iver_.iver.md).[HTTP_API_VER](_entity_iver_.iver.md#http_api_ver)*
 
-*Defined in [entity/IVer.ts:22](https://github.com/CaoMeiYouRen/node-cq-robot/blob/320aa4a/src/entity/IVer.ts#L22)*
+*Defined in [entity/IVer.ts:22](https://github.com/CaoMeiYouRen/node-cq-robot/blob/951adbf/src/entity/IVer.ts#L22)*
 
 当前CoolQ HTTP API 版本。
 详见 https://cqhttp.cc/docs
@@ -91,7 +91,7 @@ ___
 
 ▸ **debug**(): *void*
 
-*Defined in [event/CQListener.ts:17](https://github.com/CaoMeiYouRen/node-cq-robot/blob/320aa4a/src/event/CQListener.ts#L17)*
+*Defined in [event/CQListener.ts:17](https://github.com/CaoMeiYouRen/node-cq-robot/blob/951adbf/src/event/CQListener.ts#L17)*
 
 本函数的内容仅在debug模式下会执行，即CQ.setDebug(true)
 
@@ -105,7 +105,7 @@ ___
 
 ▸ **disable**(): *`0`*
 
-*Defined in [event/CQListener.ts:47](https://github.com/CaoMeiYouRen/node-cq-robot/blob/320aa4a/src/event/CQListener.ts#L47)*
+*Defined in [event/CQListener.ts:47](https://github.com/CaoMeiYouRen/node-cq-robot/blob/951adbf/src/event/CQListener.ts#L47)*
 
 Type=1004 应用将被停用
 本函数会在连接断开前执行，可以在此执行插件退出代码
@@ -124,7 +124,7 @@ ___
 
 ▸ **discussMsg**(`subType`: string, `msgId`: number, `fromDiscuss`: number, `fromQQ`: number, `msg`: string, `font`: number): *`Promise<0 | 1>`*
 
-*Defined in [event/CQListener.ts:89](https://github.com/CaoMeiYouRen/node-cq-robot/blob/320aa4a/src/event/CQListener.ts#L89)*
+*Defined in [event/CQListener.ts:89](https://github.com/CaoMeiYouRen/node-cq-robot/blob/951adbf/src/event/CQListener.ts#L89)*
 
 Type=4 讨论组消息
 
@@ -149,7 +149,7 @@ ___
 
 ▸ **enable**(): *`0`*
 
-*Defined in [event/CQListener.ts:38](https://github.com/CaoMeiYouRen/node-cq-robot/blob/320aa4a/src/event/CQListener.ts#L38)*
+*Defined in [event/CQListener.ts:38](https://github.com/CaoMeiYouRen/node-cq-robot/blob/951adbf/src/event/CQListener.ts#L38)*
 
 Type=1003 应用已被启用。本函数会在连接建立后立刻执行，可以在此执行初始化代码。
 
@@ -165,7 +165,7 @@ ___
 
 ▸ **exit**(): *`0`*
 
-*Defined in [event/CQListener.ts:32](https://github.com/CaoMeiYouRen/node-cq-robot/blob/320aa4a/src/event/CQListener.ts#L32)*
+*Defined in [event/CQListener.ts:32](https://github.com/CaoMeiYouRen/node-cq-robot/blob/951adbf/src/event/CQListener.ts#L32)*
 
 Type=1002 本函数会在连接断开后执行，请在此执行插件退出代码
 
@@ -181,7 +181,7 @@ ___
 
 ▸ **friendAdd**(`subType`: string, `sendTime`: number, `fromQQ`: number): *`Promise<0 | 1>`*
 
-*Defined in [event/CQListener.ts:147](https://github.com/CaoMeiYouRen/node-cq-robot/blob/320aa4a/src/event/CQListener.ts#L147)*
+*Defined in [event/CQListener.ts:147](https://github.com/CaoMeiYouRen/node-cq-robot/blob/951adbf/src/event/CQListener.ts#L147)*
 
 Type=201 好友事件-好友已添加
 
@@ -203,7 +203,7 @@ ___
 
 ▸ **groupAdmin**(`subType`: string, `sendTime`: number, `fromGroup`: number, `beingOperateQQ`: number): *`Promise<0 | 1>`*
 
-*Defined in [event/CQListener.ts:113](https://github.com/CaoMeiYouRen/node-cq-robot/blob/320aa4a/src/event/CQListener.ts#L113)*
+*Defined in [event/CQListener.ts:113](https://github.com/CaoMeiYouRen/node-cq-robot/blob/951adbf/src/event/CQListener.ts#L113)*
 
 Type=101 群事件-管理员变动
 
@@ -226,7 +226,7 @@ ___
 
 ▸ **groupDecrease**(`subType`: string, `sendTime`: number, `fromGroup`: number, `fromQQ`: number, `beingOperateQQ`: number): *`Promise<0 | 1>`*
 
-*Defined in [event/CQListener.ts:125](https://github.com/CaoMeiYouRen/node-cq-robot/blob/320aa4a/src/event/CQListener.ts#L125)*
+*Defined in [event/CQListener.ts:125](https://github.com/CaoMeiYouRen/node-cq-robot/blob/951adbf/src/event/CQListener.ts#L125)*
 
 Type=102 群事件-群成员减少
 
@@ -250,7 +250,7 @@ ___
 
 ▸ **groupIncrease**(`subType`: string, `sendTime`: number, `fromGroup`: number, `fromQQ`: number, `beingOperateQQ`: number): *`Promise<0 | 1>`*
 
-*Defined in [event/CQListener.ts:137](https://github.com/CaoMeiYouRen/node-cq-robot/blob/320aa4a/src/event/CQListener.ts#L137)*
+*Defined in [event/CQListener.ts:137](https://github.com/CaoMeiYouRen/node-cq-robot/blob/951adbf/src/event/CQListener.ts#L137)*
 
 Type=103 群事件-群成员增加
 
@@ -274,7 +274,7 @@ ___
 
 ▸ **groupMsg**(`subType`: string, `msgId`: number, `fromGroup`: number, `fromQQ`: number, `fromAnonymous`: string, `msg`: string, `font`: number): *`Promise<0 | 1>`*
 
-*Defined in [event/CQListener.ts:76](https://github.com/CaoMeiYouRen/node-cq-robot/blob/320aa4a/src/event/CQListener.ts#L76)*
+*Defined in [event/CQListener.ts:76](https://github.com/CaoMeiYouRen/node-cq-robot/blob/951adbf/src/event/CQListener.ts#L76)*
 
 Type=2 群消息
 
@@ -302,7 +302,7 @@ ___
 
 ▸ **groupUpload**(`subType`: string, `sendTime`: number, `fromGroup`: number, `fromQQ`: number, `file`: [CQFile](../classes/_entity_cqfile_.cqfile.md)): *`Promise<0 | 1>`*
 
-*Defined in [event/CQListener.ts:102](https://github.com/CaoMeiYouRen/node-cq-robot/blob/320aa4a/src/event/CQListener.ts#L102)*
+*Defined in [event/CQListener.ts:102](https://github.com/CaoMeiYouRen/node-cq-robot/blob/951adbf/src/event/CQListener.ts#L102)*
 
 Type=11 群文件上传事件
 
@@ -326,7 +326,7 @@ ___
 
 ▸ **privateMsg**(`subType`: string, `msgId`: number, `fromQQ`: number, `msg`: string, `font`: number): *`Promise<0 | 1>`*
 
-*Defined in [event/CQListener.ts:62](https://github.com/CaoMeiYouRen/node-cq-robot/blob/320aa4a/src/event/CQListener.ts#L62)*
+*Defined in [event/CQListener.ts:62](https://github.com/CaoMeiYouRen/node-cq-robot/blob/951adbf/src/event/CQListener.ts#L62)*
 
 Type=21 私聊消息
 
@@ -354,7 +354,7 @@ ___
 
 ▸ **requestAddFriend**(`subType`: string, `sendTime`: number, `fromQQ`: number, `msg`: string, `responseFlag`: string): *`Promise<0 | 1>`*
 
-*Defined in [event/CQListener.ts:159](https://github.com/CaoMeiYouRen/node-cq-robot/blob/320aa4a/src/event/CQListener.ts#L159)*
+*Defined in [event/CQListener.ts:159](https://github.com/CaoMeiYouRen/node-cq-robot/blob/951adbf/src/event/CQListener.ts#L159)*
 
 Type=301 请求-好友添加
 
@@ -378,7 +378,7 @@ ___
 
 ▸ **requestAddGroup**(`subType`: string, `sendTime`: number, `fromGroup`: number, `fromQQ`: number, `msg`: string, `responseFlag`: string): *`Promise<0 | 1>`*
 
-*Defined in [event/CQListener.ts:172](https://github.com/CaoMeiYouRen/node-cq-robot/blob/320aa4a/src/event/CQListener.ts#L172)*
+*Defined in [event/CQListener.ts:172](https://github.com/CaoMeiYouRen/node-cq-robot/blob/951adbf/src/event/CQListener.ts#L172)*
 
 Type=302 请求-群添加
 
@@ -403,7 +403,7 @@ ___
 
 ▸ **startup**(): *`0`*
 
-*Defined in [event/CQListener.ts:26](https://github.com/CaoMeiYouRen/node-cq-robot/blob/320aa4a/src/event/CQListener.ts#L26)*
+*Defined in [event/CQListener.ts:26](https://github.com/CaoMeiYouRen/node-cq-robot/blob/951adbf/src/event/CQListener.ts#L26)*
 
 Type=1001 插件启动，本函数会在连接建立前执行。
 请在这里执行插件初始化代码。

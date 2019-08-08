@@ -13,7 +13,7 @@
         "dev": "tsc -w",
         "lint": "eslint src --ext .ts",
         "test": "mocha -r ts-node/register test/**/*.test.ts -R nyan",
-        "deploy": "npm run test && npm run build && npm publish",
+        "deploy": "npm run test && npm run build && npm run docs && npm publish",
         "rm": "rimraf node_modules",
         "docs": "npm run doc && npm run webdocs",
         "doc": "rimraf docs && gulp typedoc",

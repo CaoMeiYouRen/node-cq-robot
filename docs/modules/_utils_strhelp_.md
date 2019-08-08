@@ -16,7 +16,7 @@
 
 ▸ **getMidStr**(`str`: string, `start`: string, `end`: string): *string*
 
-*Defined in [utils/strHelp.ts:14](https://github.com/CaoMeiYouRen/node-cq-robot/blob/320aa4a/src/utils/strHelp.ts#L14)*
+*Defined in [utils/strHelp.ts:14](https://github.com/CaoMeiYouRen/node-cq-robot/blob/951adbf/src/utils/strHelp.ts#L14)*
 
 取出中间文本;
 不含前后参考文本；如果未找到前后文本则返回空文本;

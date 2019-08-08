@@ -37,7 +37,7 @@
 
 \+ **new CQFile**(`id`: string, `name`: string, `size`: number, `busid`: number): *[CQFile](_entity_cqfile_.cqfile.md)*
 
-*Defined in [entity/CQFile.ts:13](https://github.com/CaoMeiYouRen/node-cq-robot/blob/320aa4a/src/entity/CQFile.ts#L13)*
+*Defined in [entity/CQFile.ts:13](https://github.com/CaoMeiYouRen/node-cq-robot/blob/951adbf/src/entity/CQFile.ts#L13)*
 
 **Parameters:**
 
@@ -56,7 +56,7 @@ Name | Type |
 
 • **busid**: *number*
 
-*Defined in [entity/CQFile.ts:13](https://github.com/CaoMeiYouRen/node-cq-robot/blob/320aa4a/src/entity/CQFile.ts#L13)*
+*Defined in [entity/CQFile.ts:13](https://github.com/CaoMeiYouRen/node-cq-robot/blob/951adbf/src/entity/CQFile.ts#L13)*
 
 ___
 
@@ -64,7 +64,7 @@ ___
 
 • **id**: *string*
 
-*Defined in [entity/CQFile.ts:10](https://github.com/CaoMeiYouRen/node-cq-robot/blob/320aa4a/src/entity/CQFile.ts#L10)*
+*Defined in [entity/CQFile.ts:10](https://github.com/CaoMeiYouRen/node-cq-robot/blob/951adbf/src/entity/CQFile.ts#L10)*
 
 ___
 
@@ -72,7 +72,7 @@ ___
 
 • **name**: *string*
 
-*Defined in [entity/CQFile.ts:11](https://github.com/CaoMeiYouRen/node-cq-robot/blob/320aa4a/src/entity/CQFile.ts#L11)*
+*Defined in [entity/CQFile.ts:11](https://github.com/CaoMeiYouRen/node-cq-robot/blob/951adbf/src/entity/CQFile.ts#L11)*
 
 ___
 
@@ -80,4 +80,4 @@ ___
 
 • **size**: *number*
 
-*Defined in [entity/CQFile.ts:12](https://github.com/CaoMeiYouRen/node-cq-robot/blob/320aa4a/src/entity/CQFile.ts#L12)*
+*Defined in [entity/CQFile.ts:12](https://github.com/CaoMeiYouRen/node-cq-robot/blob/951adbf/src/entity/CQFile.ts#L12)*

@@ -29,7 +29,7 @@
 
 Ƭ **LogLevel**: *`0` | `10` | `11` | `12` | `13` | `20` | `30` | `40`*
 
-*Defined in [entity/CoolQ.ts:8](https://github.com/CaoMeiYouRen/node-cq-robot/blob/320aa4a/src/entity/CoolQ.ts#L8)*
+*Defined in [entity/CoolQ.ts:8](https://github.com/CaoMeiYouRen/node-cq-robot/blob/951adbf/src/entity/CoolQ.ts#L8)*
 
 ## Variables
 
@@ -37,7 +37,7 @@
 
 • **bot**: *`CQWebSocket`*
 
-*Defined in [entity/CoolQ.ts:7](https://github.com/CaoMeiYouRen/node-cq-robot/blob/320aa4a/src/entity/CoolQ.ts#L7)*
+*Defined in [entity/CoolQ.ts:7](https://github.com/CaoMeiYouRen/node-cq-robot/blob/951adbf/src/entity/CoolQ.ts#L7)*
 
 ## Functions
 
@@ -45,7 +45,7 @@
 
 ▸ **CQWebSocketInit**(`option`: `CQWebSocketOption`): *`CQWebSocket`*
 
-*Defined in [entity/CoolQ.ts:28](https://github.com/CaoMeiYouRen/node-cq-robot/blob/320aa4a/src/entity/CoolQ.ts#L28)*
+*Defined in [entity/CoolQ.ts:28](https://github.com/CaoMeiYouRen/node-cq-robot/blob/951adbf/src/entity/CoolQ.ts#L28)*
 
 初始化CQWebSocket
 
@@ -65,7 +65,7 @@ ___
 
 ▸ **getCQOption**(`cqPath`: string): *[CQOption](../interfaces/_entity_cqoption_.cqoption.md)*
 
-*Defined in [entity/CoolQ.ts:17](https://github.com/CaoMeiYouRen/node-cq-robot/blob/320aa4a/src/entity/CoolQ.ts#L17)*
+*Defined in [entity/CoolQ.ts:17](https://github.com/CaoMeiYouRen/node-cq-robot/blob/951adbf/src/entity/CoolQ.ts#L17)*
 
 获取CQ的配置
 
