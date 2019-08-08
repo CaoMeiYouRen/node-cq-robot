@@ -15,6 +15,7 @@
         "test": "mocha -r ts-node/register test/**/*.test.ts -R nyan",
         "deploy": "npm run test && npm run build && npm publish",
         "rm": "rimraf node_modules",
+        "docs": "npm run doc && npm run webdocs",
         "doc": "rimraf docs && gulp typedoc",
         "webdocs": "rimraf webdocs && gulp webdocs",
         "mit": "git add . && git cz && git push",
