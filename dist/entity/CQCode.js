@@ -41,10 +41,10 @@ class CQCode {
      * @memberof CQCode
      */
     decode(code) {
+        code = code.replace('&amp;', '&');
         code = code.replace('&#91;', '[');
         code = code.replace('&#93;', ']');
         code = code.replace('&#44;', ',');
-        code = code.replace('&amp;', '&');
         return code;
     }
     /**

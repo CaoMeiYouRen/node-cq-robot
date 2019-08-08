@@ -4,6 +4,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 // import moment from 'moment'
 const moment = require("moment");
 const colors = require("colors");
+// import { getLogger } from './log'
 /**
  * 格式化时间
  * @export
