@@ -1,6 +1,6 @@
 {
     "name": "cq-robot",
-    "version": "1.1.10",
+    "version": "1.1.9",
     "description": "基于http-api和cq-websocket封装的酷Q机器人SDK",
     "main": "dist/index.js",
     "keywords": [
@@ -18,7 +18,7 @@
         "docs": "npm run doc && npm run webdocs",
         "doc": "rimraf docs && gulp typedoc",
         "webdocs": "rimraf webdocs && gulp webdocs",
-        "mit": "git add . && git cz && git push",
+        "mit": "git add . && git cz ",
         "cglog": "conventional-changelog -p angular -i CHANGELOG.md -s -p"
     },
     "author": "CaoMeiYouRen",

@@ -1,3 +1,7 @@
+## <small>1.1.10 (2019-08-24)</small>
+
+* refactor: 修改了package.json，增加了项目地址 ([b349e99](https://github.com/CaoMeiYouRen/node-cq-robot/commit/b349e99))
+
 ## <small>1.1.9 (2019-08-24)</small>
 
 * docs: 更新了文档 ([bbf7314](https://github.com/CaoMeiYouRen/node-cq-robot/commit/bbf7314))
