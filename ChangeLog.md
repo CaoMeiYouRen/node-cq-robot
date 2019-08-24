@@ -1,3 +1,9 @@
+## <small>1.1.9 (2019-08-24)</small>
+
+* docs: 更新了文档 ([bbf7314](https://github.com/CaoMeiYouRen/node-cq-robot/commit/bbf7314))
+
+
+
 ## <small>1.1.7 (2019-07-24)</small>
 
 ### Fix Bugs
