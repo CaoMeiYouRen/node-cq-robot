@@ -32,7 +32,7 @@
 
 • **data**: *null | object*
 
-*Defined in [entity/CQMessage.ts:12](https://github.com/CaoMeiYouRen/node-cq-robot/blob/951adbf/src/entity/CQMessage.ts#L12)*
+*Defined in [entity/CQMessage.ts:12](https://github.com/CaoMeiYouRen/node-cq-robot/blob/aeb889b/src/entity/CQMessage.ts#L12)*
 
 ___
 
@@ -40,4 +40,4 @@ ___
 
 • **type**: *string*
 
-*Defined in [entity/CQMessage.ts:11](https://github.com/CaoMeiYouRen/node-cq-robot/blob/951adbf/src/entity/CQMessage.ts#L11)*
+*Defined in [entity/CQMessage.ts:11](https://github.com/CaoMeiYouRen/node-cq-robot/blob/aeb889b/src/entity/CQMessage.ts#L11)*

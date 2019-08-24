@@ -17,7 +17,7 @@
 
 ▸ **printTime**(`msg`: string, `level`: number): *void*
 
-*Defined in [utils/timeHelp.ts:31](https://github.com/CaoMeiYouRen/node-cq-robot/blob/951adbf/src/utils/timeHelp.ts#L31)*
+*Defined in [utils/timeHelp.ts:31](https://github.com/CaoMeiYouRen/node-cq-robot/blob/aeb889b/src/utils/timeHelp.ts#L31)*
 
 在控制台输出 HH:mm:ss:SSS->msg 格式的消息
 
@@ -38,7 +38,7 @@ ___
 
 ▸ **timeFormat**(`date`: `Date` | number | string, `pattern`: string): *string*
 
-*Defined in [utils/timeHelp.ts:14](https://github.com/CaoMeiYouRen/node-cq-robot/blob/951adbf/src/utils/timeHelp.ts#L14)*
+*Defined in [utils/timeHelp.ts:14](https://github.com/CaoMeiYouRen/node-cq-robot/blob/aeb889b/src/utils/timeHelp.ts#L14)*
 
 格式化时间
 

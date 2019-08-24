@@ -45,7 +45,7 @@ CQ码专用类
 
 ▸ **anonymous**(`ignore`: boolean): *string*
 
-*Defined in [entity/CQCode.ts:107](https://github.com/CaoMeiYouRen/node-cq-robot/blob/951adbf/src/entity/CQCode.ts#L107)*
+*Defined in [entity/CQCode.ts:107](https://github.com/CaoMeiYouRen/node-cq-robot/blob/aeb889b/src/entity/CQCode.ts#L107)*
 
 匿名发消息(anonymous) - 仅支持群。
 是否不强制，如果希望匿名失败时，将消息转为普通消息发送(而不是取消发送)，请置本参数为true。
@@ -70,7 +70,7 @@ ___
 
 ▸ **at**(`qqId`: number, `isNoSpace`: boolean): *string*
 
-*Defined in [entity/CQCode.ts:82](https://github.com/CaoMeiYouRen/node-cq-robot/blob/951adbf/src/entity/CQCode.ts#L82)*
+*Defined in [entity/CQCode.ts:82](https://github.com/CaoMeiYouRen/node-cq-robot/blob/aeb889b/src/entity/CQCode.ts#L82)*
 
 **`某人(at)`** 
 
@@ -95,7 +95,7 @@ ___
 
 ▸ **contact**(`type`: "qq" | "group", `id`: number): *string*
 
-*Defined in [entity/CQCode.ts:151](https://github.com/CaoMeiYouRen/node-cq-robot/blob/951adbf/src/entity/CQCode.ts#L151)*
+*Defined in [entity/CQCode.ts:151](https://github.com/CaoMeiYouRen/node-cq-robot/blob/aeb889b/src/entity/CQCode.ts#L151)*
 
 发送名片分享(contact)
 
@@ -120,7 +120,7 @@ ___
 
 ▸ **customMusic**(`url`: string, `audio`: string, `title`: string, `content`: string, `image`: string): *string*
 
-*Defined in [entity/CQCode.ts:138](https://github.com/CaoMeiYouRen/node-cq-robot/blob/951adbf/src/entity/CQCode.ts#L138)*
+*Defined in [entity/CQCode.ts:138](https://github.com/CaoMeiYouRen/node-cq-robot/blob/aeb889b/src/entity/CQCode.ts#L138)*
 
 发送音乐自定义分享
 
@@ -148,7 +148,7 @@ ___
 
 ▸ **decode**(`code`: string): *string*
 
-*Defined in [entity/CQCode.ts:41](https://github.com/CaoMeiYouRen/node-cq-robot/blob/951adbf/src/entity/CQCode.ts#L41)*
+*Defined in [entity/CQCode.ts:41](https://github.com/CaoMeiYouRen/node-cq-robot/blob/aeb889b/src/entity/CQCode.ts#L41)*
 
 特殊字符，反转义
 
@@ -174,7 +174,7 @@ ___
 
 ▸ **emoji**(`id`: number): *string*
 
-*Defined in [entity/CQCode.ts:69](https://github.com/CaoMeiYouRen/node-cq-robot/blob/951adbf/src/entity/CQCode.ts#L69)*
+*Defined in [entity/CQCode.ts:69](https://github.com/CaoMeiYouRen/node-cq-robot/blob/aeb889b/src/entity/CQCode.ts#L69)*
 
 emoji表情(emoji)
 
@@ -198,7 +198,7 @@ ___
 
 ▸ **encode**(`code`: string, `isComma`: boolean): *string*
 
-*Defined in [entity/CQCode.ts:23](https://github.com/CaoMeiYouRen/node-cq-robot/blob/951adbf/src/entity/CQCode.ts#L23)*
+*Defined in [entity/CQCode.ts:23](https://github.com/CaoMeiYouRen/node-cq-robot/blob/aeb889b/src/entity/CQCode.ts#L23)*
 
 特殊字符，转义，避免冲突
 
@@ -225,7 +225,7 @@ ___
 
 ▸ **face**(`id`: number): *string*
 
-*Defined in [entity/CQCode.ts:57](https://github.com/CaoMeiYouRen/node-cq-robot/blob/951adbf/src/entity/CQCode.ts#L57)*
+*Defined in [entity/CQCode.ts:57](https://github.com/CaoMeiYouRen/node-cq-robot/blob/aeb889b/src/entity/CQCode.ts#L57)*
 
  QQ表情(face)
 
@@ -249,7 +249,7 @@ ___
 
 ▸ **getImage**(`code`: string): *string*
 
-*Defined in [entity/CQCode.ts:230](https://github.com/CaoMeiYouRen/node-cq-robot/blob/951adbf/src/entity/CQCode.ts#L230)*
+*Defined in [entity/CQCode.ts:230](https://github.com/CaoMeiYouRen/node-cq-robot/blob/aeb889b/src/entity/CQCode.ts#L230)*
 
 从CQ码中获取图片的路径，如 [CQ:image,file=1.jpg] 则返回 1.jpg;
 失败返回空字符串
@@ -274,7 +274,7 @@ ___
 
 ▸ **getRecord**(`code`: string): *string*
 
-*Defined in [entity/CQCode.ts:245](https://github.com/CaoMeiYouRen/node-cq-robot/blob/951adbf/src/entity/CQCode.ts#L245)*
+*Defined in [entity/CQCode.ts:245](https://github.com/CaoMeiYouRen/node-cq-robot/blob/aeb889b/src/entity/CQCode.ts#L245)*
 
 从CQ码中获取语音的路径，如 [CQ:record,file=1.amr] 则返回 1.amr;
 失败返回空字符串
@@ -299,7 +299,7 @@ ___
 
 ▸ **image**(`file`: string, `cache`: boolean): *string*
 
-*Defined in [entity/CQCode.ts:203](https://github.com/CaoMeiYouRen/node-cq-robot/blob/951adbf/src/entity/CQCode.ts#L203)*
+*Defined in [entity/CQCode.ts:203](https://github.com/CaoMeiYouRen/node-cq-robot/blob/aeb889b/src/entity/CQCode.ts#L203)*
 
 发送图片(image)
 1.原生：将图片放在 酷Q的 data\image 下，并填写相对路径。如 data\image\1.jpg 则填写 1.jpg；
@@ -327,7 +327,7 @@ ___
 
 ▸ **location**(`lat`: number, `lon`: number, `zoom`: number, `title`: string, `content`: string): *string*
 
-*Defined in [entity/CQCode.ts:182](https://github.com/CaoMeiYouRen/node-cq-robot/blob/951adbf/src/entity/CQCode.ts#L182)*
+*Defined in [entity/CQCode.ts:182](https://github.com/CaoMeiYouRen/node-cq-robot/blob/aeb889b/src/entity/CQCode.ts#L182)*
 
 发送位置分享(location)
 
@@ -355,7 +355,7 @@ ___
 
 ▸ **music**(`musicId`: number, `type`: `""` | "qq" | "163" | "xiami", `style`: boolean): *string*
 
-*Defined in [entity/CQCode.ts:122](https://github.com/CaoMeiYouRen/node-cq-robot/blob/951adbf/src/entity/CQCode.ts#L122)*
+*Defined in [entity/CQCode.ts:122](https://github.com/CaoMeiYouRen/node-cq-robot/blob/aeb889b/src/entity/CQCode.ts#L122)*
 
 发送音乐(music)
 
@@ -381,7 +381,7 @@ ___
 
 ▸ **record**(`file`: string, `magic`: boolean): *string*
 
-*Defined in [entity/CQCode.ts:218](https://github.com/CaoMeiYouRen/node-cq-robot/blob/951adbf/src/entity/CQCode.ts#L218)*
+*Defined in [entity/CQCode.ts:218](https://github.com/CaoMeiYouRen/node-cq-robot/blob/aeb889b/src/entity/CQCode.ts#L218)*
 
 发送语音(record)
 1.原生：将语音放在 data\record 下，并填写相对路径。如 data\record\1.amr 则填写 1.amr；
@@ -409,7 +409,7 @@ ___
 
 ▸ **shake**(): *string*
 
-*Defined in [entity/CQCode.ts:94](https://github.com/CaoMeiYouRen/node-cq-robot/blob/951adbf/src/entity/CQCode.ts#L94)*
+*Defined in [entity/CQCode.ts:94](https://github.com/CaoMeiYouRen/node-cq-robot/blob/aeb889b/src/entity/CQCode.ts#L94)*
 
 窗口抖动(shake) - 仅支持好友
 
@@ -427,7 +427,7 @@ ___
 
 ▸ **share**(`url`: string, `title`: string, `content`: string, `image`: string): *string*
 
-*Defined in [entity/CQCode.ts:166](https://github.com/CaoMeiYouRen/node-cq-robot/blob/951adbf/src/entity/CQCode.ts#L166)*
+*Defined in [entity/CQCode.ts:166](https://github.com/CaoMeiYouRen/node-cq-robot/blob/aeb889b/src/entity/CQCode.ts#L166)*
 
 发送链接分享(share)
 

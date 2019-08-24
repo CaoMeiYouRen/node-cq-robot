@@ -34,7 +34,7 @@
 
 • **coolq_directory**: *string*
 
-*Defined in [entity/HttpApiInfo.ts:16](https://github.com/CaoMeiYouRen/node-cq-robot/blob/951adbf/src/entity/HttpApiInfo.ts#L16)*
+*Defined in [entity/HttpApiInfo.ts:16](https://github.com/CaoMeiYouRen/node-cq-robot/blob/aeb889b/src/entity/HttpApiInfo.ts#L16)*
 
 酷Q 根目录路径
 
@@ -48,7 +48,7 @@ ___
 
 • **coolq_edition**: *string*
 
-*Defined in [entity/HttpApiInfo.ts:23](https://github.com/CaoMeiYouRen/node-cq-robot/blob/951adbf/src/entity/HttpApiInfo.ts#L23)*
+*Defined in [entity/HttpApiInfo.ts:23](https://github.com/CaoMeiYouRen/node-cq-robot/blob/aeb889b/src/entity/HttpApiInfo.ts#L23)*
 
 酷Q 版本，air 或 pro
 
@@ -62,7 +62,7 @@ ___
 
 • **plugin_build_configuration**: *string*
 
-*Defined in [entity/HttpApiInfo.ts:44](https://github.com/CaoMeiYouRen/node-cq-robot/blob/951adbf/src/entity/HttpApiInfo.ts#L44)*
+*Defined in [entity/HttpApiInfo.ts:44](https://github.com/CaoMeiYouRen/node-cq-robot/blob/aeb889b/src/entity/HttpApiInfo.ts#L44)*
 
 HTTP API 插件编译配置，debug 或 release
 
@@ -76,7 +76,7 @@ ___
 
 • **plugin_build_number**: *number*
 
-*Defined in [entity/HttpApiInfo.ts:37](https://github.com/CaoMeiYouRen/node-cq-robot/blob/951adbf/src/entity/HttpApiInfo.ts#L37)*
+*Defined in [entity/HttpApiInfo.ts:37](https://github.com/CaoMeiYouRen/node-cq-robot/blob/aeb889b/src/entity/HttpApiInfo.ts#L37)*
 
 HTTP API 插件 build 号
 
@@ -90,7 +90,7 @@ ___
 
 • **plugin_version**: *string*
 
-*Defined in [entity/HttpApiInfo.ts:30](https://github.com/CaoMeiYouRen/node-cq-robot/blob/951adbf/src/entity/HttpApiInfo.ts#L30)*
+*Defined in [entity/HttpApiInfo.ts:30](https://github.com/CaoMeiYouRen/node-cq-robot/blob/aeb889b/src/entity/HttpApiInfo.ts#L30)*
 
 HTTP API 插件版本，例如 2.1.3
 

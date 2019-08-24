@@ -18,7 +18,8 @@
         "docs": "npm run doc && npm run webdocs",
         "doc": "rimraf docs && gulp typedoc",
         "webdocs": "rimraf webdocs && gulp webdocs",
-        "mit": "git add . && git cz ",
+        "mit": "git add . && git cz",
+        "push": "npm run mit && git push",
         "cglog": "conventional-changelog -p angular -i CHANGELOG.md -s -p"
     },
     "author": "CaoMeiYouRen",

@@ -44,7 +44,7 @@
 
 • **age**: *number*
 
-*Defined in [entity/MemberInfo.ts:50](https://github.com/CaoMeiYouRen/node-cq-robot/blob/951adbf/src/entity/MemberInfo.ts#L50)*
+*Defined in [entity/MemberInfo.ts:50](https://github.com/CaoMeiYouRen/node-cq-robot/blob/aeb889b/src/entity/MemberInfo.ts#L50)*
 
 年龄
 
@@ -58,7 +58,7 @@ ___
 
 • **area**: *string*
 
-*Defined in [entity/MemberInfo.ts:57](https://github.com/CaoMeiYouRen/node-cq-robot/blob/951adbf/src/entity/MemberInfo.ts#L57)*
+*Defined in [entity/MemberInfo.ts:57](https://github.com/CaoMeiYouRen/node-cq-robot/blob/aeb889b/src/entity/MemberInfo.ts#L57)*
 
 地区
 
@@ -72,7 +72,7 @@ ___
 
 • **card**: *string*
 
-*Defined in [entity/MemberInfo.ts:37](https://github.com/CaoMeiYouRen/node-cq-robot/blob/951adbf/src/entity/MemberInfo.ts#L37)*
+*Defined in [entity/MemberInfo.ts:37](https://github.com/CaoMeiYouRen/node-cq-robot/blob/aeb889b/src/entity/MemberInfo.ts#L37)*
 
 群名片／备注
 
@@ -86,7 +86,7 @@ ___
 
 • **card_changeable**: *boolean*
 
-*Defined in [entity/MemberInfo.ts:113](https://github.com/CaoMeiYouRen/node-cq-robot/blob/951adbf/src/entity/MemberInfo.ts#L113)*
+*Defined in [entity/MemberInfo.ts:113](https://github.com/CaoMeiYouRen/node-cq-robot/blob/aeb889b/src/entity/MemberInfo.ts#L113)*
 
 是否允许修改群名片
 
@@ -100,7 +100,7 @@ ___
 
 • **group_id**: *number*
 
-*Defined in [entity/MemberInfo.ts:16](https://github.com/CaoMeiYouRen/node-cq-robot/blob/951adbf/src/entity/MemberInfo.ts#L16)*
+*Defined in [entity/MemberInfo.ts:16](https://github.com/CaoMeiYouRen/node-cq-robot/blob/aeb889b/src/entity/MemberInfo.ts#L16)*
 
 群号
 
@@ -114,7 +114,7 @@ ___
 
 • **join_time**: *number*
 
-*Defined in [entity/MemberInfo.ts:64](https://github.com/CaoMeiYouRen/node-cq-robot/blob/951adbf/src/entity/MemberInfo.ts#L64)*
+*Defined in [entity/MemberInfo.ts:64](https://github.com/CaoMeiYouRen/node-cq-robot/blob/aeb889b/src/entity/MemberInfo.ts#L64)*
 
 加群时间戳
 
@@ -128,7 +128,7 @@ ___
 
 • **last_sent_time**: *number*
 
-*Defined in [entity/MemberInfo.ts:71](https://github.com/CaoMeiYouRen/node-cq-robot/blob/951adbf/src/entity/MemberInfo.ts#L71)*
+*Defined in [entity/MemberInfo.ts:71](https://github.com/CaoMeiYouRen/node-cq-robot/blob/aeb889b/src/entity/MemberInfo.ts#L71)*
 
 最后发言时间戳
 
@@ -142,7 +142,7 @@ ___
 
 • **level**: *string*
 
-*Defined in [entity/MemberInfo.ts:78](https://github.com/CaoMeiYouRen/node-cq-robot/blob/951adbf/src/entity/MemberInfo.ts#L78)*
+*Defined in [entity/MemberInfo.ts:78](https://github.com/CaoMeiYouRen/node-cq-robot/blob/aeb889b/src/entity/MemberInfo.ts#L78)*
 
 成员等级
 
@@ -156,7 +156,7 @@ ___
 
 • **nickname**: *string*
 
-*Defined in [entity/MemberInfo.ts:30](https://github.com/CaoMeiYouRen/node-cq-robot/blob/951adbf/src/entity/MemberInfo.ts#L30)*
+*Defined in [entity/MemberInfo.ts:30](https://github.com/CaoMeiYouRen/node-cq-robot/blob/aeb889b/src/entity/MemberInfo.ts#L30)*
 
 昵称
 
@@ -170,7 +170,7 @@ ___
 
 • **role**: *string*
 
-*Defined in [entity/MemberInfo.ts:85](https://github.com/CaoMeiYouRen/node-cq-robot/blob/951adbf/src/entity/MemberInfo.ts#L85)*
+*Defined in [entity/MemberInfo.ts:85](https://github.com/CaoMeiYouRen/node-cq-robot/blob/aeb889b/src/entity/MemberInfo.ts#L85)*
 
 角色，owner 或 admin 或 member
 
@@ -184,7 +184,7 @@ ___
 
 • **sex**: *string*
 
-*Defined in [entity/MemberInfo.ts:44](https://github.com/CaoMeiYouRen/node-cq-robot/blob/951adbf/src/entity/MemberInfo.ts#L44)*
+*Defined in [entity/MemberInfo.ts:44](https://github.com/CaoMeiYouRen/node-cq-robot/blob/aeb889b/src/entity/MemberInfo.ts#L44)*
 
 性别，male 或 female 或 unknown
 
@@ -198,7 +198,7 @@ ___
 
 • **title**: *string*
 
-*Defined in [entity/MemberInfo.ts:99](https://github.com/CaoMeiYouRen/node-cq-robot/blob/951adbf/src/entity/MemberInfo.ts#L99)*
+*Defined in [entity/MemberInfo.ts:99](https://github.com/CaoMeiYouRen/node-cq-robot/blob/aeb889b/src/entity/MemberInfo.ts#L99)*
 
 专属头衔
 
@@ -212,7 +212,7 @@ ___
 
 • **title_expire_time**: *number*
 
-*Defined in [entity/MemberInfo.ts:106](https://github.com/CaoMeiYouRen/node-cq-robot/blob/951adbf/src/entity/MemberInfo.ts#L106)*
+*Defined in [entity/MemberInfo.ts:106](https://github.com/CaoMeiYouRen/node-cq-robot/blob/aeb889b/src/entity/MemberInfo.ts#L106)*
 
 专属头衔过期时间戳
 
@@ -226,7 +226,7 @@ ___
 
 • **unfriendly**: *boolean*
 
-*Defined in [entity/MemberInfo.ts:92](https://github.com/CaoMeiYouRen/node-cq-robot/blob/951adbf/src/entity/MemberInfo.ts#L92)*
+*Defined in [entity/MemberInfo.ts:92](https://github.com/CaoMeiYouRen/node-cq-robot/blob/aeb889b/src/entity/MemberInfo.ts#L92)*
 
 是否不良记录成员
 
@@ -240,7 +240,7 @@ ___
 
 • **user_id**: *number*
 
-*Defined in [entity/MemberInfo.ts:23](https://github.com/CaoMeiYouRen/node-cq-robot/blob/951adbf/src/entity/MemberInfo.ts#L23)*
+*Defined in [entity/MemberInfo.ts:23](https://github.com/CaoMeiYouRen/node-cq-robot/blob/aeb889b/src/entity/MemberInfo.ts#L23)*
 
 QQ 号
 
