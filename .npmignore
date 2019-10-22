@@ -34,8 +34,8 @@ sessions
 
 *.txt
 src
+tsconfig.json
 test/app/
 /log
 _site
 webroot
-webdocs
