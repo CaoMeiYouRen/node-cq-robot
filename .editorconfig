@@ -17,3 +17,5 @@ trim_trailing_whitespace = true
 # 对后缀名为 md 的文件生效
 [*.md]
 trim_trailing_whitespace = false
+[package.json]
+indent_size = 2
