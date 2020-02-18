@@ -3,6 +3,9 @@
   "version": "1.1.11",
   "description": "基于http-api和cq-websocket封装的酷Q机器人SDK",
   "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
   "keywords": [
     "CoolQ",
     "CQ",
@@ -18,9 +21,9 @@
     "docs": "npm run doc && npm run webdocs",
     "doc": "rimraf docs && gulp typedoc",
     "webdocs": "rimraf webdocs && gulp webdocs",
-    "mit": "git add . && git cz",
+    "commit": "git add . && git cz",
     "push": "npm run mit && git push",
-    "cglog": "conventional-changelog -p angular -i CHANGELOG.md -s -p",
+    "changelog": "conventional-changelog -p cmyr-config -i CHANGELOG.md -s -p",
     "release": "release-it"
   },
   "author": "CaoMeiYouRen",
@@ -60,6 +63,9 @@
     "chai": "^4.2.0",
     "clean-webpack-plugin": "^3.0.0",
     "colors": "^1.4.0",
+    "commitizen": "^4.0.3",
+    "conventional-changelog-cli": "^2.0.31",
+    "conventional-changelog-cmyr-config": "^1.2.0",
     "cz-conventional-changelog": "^3.1.0",
     "eslint": "^5.16.0",
     "eslint-config-alloy": "^2.0.4",
@@ -91,5 +97,8 @@
     "hooks": {
       "commit-msg": "validate-commit-msg"
     }
+  },
+  "changelog": {
+    "language": "zh"
   }
 }
