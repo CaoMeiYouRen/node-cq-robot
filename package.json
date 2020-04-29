@@ -72,7 +72,7 @@
     "eslint-plugin-typescript": "^0.14.0",
     "gulp": "^4.0.2",
     "gulp-typedoc": "^2.2.4",
-    "husky": "^3.0.1",
+    "husky": "^4.2.5",
     "mocha": "^6.1.4",
     "nyc": "^14.1.1",
     "release-it": "^12.4.3",
