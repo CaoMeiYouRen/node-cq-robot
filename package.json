@@ -81,7 +81,7 @@
     "ts-loader": "^6.2.1",
     "ts-node": "^8.6.2",
     "typedoc": "^0.14.2",
-    "typedoc-plugin-external-module-name": "^2.1.0",
+    "typedoc-plugin-external-module-name": "^3.1.0",
     "typedoc-plugin-markdown": "^2.2.16",
     "typescript": "^3.7.5",
     "typescript-eslint-parser": "^22.0.0",
